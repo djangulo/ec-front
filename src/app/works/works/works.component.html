@@ -1,0 +1,9 @@
+<ul>
+  <li *ngFOr="let category of categories" (click)="onSelect(category)"
+    [class.selected]="category === selectedCategory">
+    {{category.name}}
+  </li>
+</ul>
+<div *ngIf="selectedCategory">
+  <works-by-category-list></works-by-category-list>
+</div>

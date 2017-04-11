@@ -3,53 +3,52 @@ import { Headers, Http } from '@angular/http';
 
 import 'rxjs/add/operator/toPromise';
 
-import { Work } from './../models/';
-import { Category } from './../models/';
+import { Staff } from './../models/';
 
 @Injectable()
-export class WorkService {
+export class StaffService {
     private headers = new Headers({'Content-Type': 'application/json'});
-    private worksUrl = 'http://localhost:8000/api/v1/works/'; // currently on localhost:8000, change later to actual domain
+    private staffUrl = 'http://localhost:8000/api/v1/staffs/'; // currently on localhost:8000, change later to actual domain
 
     constructor(private http: Http) { }
 
-    getWorks(): Promise<Work[]> {
-        return this.http.get(this.worksUrl)
+    getStaff(): Promise<Staff[]> {
+        return this.http.get(this.staffUrl)
             .toPromise()
-            .then(response => response.json().data.results as Work[])
+            .then(response => response.json().data.results as Staff[])
             .catch(this.handleError);
     }
-    getWork(id: number): Promise<Work> {
-        const url = `${this.worksUrl}/${id}/`;
+    getStaffMember(username: string): Promise<Staff> {
+        const url = `${this.staffUrl}/${username}/`;
         return this.http.get(url)
             .toPromise()
-            .then(response => response.json().data as Work)
+            .then(response => response.json().data as Staff)
             .catch(this.handleError)
     }
 
 
     delete(id: number): Promise<void> {
-        const url = `${this.worksUrl}/${id}/`;
+        const url = `${this.staffUrl}/${id}/`;
         return this.http.delete(url, {headers: this.headers})
             .toPromise()
             .then(() => null)
             .catch(this.handleError);
     }
 
-    create(work: Work): Promise<Work> {
+    create(staff: Staff): Promise<Staff> {
         return this.http
-            .post(this.worksUrl, JSON.stringify({work}), {headers: this.headers})
+            .post(this.staffUrl, JSON.stringify({staff}), {headers: this.headers})
             .toPromise()
-            .then(res => res.json().data as Work)
+            .then(res => res.json().data as Staff)
             .catch(this.handleError);
     }
 
-    update(work: Work): Promise<Work> {
-    const url = `${this.worksUrl}/${work.id}`;
+    update(staff: Staff): Promise<Staff> {
+    const url = `${this.staffUrl}/${staff.id}`;
         return this.http
-            .put(url, JSON.stringify(work), {headers: this.headers})
+            .put(url, JSON.stringify(staff), {headers: this.headers})
             .toPromise()
-            .then(() => work)
+            .then(() => staff)
             .catch(this.handleError);
     }
 
