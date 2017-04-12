@@ -49,7 +49,7 @@ export class CategoryService {
         const url = `${this.worksUrl}/categories/${slug}/`
         return this.http.get(url)
             .toPromise()
-            .then(response => response.json().data.resulta as Work[])
+            .then(response => response.json().data.results as Work[])
             .catch(this.handleError)
     }
     getPublicationCategories(): Promise<Category[]> {

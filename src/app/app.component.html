@@ -2,4 +2,12 @@
 <h1>
   {{title}}
 </h1>
-<nav-nav></nav-nav>
+  <nav>
+    <a routerLink="/works" routerLinkActive="active" (click)="selectElem('works')">works</a>
+    <a routerLink="/publications" routerLinkActive="active" (click)="selectElem('publications')">publications</a>
+    <a routerLink="/press" routerLinkActive="active" (click)="selectElem('press')">press</a>
+    <a routerLink="/staff" routerLinkActive="active" (click)="selectElem('staff')">staff</a>
+    <a routerLink="/contact" routerLinkActive="active" (click)="selectElem('contact')">contact</a>
+    <a routerLink="/" routerLinkActive="active" (click)="selectElem('home')">home</a>
+  </nav>
+  <router-outlet></router-outlet>

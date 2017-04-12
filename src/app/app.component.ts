@@ -7,4 +7,10 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'EC Image';
+  selectedElem: string;
+
+  selectElem(sel: string): void {
+    this.selectedElem = sel;
+  }
+
 }

@@ -5,11 +5,11 @@ import { Category, Work } from './../../models';
 import { CategoryService, WorkService } from './../../services';
 
 @Component({
-    selector: 'works',
-    templateUrl: './works.component.html',
-    styleUrls: ['./works.component.css']
+    selector: 'work-list',
+    templateUrl: './work-list.component.html',
+    styleUrls: ['./work-list.component.css']
 })
-export class WorksComponent implements OnInit {
+export class WorkListComponent implements OnInit {
     works: Work[];
     categories: Category[];
     selectedCategory: Category;
