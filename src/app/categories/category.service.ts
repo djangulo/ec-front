@@ -3,18 +3,18 @@ import { Headers, Http } from '@angular/http';
 
 import 'rxjs/add/operator/toPromise';
 
-import {
-    Category,
-    Publication,
-    Work    
-} from './../models/';
+import { Category } from './';
+import { Work } from './../works';
+import { Publication } from './../publications';
+
 
 @Injectable()
 export class CategoryService {
     private headers = new Headers({'Content-Type': 'application/json'});
-    private categoriesUrl = 'http://localhost:8000/api/v1/categories/'; // currently on localhost:8000, change later to actual domain
-    private worksUrl = 'http://localhost:8000/api/v1/works/'; // currently on localhost:8000, change later to actual domain
-    private publicationsUrl = 'http://localhost:8000/api/v1/publications/'; // currently on localhost:8000, change later to actual domain
+    private categoriesUrl = 'http://localhost:8000/api/v1/categories'; // currently on localhost:8000, change later to actual domain
+    private worksUrl = 'http://localhost:8000/api/v1/works'; // currently on localhost:8000, change later to actual domain
+    private publicationsUrl = 'http://localhost:8000/api/v1/publications'; // currently on localhost:8000, change later to actual domain
+    private pressUrl = 'http://localhost:8000/api/v1/press'; // currently on localhost:8000, change later to actual domain
 
     constructor(private http: Http) { }
 
@@ -67,7 +67,7 @@ export class CategoryService {
             .catch(this.handleError)
     }
     getPublicationsByCategory(slug: string): Promise<Work[]> {
-        const url = `${this.worksUrl}/categories/${slug}/`
+        const url = `${this.publicationsUrl}/categories/${slug}/`
         return this.http.get(url)
             .toPromise()
             .then(response => response.json().data.resulta as Work[])

@@ -7,9 +7,9 @@ import { WorkListComponent } from './work-list/work-list.component';
 import { WorkDetailComponent } from './work-detail/work-detail.component';
 
 const worksRoutes: Routes = [
-  { path: 'works',  component: WorkListComponent },
-  { path: 'works/:id', component: WorkDetailComponent }
-//   { path: 'works/categories/:name', component: WorkByCategoryComponent }
+  // { path: 'works',  component: WorkListComponent },
+  { path: 'works/:id', component: WorkDetailComponent },
+  { path: 'works/categories/:slug', component: WorkListComponent }
 ];
 @NgModule({
   imports: [

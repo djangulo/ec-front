@@ -3,7 +3,7 @@ import { Headers, Http } from '@angular/http';
 
 import 'rxjs/add/operator/toPromise';
 
-import { PressRelease } from './../models/';
+import { PressRelease } from './';
 
 @Injectable()
 export class PressReleaseService {

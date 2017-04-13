@@ -3,8 +3,8 @@ import { Headers, Http } from '@angular/http';
 
 import 'rxjs/add/operator/toPromise';
 
-import { Work } from './../models/';
-import { Category } from './../models/';
+import { Work } from './';
+import { Category } from './../categories';
 
 @Injectable()
 export class WorkService {

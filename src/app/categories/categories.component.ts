@@ -2,8 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { Location } from '@angular/common';
 import { Router } from '@angular/router';
 
-import { Category } from './../models';
-import { CategoryService } from './../services';
+import { Category } from './';
+import { CategoryService } from './';
 
 @Component({
   selector: 'categories',
@@ -19,9 +19,14 @@ export class CategoriesComponent implements OnInit {
         private location: Location,
         private router: Router){ }
 
-    getCategories(): void {
+    getWorkCategories(): void {
         this.categoryService
             .getWorkCategories()
+            .then(categories => this.categories = categories)
+    }
+    getPublicationCategories(): void {
+        this.categoryService
+            .getPublicationCategories()
             .then(categories => this.categories = categories)
     }
 

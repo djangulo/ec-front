@@ -1,0 +1,13 @@
+<p>
+  staff-list works! AAAAAAAAAA
+</p>
+<div class="staff">
+  <ul>
+    <li *ngFor="let member of staff | async">
+      <figure>
+        <img src="{{member.photo}}" alt="{{member.username}}'s photo'">
+        <figcaption>{{member.first_name}} {{member.last_name}}</figcaption>
+      </figure>
+    </li>
+  </ul>
+</div>

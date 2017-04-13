@@ -1,8 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 
-import { Category, Work } from './../../models';
-import { CategoryService, WorkService } from './../../services';
+import { Category, CategoryService } from './../../categories';
+import { Work } from './../';
+import { WorkService } from './../work.service';
 
 @Component({
     selector: 'work-list',

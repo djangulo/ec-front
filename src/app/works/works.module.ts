@@ -14,7 +14,8 @@ import { WorkDetailComponent } from './work-detail/work-detail.component';
 import { WorkRoutingModule } from './works-routing.module';
 
 // Services
-import { WorkService, CategoryService } from '../services';
+import { WorkService } from './';
+import { CategoryService } from './../categories';
 
 @NgModule({
     imports: [

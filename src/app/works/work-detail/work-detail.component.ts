@@ -3,8 +3,9 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Params, Router } from '@angular/router';
 import { Location } from '@angular/common';
 
-import { Category, Work } from './../../models';
-import { CategoryService, WorkService } from './../../services';
+import { Category, CategoryService } from './../../categories';
+import { Work } from './../';
+import { WorkService } from './../work.service';
 
 @Component({
     selector: 'work-detail',
@@ -23,7 +24,6 @@ export class WorkDetailComponent implements OnInit {
 
     ngOnInit() {
         this.route.params
-            // (+) converts string 'id' to a number
             .switchMap((params: Params) => this.workService.getWork(+params['id']))
             .subscribe((work: Work) => this.work = work);
     }
@@ -31,11 +31,10 @@ export class WorkDetailComponent implements OnInit {
         this.location.back();
     }
 
-    gotoWorkCategory() {
-        this.categoryService
-        let workId = this.work ? this.work.id : null;
-        let catId = this.category
-        this.router.navigate(['/works/categories'])
-    }
+    // gotoWorkCategory(): void {
+    //     let workId = this.work ? this.work.id : null;
+    //     let categorySlug = this.work.category_slug;
+    //     this.router.navigate(['/works/categories', { category: categorySlug, id: workId }])
+    // }
     
 }
