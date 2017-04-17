@@ -3,9 +3,9 @@ export class Staff {
     username: string;
     first_name: string;
     last_name: string;
-    photo: URL;
+    photo: string;
     bio: string;
-    is_active: Boolean;
-    is_admin: Boolean;
+    is_active: boolean;
+    is_admin: boolean;
     staff_of_intern: string;
 }

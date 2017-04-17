@@ -1,3 +1,9 @@
-<p>
-  work-categories works!
-</p>
+<div class="categories">
+  <ul class *ngFor="let category of categories" (click)="onSelect(category)">
+    <li>{{category.name}}</li>
+  </ul>
+</div>
+
+<div class="works" *ngIf="selectedCategory">
+  <app-work-list [category]="selectedCategory"></app-work-list>
+</div>

@@ -8,7 +8,6 @@ import { FormsModule } from '@angular/forms';
 
 // Components
 import { StaffListComponent } from './staff-list/staff-list.component';
-import { StaffDetailComponent } from './staff-detail/staff-detail.component';
 
 // Routing
 import { StaffRoutingModule } from './staff-routing.module';
@@ -22,7 +21,6 @@ import { StaffService } from './staff.service';
     StaffRoutingModule
   ],
   declarations: [
-    StaffDetailComponent,
     StaffListComponent
     ],
   providers: [ StaffService ]

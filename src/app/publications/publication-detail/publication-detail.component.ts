@@ -31,9 +31,9 @@ export class PublicationDetailComponent implements OnInit {
       this.location.back();
     }
     gotoPublicationCategory(): void {
-      let publicationId = this.publication ? this.publication.id : null;
-      let categorySlug = this.publication.category_slug;
-      this.router.navigate(['/publications/categories', { category: categorySlug, id: publicationId }])
+      const publicationId = this.publication ? this.publication.id : null;
+      const categorySlug = this.publication.category_slug;
+      this.router.navigate(['/publications/categories', { category: categorySlug, id: publicationId }]);
     }
 
 }

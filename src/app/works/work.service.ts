@@ -10,21 +10,38 @@ import { Category } from './../categories';
 export class WorkService {
     private headers = new Headers({'Content-Type': 'application/json'});
     private worksUrl = 'http://localhost:8000/api/v1/works/'; // currently on localhost:8000, change later to actual domain
+    private workCategoriesUrl = 'http://localhost:8000/api/v1/works/categories';
 
     constructor(private http: Http) { }
 
     getWorks(): Promise<Work[]> {
         return this.http.get(this.worksUrl)
             .toPromise()
-            .then(response => response.json().data.results as Work[])
+            .then(response => response.json().results as Work[])
             .catch(this.handleError);
     }
+
     getWork(id: number): Promise<Work> {
         const url = `${this.worksUrl}/${id}/`;
         return this.http.get(url)
             .toPromise()
-            .then(response => response.json().data as Work)
-            .catch(this.handleError)
+            .then(response => response.json() as Work)
+            .catch(this.handleError);
+    }
+
+    getWorkCategories(): Promise<Category[]> {
+        return this.http.get(this.workCategoriesUrl)
+            .toPromise()
+            .then(response => response.json().results as Category[])
+            .catch(this.handleError);
+    }
+
+    getWorksByCategory(slug: string): Promise<Work[]> {
+        const url = `${this.workCategoriesUrl}/${slug}`;
+        return this.http.get(url)
+            .toPromise()
+            .then(response => response.json().results as Work[])
+            .catch(this.handleError);
     }
 
 

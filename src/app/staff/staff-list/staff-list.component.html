@@ -1,13 +1,26 @@
-<p>
-  staff-list works! AAAAAAAAAA
-</p>
 <div class="staff">
-  <ul>
-    <li *ngFor="let member of staff | async">
+  <ul class *ngFor="let member of staffMembers">
+    <li *ngIf="member.staff_or_intern === 'Staff'"  (click)="onSelect(member)">
       <figure>
         <img src="{{member.photo}}" alt="{{member.username}}'s photo'">
         <figcaption>{{member.first_name}} {{member.last_name}}</figcaption>
       </figure>
     </li>
   </ul>
+</div>
+<div class="interns">
+  <h4>Interns</h4>
+  <ul  *ngFor="let member of staffMembers">
+    <li *ngIf="member.staff_or_intern === 'Intern'" (click)="onSelect(member)">
+      {{member.first_name}} {{member.last_name}}
+    </li>
+  </ul>
+</div>
+<div class="member-details" *ngIf="selectedMember">
+  <span (click)="clearSelection()">Close</span>
+  <h3>{{selectedMember.first_name}} {{selectedMember.last_name}}</h3>
+  <img src="{{selectedMember.photo}}" *ngIf="selectedMember.photo != null">
+  <h5>Bio</h5>
+  <p>{{selectedMember.bio}}</p>
+  
 </div>

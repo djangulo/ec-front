@@ -3,12 +3,13 @@ import { Headers, Http } from '@angular/http';
 
 import 'rxjs/add/operator/toPromise';
 
+import { Observable } from 'rxjs/Observable';
+
 import { Staff } from './';
 
 @Injectable()
 export class StaffService {
     private headers = new Headers({'Content-Type': 'application/json'});
-    // private staffUrl = 'http://localhost:8000/api/v1/staff/?format=json'; // currently on localhost:8000, change later to actual domain
     private staffUrl = 'http://localhost:8000/api/v1/staff/'; // currently on localhost:8000, change later to actual domain
 
     constructor(private http: Http) { }
@@ -19,15 +20,12 @@ export class StaffService {
             .then(response => response.json().results as Staff[])
             .catch(this.handleError);
     }
-    // getInterns(): Promise<Staff[]> {
-    //     return this.ht
-    // }
     getStaffMember(username: string): Promise<Staff> {
         const url = `${this.staffUrl}/${username}/`;
         return this.http.get(url)
             .toPromise()
-            .then(response => response.json().data as Staff)
-            .catch(this.handleError)
+            .then(response => response.json() as Staff)
+            .catch(this.handleError);
     }
 
 

@@ -29,64 +29,10 @@ export class CategoryService {
         return this.http.get(url)
             .toPromise()
             .then(response => response.json().data as Category)
-            .catch(this.handleError)
+            .catch(this.handleError);
     }
-    getWorkCategories(): Promise<Category[]> {
-        return this.http.get(this.categoriesUrl)
-            .toPromise()
-            .then(function(response) {
-                var workCategories: Category[];
-                for (let c of response.json().data.results) {
-                    if (c.works.length > 0) {
-                        workCategories.push(c)
-                    }
-                }
-                return workCategories
-            })
-            .catch(this.handleError)
-    }
-    getWorksByCategory(slug: string): Promise<Work[]> {
-        const url = `${this.worksUrl}/categories/${slug}/`
-        return this.http.get(url)
-            .toPromise()
-            .then(response => response.json().data.results as Work[])
-            .catch(this.handleError)
-    }
-    getPublicationCategories(): Promise<Category[]> {
-        return this.http.get(this.categoriesUrl)
-            .toPromise()
-            .then(function(response) {
-                var publicationCategories: Category[];
-                for (let c of response.json().data.results) {
-                    if (c.publications.length > 0) {
-                        publicationCategories.push(c)
-                    }
-                }
-                return publicationCategories
-            })
-            .catch(this.handleError)
-    }
-    getPublicationsByCategory(slug: string): Promise<Work[]> {
-        const url = `${this.publicationsUrl}/categories/${slug}/`
-        return this.http.get(url)
-            .toPromise()
-            .then(response => response.json().data.resulta as Work[])
-            .catch(this.handleError)
-    }
-    getPressCategories(): Promise<Category[]> {
-        return this.http.get(this.categoriesUrl)
-            .toPromise()
-            .then(function(response) {
-                var pressCategories: Category[];
-                for (let c of response.json().data.results) {
-                    if (c.press_releases.length > 0) {
-                        pressCategories.push(c)
-                    }
-                }
-                return pressCategories
-            })
-            .catch(this.handleError)
-    }
+
+    getPublicationCategor
 
 
 

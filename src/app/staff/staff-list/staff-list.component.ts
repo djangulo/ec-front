@@ -2,7 +2,7 @@ import { Location } from '@angular/common';
 import { Router, ActivatedRoute } from '@angular/router';
 import { Component, OnInit } from '@angular/core';
 
-import { Staff } from './../'
+import { Staff } from './../staff.model';
 import { StaffService } from './../staff.service';
 
 @Component({
@@ -10,7 +10,8 @@ import { StaffService } from './../staff.service';
   styleUrls: ['./staff-list.component.css']
 })
 export class StaffListComponent implements OnInit {
-  staff: Staff[];
+  staffMembers: Staff[];
+  interns: Staff[];
   selectedMember: Staff;
 
   constructor(
@@ -22,16 +23,18 @@ export class StaffListComponent implements OnInit {
 
   ngOnInit() {
     this.getStaffMembers();
-    console.log("so far were here")
   }
 
   getStaffMembers(): void {
     this.staffService
       .getStaff()
-      .then(staff => this.staff = staff)
+      .then(staffMembers => this.staffMembers = staffMembers);
   }
   onSelect(member: Staff): void {
     this.selectedMember = member;
+  }
+  clearSelection(): void {
+    this.selectedMember = null;
   }
 
 }

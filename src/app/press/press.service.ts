@@ -23,7 +23,7 @@ export class PressReleaseService {
         return this.http.get(url)
             .toPromise()
             .then(response => response.json().data as PressRelease)
-            .catch(this.handleError)
+            .catch(this.handleError);
     }
 
     delete(id: number): Promise<void> {

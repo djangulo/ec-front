@@ -6,7 +6,6 @@ import { NgModule } from '@angular/core';
 
 // Components
 import { AppComponent } from './app.component';
-import { CategoriesComponent } from './categories/categories.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 
 
@@ -23,7 +22,6 @@ import { AppRoutingModule } from './app-routing.module';
 import { CategoryService } from './categories';
 import { StaffService } from './staff';
 import { WorkService } from './works';
-// import { WorkCategoriesComponent } from './work-categories/work-categories.component';
 
 
 
@@ -32,13 +30,12 @@ import { WorkService } from './works';
     BrowserModule,
     FormsModule,
     HttpModule,
-    // WorksModule,
+    WorksModule,
     StaffModule,
     AppRoutingModule
   ],
   declarations: [
     AppComponent,
-    CategoriesComponent,
     PageNotFoundComponent
   ],
   providers: [
