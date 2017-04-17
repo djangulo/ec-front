@@ -1,3 +1,11 @@
-<p>
-  publication-list works!
-</p>
+<div class="publications">
+  <div class="publication" *ngFor="let publication of publications" (click)="onSelect(publication)">
+    <h4>{{publication.title}}</h4>
+    <p>{{publication.description}}</p>
+  </div>
+</div>
+<div *ngIf="selectedPublication">
+  <span (click)="deSelect()">Close</span>
+  <h4>{{selectedPublication.title}}</h4>
+  <p>{{selectedPublication.description}}</p>
+</div>

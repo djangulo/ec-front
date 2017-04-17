@@ -1,0 +1,48 @@
+<form (submit)="onSubmit()" #contactForm="ngForm">
+  <div class="contact-form contact-form-name">
+    <label for="name">Name</label>
+    <input type="text" name="name" [(ngModel)]="name" maxlength="50"
+    #name="ngModel">
+    <div *ngIf="name.errors && (name.dirty || name.touched)"
+      class="alert">
+      <div [hidden]="!name.errors.maxlength">
+        Name is too long
+      </div>
+    </div> <!--close #name alerts-->
+  </div>
+
+  <div class="contact-form contact-form-email">
+    <label for="email">Email</label>
+    <input type="email" name="email" [(ngModel)]="email"
+    required maxlength="50" #email="ngModel">
+    <div *ngIf="formErrors.name" class="alert alert-danger">
+      {{ formErrors.name }}
+    </div>
+  </div>
+  <div class="contact-form contact-form-subject">
+    <label for="subject">Subject</label>
+    <input type="text" name="subject" [(ngModel)]="subject"/>
+  </div>
+  <div class="contact-form contact-form-message">
+    <label for="message">Message</label>
+    <textarea name="message" [(ngModel)]="message">
+    </textarea>
+  </div>
+  <div>
+    <button>Submit</button>
+  </div>
+</form>
+<div class="message-preview">
+  <div *ngIf="ifDisplay(subject)">
+    <h3>{{subject}}</h3>
+  </div>
+  <div *ngIf="ifDisplay(message)">
+  <p>{{message}}</p>
+  </div>
+  <div *ngIf="ifDisplay(name)">
+    <p><strong>&#45; {{name}}</strong></p>
+  </div>
+  <div *ngIf="ifDisplay(email)">
+    <p>&#40;{{email}}&#41;</p>
+  <div>
+</div>

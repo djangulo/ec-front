@@ -10,6 +10,7 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
 
 
 // Modules
+import { ContactModule } from './contact';
 import { PressModule } from './press';
 import { PublicationsModule } from './publications';
 import { StaffModule } from './staff';
@@ -19,27 +20,33 @@ import { WorksModule } from './works';
 import { AppRoutingModule } from './app-routing.module';
 
 // Services
-import { CategoryService } from './categories';
-import { StaffService } from './staff';
-import { WorkService } from './works';
-
-
+import { CategoryService } from './categories/category.service';
+import { PublicationService } from './publications/publication.service';
+import { StaffService } from './staff/staff.service';
+import { WorkService } from './works/work.service';
+import { ContactComponent } from './contact/contact.component';
+import { ContactFormComponent } from './contact/contact-form/contact-form.component';
 
 @NgModule({
   imports: [
     BrowserModule,
     FormsModule,
     HttpModule,
+    ContactModule,
+    PublicationsModule,
     WorksModule,
     StaffModule,
     AppRoutingModule
   ],
   declarations: [
     AppComponent,
-    PageNotFoundComponent
+    PageNotFoundComponent,
+    ContactComponent,
+    ContactFormComponent
   ],
   providers: [
     CategoryService,
+    PublicationService,
     StaffService,
     WorkService
   ],

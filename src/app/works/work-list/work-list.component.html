@@ -1,7 +1,11 @@
-<p>Work-list works!</p>
 <div class="works">
-  <div class="work" *ngFor="let work of works">
+  <div class="work" *ngFor="let work of works" (click)="onSelect(work)">
     <h4>{{work.title}}</h4>
     <p>{{work.description}}</p>
   </div>
+</div>
+<div *ngIf="selectedWork">
+  <span (click)="deSelect()">Close</span>
+  <h4>{{selectedWork.title}}</h4>
+  <p>{{selectedWork.description}}</p>
 </div>

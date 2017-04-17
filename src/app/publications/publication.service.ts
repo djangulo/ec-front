@@ -4,18 +4,20 @@ import { Headers, Http } from '@angular/http';
 import 'rxjs/add/operator/toPromise';
 
 import { Publication } from './';
+import { Category } from './../categories';
 
 @Injectable()
 export class PublicationService {
     private headers = new Headers({'Content-Type': 'application/json'});
     private publicationsUrl = 'http://localhost:8000/api/v1/publications/'; // currently on localhost:8000, change later to actual domain
+    private publicationCategoriesUrl = 'http://localhost:8000/api/v1/publications/categories';
 
     constructor(private http: Http) { }
 
     getPublications(): Promise<Publication[]> {
         return this.http.get(this.publicationsUrl)
             .toPromise()
-            .then(response => response.json().data.results as Publication[])
+            .then(response => response.json().results as Publication[])
             .catch(this.handleError);
     }
     getPublication(id: number): Promise<Publication> {
@@ -23,6 +25,21 @@ export class PublicationService {
         return this.http.get(url)
             .toPromise()
             .then(response => response.json().data as Publication)
+            .catch(this.handleError);
+    }
+
+    getPublicationCategories(): Promise<Category[]> {
+        return this.http.get(this.publicationCategoriesUrl)
+            .toPromise()
+            .then(response => response.json().results as Category[])
+            .catch(this.handleError);
+    }
+
+    getPublicationsByCategory(slug: string): Promise<Publication[]> {
+        const url = `${this.publicationCategoriesUrl}/${slug}`;
+        return this.http.get(url)
+            .toPromise()
+            .then(response => response.json().results as Publication[])
             .catch(this.handleError);
     }
 

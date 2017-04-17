@@ -2,6 +2,7 @@ import { NgModule }             from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
 import { AppComponent } from './app.component';
+import { ContactComponent } from './contact/contact.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 
 const routes: Routes = [
@@ -10,7 +11,7 @@ const routes: Routes = [
   // { path: 'publications/:id', component: PublicationDetailComponent },
   // { path: 'press', component: PressReleaseListComponent },
   // { path: 'press/:id' component: PressReleaseDetailComponent },
-  { path: '', redirectTo: 'home', pathMatch: 'full'},
+  // { path: '', redirectTo: '', pathMatch: 'full'},
   { path: '**', component: PageNotFoundComponent }
 ];
 

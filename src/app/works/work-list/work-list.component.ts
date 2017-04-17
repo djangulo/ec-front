@@ -8,7 +8,6 @@ import { Work } from './../';
 import { WorkService } from './../work.service';
 
 @Component({
-    selector: 'app-work-list',
     templateUrl: './work-list.component.html',
     styleUrls: ['./work-list.component.css']
 })
@@ -22,17 +21,22 @@ export class WorkListComponent implements OnInit {
         private route: ActivatedRoute,
         private router: Router){ }
 
-    getWorks(): void {
-        this.workService.getWorksByCategory(this.category.slug)
-            .then(works => this.works = works)
-        // this.route.params
-        //     .switchMap((params: Params) => this.workService.getWorksByCategory(params['slug']))
-        //     .subscribe((works: Work[]) => this.works = works);
-    }
-
     ngOnInit(): void {
         this.getWorks();
     }
 
+    getWorks(): void {
+        this.route.params
+            .switchMap((params: Params) => this.workService.getWorksByCategory(params['slug']))
+            .subscribe((works: Work[]) => this.works = works);
+    }
+
+    onSelect(work: Work): void {
+        this.selectedWork = work;
+    }
+
+    deSelect(): void {
+        this.selectedWork = null;
+    }
 
 }

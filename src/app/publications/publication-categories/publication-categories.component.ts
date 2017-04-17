@@ -3,18 +3,18 @@ import { Router, ActivatedRoute } from '@angular/router';
 import { Component, OnInit } from '@angular/core';
 
 import { Category } from './../../categories/category.model';
-import { WorkService } from './../work.service';
+import { PublicationService } from './../publication.service';
 
 @Component({
-  templateUrl: './work-categories.component.html',
-  styleUrls: ['./work-categories.component.css']
+  templateUrl: './publication-categories.component.html',
+  styleUrls: ['./publication-categories.component.css']
 })
-export class WorkCategoriesComponent implements OnInit {
+export class PublicationCategoriesComponent implements OnInit {
   categories: Category[];
   selectedCategory: Category;
 
   constructor(
-    private workService: WorkService,
+    private publicationService: PublicationService,
     private router: Router,
     private route: ActivatedRoute,
     private location: Location
@@ -25,8 +25,8 @@ export class WorkCategoriesComponent implements OnInit {
   }
 
   getCategories(): void {
-    this.workService
-      .getWorkCategories()
+    this.publicationService
+      .getPublicationCategories()
       .then(categories => this.categories = categories);
   }
   onSelect(category: Category): void {
