@@ -24,7 +24,6 @@ import { CategoryService } from './categories/category.service';
 import { PublicationService } from './publications/publication.service';
 import { StaffService } from './staff/staff.service';
 import { WorkService } from './works/work.service';
-import { ContactComponent } from './contact/contact.component';
 import { ContactFormComponent } from './contact/contact-form/contact-form.component';
 
 @NgModule({
@@ -41,8 +40,6 @@ import { ContactFormComponent } from './contact/contact-form/contact-form.compon
   declarations: [
     AppComponent,
     PageNotFoundComponent,
-    ContactComponent,
-    ContactFormComponent
   ],
   providers: [
     CategoryService,

@@ -1,12 +1,14 @@
 // Core
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { FormsModule } from '@angular/forms';
+import { ReactiveFormsModule } from '@angular/forms';
 
 // Vendor
 // ...
 
 // Components
+import { ContactComponent } from './contact.component';
+import { ContactFormComponent } from './contact-form/contact-form.component';
 
 // Routing
 import { ContactRoutingModule } from './contact-routing.module';
@@ -16,10 +18,12 @@ import { ContactRoutingModule } from './contact-routing.module';
 @NgModule({
   imports: [
     CommonModule,
+    ReactiveFormsModule,
     ContactRoutingModule
   ],
   declarations: [
-    ],
-  providers: [  ]
+    ContactComponent,
+    ContactFormComponent
+    ]
 })
 export class ContactModule { }
