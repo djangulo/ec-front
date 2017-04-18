@@ -7,7 +7,7 @@ body {
     text-decoration: none;
 }
 
-.main-nav {
+.menu {
     width: 200px;
     margin: 0;
     padding: 0;
@@ -18,7 +18,7 @@ body {
     vertical-align: baseline;
 }
 
-.main-nav a {
+.menu-item {
     cursor: pointer;
     color: #ccc;
     font-size: 1.4em;

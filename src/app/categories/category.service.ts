@@ -11,10 +11,10 @@ import { Publication } from './../publications';
 @Injectable()
 export class CategoryService {
     private headers = new Headers({'Content-Type': 'application/json'});
-    private categoriesUrl = 'http://localhost:8000/api/v1/categories'; // currently on localhost:8000, change later to actual domain
-    private worksUrl = 'http://localhost:8000/api/v1/works'; // currently on localhost:8000, change later to actual domain
-    private publicationsUrl = 'http://localhost:8000/api/v1/publications'; // currently on localhost:8000, change later to actual domain
-    private pressUrl = 'http://localhost:8000/api/v1/press'; // currently on localhost:8000, change later to actual domain
+    private categoriesUrl = 'http://ec.djangulo.com/api/v1/categories'; // currently on localhost:8000, change later to actual domain
+    private worksUrl = 'http://ec.djangulo.com/api/v1/works'; // currently on localhost:8000, change later to actual domain
+    private publicationsUrl = 'http://ec.djangulo.com/api/v1/publications'; // currently on localhost:8000, change later to actual domain
+    private pressUrl = 'http://ec.djangulo.com/api/v1/press'; // currently on localhost:8000, change later to actual domain
 
     constructor(private http: Http) { }
 

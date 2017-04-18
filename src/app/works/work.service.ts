@@ -9,8 +9,8 @@ import { Category } from './../categories';
 @Injectable()
 export class WorkService {
     private headers = new Headers({'Content-Type': 'application/json'});
-    private worksUrl = 'http://localhost:8000/api/v1/works/'; // currently on localhost:8000, change later to actual domain
-    private workCategoriesUrl = 'http://localhost:8000/api/v1/works/categories';
+    private worksUrl = 'http://ec.djangulo.com/api/v1/works/'; // currently on localhost:8000, change later to actual domain
+    private workCategoriesUrl = 'http://ec.djangulo.com/api/v1/works/categories';
 
     constructor(private http: Http) { }
 
