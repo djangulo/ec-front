@@ -5,6 +5,7 @@ export class Publication {
     description: string;
     category_id: number;
     category_slug: string;
-    medium: string;
+    medium_id: number;
+    medium_slug: string;
     image: any;
 }

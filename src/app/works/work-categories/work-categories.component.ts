@@ -7,7 +7,9 @@ import { WorkService } from './../work.service';
 
 @Component({
   templateUrl: './work-categories.component.html',
-  styleUrls: ['./work-categories.component.css']
+  styleUrls: [
+    './work-categories.component.css'
+    ]
 })
 export class WorkCategoriesComponent implements OnInit {
   categories: Category[];

@@ -4,7 +4,7 @@ body {
     font-weight: 300;
     font-size: 12px;
     list-style: none;
-    text-decoration: none;
+
 }
 
 .menu {
@@ -20,8 +20,9 @@ body {
 
 .menu-item {
     cursor: pointer;
-    color: #ccc;
+    color: #444;
     font-size: 1.4em;
     display: block;
     margin-bottom: 0.3em;
+    text-decoration: none;
 }

@@ -1,11 +1,16 @@
 <div class="works">
   <div class="work" *ngFor="let work of works" (click)="onSelect(work)">
     <h4>{{work.title}}</h4>
+    <img src="{{work.cover_picture.image}}">
     <p>{{work.description}}</p>
   </div>
 </div>
-<div *ngIf="selectedWork">
-  <span (click)="deSelect()">Close</span>
-  <h4>{{selectedWork.title}}</h4>
-  <p>{{selectedWork.description}}</p>
+<div class="lightbox-outer s-work"*ngIf="selectedWork">
+  <div class="lightbox-inner">
+    <span class="btn btn-close" (click)="deSelect()">Close</span>
+    <h4 class="lightbox-title">{{selectedWork.title}}</h4>
+    <h5 class="lightbox-title">{{stagePicture.title}}</h5>
+    <img class="lightbox-image" src="{{stagePicture.image}}">
+    <p class="lightbox-caption">{{stagePicture.caption}}</p>
+  </div>
 </div>

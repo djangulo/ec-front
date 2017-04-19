@@ -4,17 +4,21 @@ import { Router, ActivatedRoute, Params } from '@angular/router';
 import 'rxjs/add/operator/switchMap';
 
 import { Category, CategoryService } from './../../categories';
-import { Work } from './../';
+import { Work, WorkPicture } from './../work.model';
 import { WorkService } from './../work.service';
 
 @Component({
     templateUrl: './work-list.component.html',
-    styleUrls: ['./work-list.component.css']
+    styleUrls: [
+        './work-list.component.css',
+        './../../../lightbox.css'
+    ]
 })
 export class WorkListComponent implements OnInit {
     @Input() category: Category;
     works: Work[];
     selectedWork: Work;
+    stagePicture: WorkPicture;
 
     constructor(
         private workService: WorkService,
@@ -29,10 +33,12 @@ export class WorkListComponent implements OnInit {
         this.route.params
             .switchMap((params: Params) => this.workService.getWorksByCategory(params['slug']))
             .subscribe((works: Work[]) => this.works = works);
+        
     }
 
     onSelect(work: Work): void {
         this.selectedWork = work;
+        this.stagePicture = this.selectedWork.cover_picture;
     }
 
     deSelect(): void {
