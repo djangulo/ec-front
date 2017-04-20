@@ -8,10 +8,18 @@
     text-align: center;
 }
 
+
 .lightbox-image {
     border: none;
-    margin-top: 10%;
+    margin: 0 10%;
+    width: 100%;
+}
+
+.lightbox-inner {
+    border: none;
+    margin: 0 10% auto;
     width: 60%;
+    height: 50%;
 }
 
 .lightbox-caption {
