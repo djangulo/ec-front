@@ -3,6 +3,7 @@ import { Router, ActivatedRoute, Params } from '@angular/router';
 
 import 'rxjs/add/operator/switchMap';
 
+import { Animations } from './../../animations';
 import { Category, CategoryService } from './../../categories';
 import { Work, WorkPicture } from './../work.model';
 import { WorkService } from './../work.service';
@@ -11,6 +12,9 @@ import { WorkService } from './../work.service';
     templateUrl: './work-list.component.html',
     styleUrls: [
         './work-list.component.css',
+    ],
+    animations: [
+        Animations.flyIn
     ]
 })
 export class WorkListComponent implements OnInit {

@@ -8,6 +8,13 @@
     text-align: center;
 }
 
+.lightbox-inner {
+    border: none;
+    margin: 0 10% auto;
+    width: 60%;
+    height: 50%;
+}
+
 
 .lightbox-image {
     border: none;
@@ -15,12 +22,7 @@
     width: 100%;
 }
 
-.lightbox-inner {
-    border: none;
-    margin: 0 10% auto;
-    width: 60%;
-    height: 50%;
-}
+
 
 .lightbox-caption {
     color: #fff;

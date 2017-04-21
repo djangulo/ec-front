@@ -19,15 +19,15 @@ import { Animations } from './../../animations';
   styleUrls: ['./work-categories.component.css'
     ],
   animations: [
-    Animations.flyInFromBelow,
-    Animations.swapRightSecond
+    Animations.flyIn,
+    Animations.deOpacify
   ]
 })
 export class WorkCategoriesComponent implements OnInit {
   categories: Category[];
   selectedCategory: Category;
   hoveredCategory: Category;
-  @Output() onCategorySelected: EventEmitter<Category> =  new EventEmitter<Category>();
+  hoverState: string = 'off';
   
   constructor(
     private workService: WorkService,
@@ -52,9 +52,13 @@ export class WorkCategoriesComponent implements OnInit {
 
   onHover(category: Category): void {
     this.hoveredCategory = category;
+    this.hoverState = 'on';
   }
   offHover(): void {
     this.hoveredCategory = null;
+    this.hoverState = 'off';
   }
+
+
 
 }

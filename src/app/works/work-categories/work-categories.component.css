@@ -5,10 +5,15 @@
     width: 
 }*/
 
-/*.categories {
-    transform: translateX(-100%)
-}*/
+.category-description {
+    width: 48%;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    float: left;
+}
 
-/*.works {
-
-}*/
+.category-description p {
+    font-size: 1.4em;
+}
