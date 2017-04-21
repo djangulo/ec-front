@@ -6,4 +6,12 @@ export class Category {
     works: any[];
     press_releases: any[];
     publications: any[];
+    
+    constructor(
+        public state = 'inactive'
+    ) { }
+
+    toggleState() {
+        this.state = (this.state === 'active' ? 'inactive' : 'active' )
+    }
 }

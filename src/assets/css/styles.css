@@ -4,6 +4,7 @@ body {
     font-weight: 300;
     font-size: 12px;
     list-style: none;
+    text-decoration: none;
 }
 
 header {
@@ -25,7 +26,7 @@ header a img {
 }
 
 .menu {
-    width: 200px;
+    width: 24%;
     margin: 0;
     padding: 0;
     border: 0;
@@ -33,15 +34,17 @@ header a img {
     font-weight: inherit;
     font-style: inherit;
     vertical-align: baseline;
-    display: inline-block;
+    float: left;
 }
 
 .menu-item {
     cursor: pointer;
+    width: 100%;
     color: #444;
-    font-size: 2.0em;
+    font-size: 1.8em;
     display: block;
     margin: 10% 0;
     text-decoration: none;
+    list-style: inherit;
 }
 

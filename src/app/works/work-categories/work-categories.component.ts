@@ -1,20 +1,34 @@
 import { Location } from '@angular/common';
 import { Router, ActivatedRoute } from '@angular/router';
-import { Component, OnInit, ViewEncapsulation } from '@angular/core';
+import {
+  Component,
+  EventEmitter,
+  OnInit,
+  Output,
+  ViewEncapsulation
+} from '@angular/core';
 
 import { Category } from './../../categories/category.model';
 import { WorkService } from './../work.service';
+import { Animations } from './../../animations';
+
 
 
 @Component({
   templateUrl: './work-categories.component.html',
   styleUrls: ['./work-categories.component.css'
-    ]
+    ],
+  animations: [
+    Animations.flyInFromBelow,
+    Animations.swapRightSecond
+  ]
 })
 export class WorkCategoriesComponent implements OnInit {
   categories: Category[];
   selectedCategory: Category;
-
+  hoveredCategory: Category;
+  @Output() onCategorySelected: EventEmitter<Category> =  new EventEmitter<Category>();
+  
   constructor(
     private workService: WorkService,
     private router: Router,
@@ -34,6 +48,13 @@ export class WorkCategoriesComponent implements OnInit {
   onSelect(category: Category): void {
     this.selectedCategory = category;
     this.router.navigate([category.slug], { relativeTo: this.route })
+  }
+
+  onHover(category: Category): void {
+    this.hoveredCategory = category;
+  }
+  offHover(): void {
+    this.hoveredCategory = null;
   }
 
 }

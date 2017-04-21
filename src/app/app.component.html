@@ -1,9 +1,9 @@
-<nav class="menu nav-menu">
-    <a class="menu-item nav-menu-item" routerLink="works/categories" routerLinkActive="active">works</a>
-    <a class="menu-item nav-menu-item" routerLink="publications/categories" routerLinkActive="active">publications</a>
-    <a class="menu-item nav-menu-item" routerLink="press" routerLinkActive="active">press</a>
-    <a class="menu-item nav-menu-item" routerLink="staff" routerLinkActive="active">staff</a>
-    <a class="menu-item nav-menu-item" routerLink="contact" routerLinkActive="active">contact</a>
-    <a class="menu-item nav-menu-item" routerLink="/" routerLinkActive="active">home</a>
+<nav [@flyInFromBelow]='in' [@swapRightFirst]='state' class="menu nav-menu">
+    <a class="menu-item nav-menu-item" routerLink="works/categories" routerLinkActive="active" (click)="toggleState('active')">works</a>
+    <a class="menu-item nav-menu-item" routerLink="publications/categories" routerLinkActive="active" (click)="toggleState('active')">publications</a>
+    <a class="menu-item nav-menu-item" routerLink="press" routerLinkActive="active" (click)="toggleState('active')">press</a>
+    <a class="menu-item nav-menu-item" routerLink="staff" routerLinkActive="active" (click)="toggleState('active')">staff</a>
+    <a class="menu-item nav-menu-item" routerLink="contact" routerLinkActive="active" (click)="toggleState('active')">contact</a>
+    <a class="menu-item nav-menu-item" routerLink="/" routerLinkActive="active" (click)="toggleState('inactive')">home</a>
 </nav>
 <router-outlet></router-outlet>

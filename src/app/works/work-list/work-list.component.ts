@@ -11,7 +11,6 @@ import { WorkService } from './../work.service';
     templateUrl: './work-list.component.html',
     styleUrls: [
         './work-list.component.css',
-        './../../../assets/css/lightbox.css'
     ]
 })
 export class WorkListComponent implements OnInit {

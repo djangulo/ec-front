@@ -1,8 +1,16 @@
-<div class="categories menu">
-  <ul class *ngFor="let category of categories" (click)="onSelect(category)">
-    <li class="menu-item">{{category.name}}</li>
+<div [@flyInFromBelow]='in' class="categories menu">
+  <ul class="category menu-item"
+  *ngFor="let category of categories"
+  (click)="onSelect(category)"
+  (mouseenter)="onHover(category)"
+  (mouseleave)="offHover()">
+    <li>{{category.name}}</li>
   </ul>
 </div>
+<div class="category-description" *ngIf="hoveredCategory">
+  <p>{{hoveredCategory.description}}</p>
+<div>
+
 
 <div class="works">
   <router-outlet></router-outlet>
