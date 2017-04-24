@@ -1,0 +1,26 @@
+.btn {
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    border-radius: 10px
+}
+
+.btn-close {
+    height: 30px;
+    width: 30px;
+    top: 10px;
+    right: 10px;
+}
+
+.close-icon {
+    background: #eee;
+    height: 90%;
+    width: 90%;
+    transform: rotate(45deg);
+}
+.close-icon:after {
+    background: #eee;
+    content: "";
+    height: inherit;
+    width: inherit;
+    transform: rotate(-45deg);
+} 

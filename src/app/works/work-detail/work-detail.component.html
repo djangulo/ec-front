@@ -1,0 +1,15 @@
+<div class="lightbox-outer s-work" *ngIf="workid">
+  <div class="lightbox-inner">
+    <button (click)="nextItem()">Next</button>
+    <button (click)="prevItem()">Previous</button>
+    <button (click)="nextPic()">Next Image</button>
+    <button (click)="prevPic()">Previous Image</button>
+
+    <span class="btn btn-close" (click)="close()">Close</span>
+    <h4 class="lightbox-title">{{work?.title}}</h4>
+    <div id="counter-container" class="counter-container"></div>
+    <h5 class="lightbox-title">{{stageCenter?.title}}</h5>
+    <img class="lightbox-image" src="{{stageCenter?.image}}">
+    <p class="lightbox-caption">{{stageCenter?.caption}}</p>
+  </div>
+</div>

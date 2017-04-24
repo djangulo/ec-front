@@ -1,1 +1,3 @@
-:host /deep/ {}
+:host /deep/ {
+    width: 100%;
+}

@@ -1,34 +1,106 @@
+figure {
+    margin: 0;
+    line-height: 0;
+    position: relative;
+}
+
 .lightbox-outer {
     background: rgba(0, 0, 0, .7);
     width: 100%;
     height: 100%;
+    margin: 0 auto;
     position: absolute;
     top: 0;
     left: 0;
-    text-align: center;
+    text-align: left;
 }
 
 .lightbox-inner {
-    border: none;
-    margin: 0 10% auto;
-    width: 60%;
-    height: 50%;
+    /*position: relative;*/
+    margin: 5% auto;
+    width: 80%;
+    height: 80%;
+    max-width: 760px;
+    background-color: #282625;
 }
 
+.lightbox-title {
+    color: #eee;
+}
 
 .lightbox-image {
+    position: relative;
+    display: inline-block;
+    text-align: center;
+    padding: 0;
+    height: 80%;
     border: none;
-    margin: 0 10%;
+    margin: 0 auto;
+    width: 95%;
+}
+
+.lightbox-caption {
+    background: rgba(0,0,0,.5);
+    color: #eee;
+    position: absolute;
+    bottom: 0;
     width: 100%;
 }
 
-
-
-.lightbox-caption {
-    color: #fff;
+.lightbox-counter {
+    width: 50px;
+    height: 50px;
+    -webkit-border-radius: 25px;
+    -moz-border-radius: 25px;
+    border-radius: 25px;
+    background: red;
 }
 
 .btn-close {
-    color: #fff;
+    color: #eee;
     background-color: #000;
+}
+
+.scroll-button {
+    display: inline-block;
+    height: 80%;
+    width: 2.5%;
+    margin: 0;
+    padding: 0;
+    background: #777;
+    line-height: center;
+}
+
+.prevPic {
+    float: left;
+}
+
+.nextPic {
+    float: right;
+}
+
+.arrow {
+    margin: auto;
+    vertical-align: center;
+}
+
+.arrow::before {
+    color: #eee;
+	border-style: solid;
+	border-width: 0.25em 0.25em 0 0;
+	content: '';
+	display: block;
+	height: 0.45em;
+	transform: rotate(-45deg);
+	width: 0.45em;
+}
+
+.arrow.nextPic:before {
+	left: 0;
+	transform: rotate(45deg);
+}
+
+.arrow.prevPic:before {
+	left: 0.25em;
+	transform: rotate(-135deg);
 }

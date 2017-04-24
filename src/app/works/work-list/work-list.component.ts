@@ -18,15 +18,22 @@ import { WorkService } from './../work.service';
     ]
 })
 export class WorkListComponent implements OnInit {
-    @Input() category: Category;
-    works: Work[];
-    selectedWork: Work;
-    stagePicture: WorkPicture;
+  works: Work[];
+  selectedWork: Work;
+  pictures: WorkPicture[]
+  stageCenter: WorkPicture;
+  stageLeft: WorkPicture;
+  stageRight: WorkPicture;
+  i: number;
+  c: number;
+  l: number;
+  r: number;
 
-    constructor(
-        private workService: WorkService,
-        private route: ActivatedRoute,
-        private router: Router){ }
+  constructor(
+    private workService: WorkService,
+    private route: ActivatedRoute,
+    private router: Router
+    ){ }
 
     ngOnInit(): void {
         this.getWorks();
@@ -36,16 +43,151 @@ export class WorkListComponent implements OnInit {
         this.route.params
             .switchMap((params: Params) => this.workService.getWorksByCategory(params['slug']))
             .subscribe((works: Work[]) => this.works = works);
-        
     }
 
     onSelect(work: Work): void {
         this.selectedWork = work;
-        this.stagePicture = this.selectedWork.cover_picture;
+        this.setInitialStage();
     }
 
     deSelect(): void {
         this.selectedWork = null;
     }
+
+  setInitialStage() {
+    this.pictures = [];
+    this.pictures  = this.pictures.concat(
+      this.selectedWork.cover,
+      this.selectedWork.pictures
+    );
+    this.i = this.pictures.length;
+    switch(this.i){
+      case 0: {
+        return null;
+      }
+      case 1: {
+        this.c = 0;
+        this.l = 0;
+        this.r = 0;
+        break;
+      }
+      case 2: {
+        this.c = 0;
+        this.r = 1;
+        this.l = 1;
+        break;
+      }
+      default: {
+        this.c = 0;
+        this.r = 1;
+        this.l = this.i - 1;
+      }
+    }
+    this.stageCenter = this.pictures[this.c];
+    this.stageRight = this.pictures[this.r];
+    this.stageLeft = this.pictures[this.l];
+}
+
+// on lcick left, select left image
+// rotate 3  stages to match new center
+//on click right, select right image
+//deal with less than 3 image cases
+//  single image case
+//  two image case
+
+  prevPic() {
+    switch(this.i){
+      case 0: {
+        return null;
+      }
+      case 1: {
+        this.c = 0;
+        this.l = 0;
+        this.r = 0;
+        break;
+      }
+      case 2: {
+        if(this.c === 0){
+          this.c = 1;
+        } else {
+          this.c = 0;
+        }
+        if(this.c === 0){
+          this.r = 1;
+          this.l = 1;
+        } else {
+          this.r = 0;
+          this.l = 0;
+        }
+        break;
+      }
+      default: {
+        if(this.c === 1){
+          this.c = this.c - 1;
+          this.r = this.c + 1;
+          this.l = this.i - 1;
+        } else if(this.c === 0){
+          this.c = this.i - 1;
+          this.r = 0;
+          this.l = this.i - 2;
+        } else {
+          this.c = this.c - 1;
+          this.r = this.c + 1;
+          this.l = this.c - 1
+        }
+      }
+      break;
+    }
+    this.stageCenter = this.pictures[this.c];
+    this.stageRight = this.pictures[this.r];
+    this.stageLeft = this.pictures[this.l];
+  }
+  nextPic() {
+    switch(this.i){
+      case 0: {
+        return null;
+      }
+      case 1: {
+        this.c = 0;
+        this.l = 0;
+        this.r = 0;
+        break;
+      }
+      case 2: {
+        if(this.c === (this.i - 1)){
+          this.c = 0;
+        } else {
+          this.c = 1;
+        }
+        if(this.c === 0){
+          this.r = 1;
+          this.l = 1;
+        } else {
+          this.r = 0;
+          this.l = 0;
+        }
+        break;
+      }
+      default: {
+        if(this.c === (this.i - 2)){
+          this.c = this.c + 1;
+          this.r = 0;
+          this.l = this.c - 1;
+        } else if(this.c === (this.i - 1)){
+          this.c = 0;
+          this.r = 1;
+          this.l = this.i - 1;
+        } else {
+          this.c = this.c + 1;
+          this.r = this.c + 1;
+          this.l = this.c - 1
+        }
+        break;
+      }
+    }
+    this.stageCenter = this.pictures[this.c];
+    this.stageRight = this.pictures[this.r];
+    this.stageLeft = this.pictures[this.l];
+  }
 
 }

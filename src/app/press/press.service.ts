@@ -8,7 +8,7 @@ import { PressRelease } from './';
 @Injectable()
 export class PressReleaseService {
     private headers = new Headers({'Content-Type': 'application/json'});
-    private pressReleasesUrl = 'http://localhost:8000/api/v1/press-releases/'; // currently on localhost:8000, change later to actual domain
+    private pressReleasesUrl = 'https://localhost:8000/api/v1/press-releases/'; // currently on localhost:8000, change later to actual domain
 
     constructor(private http: Http) { }
 

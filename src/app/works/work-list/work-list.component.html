@@ -1,18 +1,29 @@
 <div class="works">
   <div class="work" *ngFor="let work of works" (click)="onSelect(work)">
-    <img src="{{work.cover_picture.image}}">
+    <img src="{{work.cover.image}}">
     <p><strong>Project: </strong>{{work.title}}</p>
     <p><strong>Program: </strong>{{work.program}}</p>
     <p><strong>Status: </strong>{{work.status}}</p>
     <p><strong>Team: </strong>{{work.team}}</p>
   </div>
 </div>
-<div class="lightbox-outer s-work"*ngIf="selectedWork">
-  <div class="lightbox-inner">
-    <span class="btn btn-close" (click)="deSelect()">Close</span>
+<div class="lightbox-outer s-work" *ngIf="selectedWork">
+  <div class="lightbox-inner" (keyup.escape)="deSelect()">
+    <!--<button (click)="nextItem()">Next</button>-->
+    <!--<button (click)="prevItem()">Previous</button>-->
+    <div class="btn btn-close">
+      <span class="close-icon" (click)="deSelect()"></span>
+    </div>
     <h4 class="lightbox-title">{{selectedWork.title}}</h4>
-    <h5 class="lightbox-title">{{stagePicture.title}}</h5>
-    <img class="lightbox-image" src="{{stagePicture.image}}">
-    <p class="lightbox-caption">{{stagePicture.caption}}</p>
+    <figure>
+      <div class="scroll-button prevPic" (click)="prevPic()">
+        <span class="arrow prevPic"></span>
+      </div>
+      <img class="lightbox-image" src="{{stageCenter.image}}">
+      <div class="scroll-button nextPic" (click)="nextPic()">
+        <span class="arrow nextPic"></span>
+      </div>
+    <figcaption class="lightbox-caption">{{stageCenter.caption}}</figcaption>
+    </figure>
   </div>
 </div>

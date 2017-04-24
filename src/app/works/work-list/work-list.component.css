@@ -1,24 +1,26 @@
 @import url('../../../assets/css/lightbox.css');
+@import url('../../../assets/css/buttons.css');
 
 .works {
     width: 48%;
+    max-height: 80vh;
     margin: 0;
     padding: 0;
     border: 0;
     outline: 0;
-    float: left;
+    float: right;
+    overflow-y: auto;
 }
 
 .work {
-    width: 80%;
-    margin: 0 auto;
+    width: 90%;
+    margin: 2% auto;
+    padding: 0 2%;
+    float: none;
+    clear: both;
 }
 
 p {
     margin: 2px 0;
 }
 
-img {
-    width: 100%;
-    margin: 0 auto;
-}

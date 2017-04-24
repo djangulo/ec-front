@@ -3,21 +3,21 @@ import { Headers, Http } from '@angular/http';
 
 import 'rxjs/add/operator/toPromise';
 
-import { Work } from './';
+import { Work, WorkShort } from './work.model';
 import { Category } from './../categories';
 
 @Injectable()
 export class WorkService {
     private headers = new Headers({'Content-Type': 'application/json'});
-    private worksUrl = 'http://ec.djangulo.com/api/v1/works/'; // currently on localhost:8000, change later to actual domain
-    private workCategoriesUrl = 'http://ec.djangulo.com/api/v1/works/categories';
+    private worksUrl = 'https://ec.djangulo.com/api/v1/works/'; // currently on localhost:8000, change later to actual domain
+    private workCategoriesUrl = 'https://ec.djangulo.com/api/v1/works/categories';
 
     constructor(private http: Http) { }
 
-    getWorks(): Promise<Work[]> {
+    getWorks(): Promise<WorkShort[]> {
         return this.http.get(this.worksUrl)
             .toPromise()
-            .then(response => response.json().results as Work[])
+            .then(response => response.json().results as WorkShort[])
             .catch(this.handleError);
     }
 

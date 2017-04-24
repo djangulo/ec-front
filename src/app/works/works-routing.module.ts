@@ -6,6 +6,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { WorkCategoriesComponent } from './work-categories/work-categories.component';
 import { WorkListComponent } from './work-list/work-list.component';
 
+
 const workRoutes: Routes = [{
   path: 'works/categories',
   component: WorkCategoriesComponent,

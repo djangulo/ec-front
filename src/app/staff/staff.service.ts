@@ -10,7 +10,7 @@ import { Staff } from './';
 @Injectable()
 export class StaffService {
     private headers = new Headers({'Content-Type': 'application/json'});
-    private staffUrl = 'http://ec.djangulo.com/api/v1/staff/'; // currently on localhost:8000, change later to actual domain
+    private staffUrl = 'https://ec.djangulo.com/api/v1/staff/'; // currently on localhost:8000, change later to actual domain
 
     constructor(private http: Http) { }
 

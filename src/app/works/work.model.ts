@@ -4,7 +4,17 @@ export class WorkPicture {
     image: string;
     caption: string;
     work: string;
-    is_cover: boolean;
+}
+
+export class WorkShort {
+    id: number;
+    title: string;
+    category: string;
+    cover: {image: string};
+    team: string;
+    status: string;
+    program: string;
+    published_date: string;
 }
 
 export class Work {
@@ -16,10 +26,26 @@ export class Work {
     category_slug: string;
     document: string;
     pictures: WorkPicture[];
-    cover_picture: WorkPicture;
+    cover: WorkPicture;
     team: string;
     status: string;
     program: string;
     created_date: string;
     published_date: string;
 }
+
+
+export class Pics{
+    pictures: WorkPicture[];
+    stage: {
+      stageCenter: WorkPicture,
+      stageLeft: WorkPicture,
+      stageRight: WorkPicture
+    };
+    len: {
+      i: number,
+      c: number,
+      l: number,
+      r: number
+    }
+};
