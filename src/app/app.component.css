@@ -1,1 +1,41 @@
 @import url("../assets/css/buttons.css");
+
+.background {
+    position: fixed;
+    border: 1px solid red;
+    top: 15%;
+    left: 7.5%;
+    height: 75vh;
+    width: 85vw;
+    z-index: -99;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.background-image {
+    transform: scale(1.4);
+    z-index: -100;
+    -o-animation: bg-move 15s ease-out;
+    -moz-animation: bg-move 15s ease-out;
+    -webkit-animation: bg-move 15s ease-out;
+    animation: bg-move 15s ease-out;
+    transform-origin: 60vh 60vw;
+}
+
+.router {
+    z-index: 1000;
+}
+@-webkit-keyframes bg-move {
+	0%   { background-position:  0 0; }
+	100% { background-position: -10% -10%; transform: scale(1.6); }
+}
+
+@-moz-keyframes bg-move {
+	0%   { background-position:  0 0; }
+	100% { background-position: -10% -10%; transform: scale(1.6); }
+}
+
+@keyframes bg-move {
+	0%   { background-position:  0 0; }
+	100% { background-position: -10% -10%; transform: scale(1.6); }
+}

@@ -17,7 +17,10 @@ export const Animations = {
         })),
         transition('off => on', animate('600ms ease-in')),
         transition('on => off', animate('600ms ease-out'))
-    ]), 
+    ]),
+    // slideRight: trigger('slideRight',[
+    //     state("static", )
+    // ])
     // swapRightFirst: trigger('swapRightFirst', [
     //     state('inactive', style({
     //         transform: 'translateX(0)'

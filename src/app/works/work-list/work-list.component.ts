@@ -190,4 +190,22 @@ export class WorkListComponent implements OnInit {
     this.stageLeft = this.pictures[this.l];
   }
 
+  scroll(event: KeyboardEvent) {
+    event.preventDefault();
+    if (event.keyCode === 37) {
+      this.prevPic();
+    } else if (event.keyCode === 39){
+      this.nextPic();
+    } else return;
+  }
+
+  escape(event: KeyboardEvent) {
+    event.preventDefault();
+    if (event.keyCode === 27) {
+      this.deSelect();
+    } else return;
+  }
+
+
+
 }
