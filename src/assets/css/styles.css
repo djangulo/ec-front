@@ -44,7 +44,7 @@ header a img {
     font-style: inherit;
     vertical-align: baseline;
     float: left;
-    background: rgba(255,255,255,0.2);
+    background: rgba(255,255,255,0.7);
 }
 
 .menu-item {
@@ -56,4 +56,8 @@ header a img {
     margin: 10% 0;
     text-decoration: none;
     list-style: inherit;
+}
+
+.active {
+    color: #6d456d;
 }

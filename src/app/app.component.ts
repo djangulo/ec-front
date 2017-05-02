@@ -20,7 +20,7 @@ export class AppComponent {
     private router: Router
   ) { }
   
-  select(sel): void {
+  sel(sel): void {
     this.selection = sel;
   }
   deSelect(): void {

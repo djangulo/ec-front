@@ -4,14 +4,10 @@ import { RouterModule, Routes } from '@angular/router';
 import { AppComponent } from './app.component';
 import { ContactComponent } from './contact/contact.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+import { HomeComponent } from './home/home.component';
 
 const routes: Routes = [
-  // { path: 'contact',  component: ContactComponent },
-  // { path: 'publications/', component: PublicationListComponent },
-  // { path: 'publications/:id', component: PublicationDetailComponent },
-  // { path: 'press', component: PressReleaseListComponent },
-  // { path: 'press/:id' component: PressReleaseDetailComponent },
-  // { path: '', redirectTo: '', pathMatch: 'full'},
+  { path: '', component: HomeComponent },
   { path: '**', component: PageNotFoundComponent }
 ];
 

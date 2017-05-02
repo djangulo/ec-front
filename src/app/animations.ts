@@ -18,6 +18,9 @@ export const Animations = {
         transition('off => on', animate('600ms ease-in')),
         transition('on => off', animate('600ms ease-out'))
     ]),
+    // fadeToBlack: trigger('fade', [
+    //     state()
+    // ])
     // slideRight: trigger('slideRight',[
     //     state("static", )
     // ])

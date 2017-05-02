@@ -1,10 +1,14 @@
-@import url("../assets/css/buttons.css");
+@import url("../../assets/css/buttons.css");
+
+:host {
+    width: 100%;
+}
 
 .background {
     position: fixed;
-    top: 15%;
+    top: 150px;
     left: 0;
-    height: 75vh;
+    height: 90vh;
     width: 100vw;
     z-index: -99;
     margin: 0 auto;
@@ -12,18 +16,16 @@
 }
 
 .background-image {
-    /*transform: scale(1.4);*/
-    z-index: -100;
-    -o-animation: bg-move 15s ease-out;
-    -moz-animation: bg-move 15s ease-out;
-    -webkit-animation: bg-move 15s ease-in;
-    animation: bg-move 30s ease-out;
-    transform-origin: 800px 800px;
+    z-index: 100;
+    -o-animation: bg-move 30s linear;
+    -moz-animation: bg-move 30s linear;
+    -webkit-animation: bg-move 30s linear;
+    animation: bg-move 30s linear;
+    transform-origin: 1000px 1200px;
+    background-size: cover;
+    height: 150%;
 }
 
-/*.router {
-    z-index: -1;
-}*/
 @-webkit-keyframes bg-move {
 	0%   { background-position:  0 0; }
 	100% { background-position: -5% -5%; transform: scale(1.2); }
