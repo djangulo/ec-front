@@ -1,4 +1,4 @@
-import { Component, OnInit, ViewChild, ElementRef } from '@angular/core';
+import { Component, OnInit, OnDestroy, ViewChild, ElementRef } from '@angular/core';
 import { DomSanitizer } from '@angular/platform-browser';
 
 import { HomeImage } from './home-image.model';
@@ -14,7 +14,7 @@ import { Animations } from './../animations';
     Animations.fade
   ]
 })
-export class HomeComponent implements OnInit {
+export class HomeComponent implements OnInit, OnDestroy {
   images: HomeImage[];
   currentImage: HomeImage;
   index: number;
@@ -30,6 +30,11 @@ export class HomeComponent implements OnInit {
   ngOnInit() {
     this.fadeState = 'invisible';
     this.getHomeImages();
+  }
+  ngOnDestroy() {
+    //Called once, before the instance is destroyed.
+    //Add 'implements OnDestroy' to the class.
+    this.fadeState = 'invisible';
   }
 
   getHomeImages(): void {

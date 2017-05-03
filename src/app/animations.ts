@@ -61,7 +61,6 @@ export const Animations = {
     fade: trigger('fade', [
         state('visible', style({ opacity: 1 })),
         state('invisible', style({ opacity: 0 })),
-        transition('invisible => visible', animate('1000ms ease-in')),
-        transition('visible => invisible', animate('1000ms ease-in'))
+        transition('invisible <=> visible', animate('1000ms ease-in')),
     ]),
 }
