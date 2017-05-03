@@ -12,21 +12,22 @@ import { Category } from './../../categories/category.model';
 import { WorkService } from './../work.service';
 import { Animations } from './../../animations';
 
-
-
 @Component({
   templateUrl: './work-categories.component.html',
   styleUrls: ['./work-categories.component.css'
     ],
   animations: [
-    Animations.flyIn,
-    Animations.deOpacify
+    Animations.deOpacify,
+    Animations.flySecondIn,
+    Animations.flySecondRight,
+    Animations.flyThirdIn
   ]
 })
 export class WorkCategoriesComponent implements OnInit {
   categories: Category[];
   selectedCategory: Category;
   hoveredCategory: Category;
+  selectionState: string;
   hoverState: string = 'off';
   
   constructor(
@@ -37,7 +38,9 @@ export class WorkCategoriesComponent implements OnInit {
   ) { }
 
   ngOnInit() {
+    this.determineSelectionState();
     this.getCategories();
+    console.log(JSON.stringify(this.router.url).split('/')[3] === undefined)
   }
 
   getCategories(): void {
@@ -48,6 +51,15 @@ export class WorkCategoriesComponent implements OnInit {
   onSelect(category: Category): void {
     this.selectedCategory = category;
     this.router.navigate([category.slug], { relativeTo: this.route })
+    this.selectionState = 'selection';
+  }
+
+  determineSelectionState(){
+    if(JSON.stringify(this.router.url).split('/')[3] === undefined){
+      this.selectionState = 'noSelection';
+    }else{
+      this.selectionState = 'selection';
+    }
   }
 
   onHover(category: Category): void {
@@ -55,7 +67,7 @@ export class WorkCategoriesComponent implements OnInit {
     this.hoverState = 'on';
   }
   offHover(): void {
-    this.hoveredCategory = null;
+
     this.hoverState = 'off';
   }
 

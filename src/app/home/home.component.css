@@ -21,22 +21,26 @@
     -moz-animation: bg-move 30s linear;
     -webkit-animation: bg-move 30s linear;
     animation: bg-move 30s linear;
+    animation-fill-mode: forwards;
+    background-color: #eee;
     transform-origin: 1000px 1200px;
     background-size: cover;
-    height: 150%;
+    background-repeat: no-repeat;
+    height: 140%;
+
 }
 
 @-webkit-keyframes bg-move {
 	0%   { background-position:  0 0; }
-	100% { background-position: -5% -5%; transform: scale(1.2); }
+	100% { background-position: -50px -50px; transform: scale(1.1); }
 }
 
 @-moz-keyframes bg-move {
 	0%   { background-position:  0 0; }
-	100% { background-position: -5% -5%; transform: scale(1.2); }
+	100% { background-position: -50px -50px; transform: scale(1.1); }
 }
 
 @keyframes bg-move {
 	0%   { background-position:  0 0; }
-	100% { background-position: -5% -5%; transform: scale(1.2); }
+	100% { background-position: -50px -50px; transform: scale(1.1); }
 }

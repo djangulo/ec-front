@@ -1,4 +1,4 @@
-<div class="works">
+<div class="works"  [@flyThirdIn]="in">
   <div class="work" *ngFor="let work of works" (click)="onSelect(work)">
     <img src="{{work.cover.image}}">
     <p><strong>Project: </strong>{{work.title}}</p>
@@ -18,17 +18,19 @@
     <button class="btn-scroll prev-pic" (click)="prevPic()" (keydown)="scroll($event)">
       <span class="chevron left-chevron"></span>
     </button>
-    <div class="slide stage-left">
-      <img class="lightbox-image" src="{{stageLeft.image}}">
-      <div class="lightbox-caption">{{stageLeft.caption}}</div>
-    </div>
-    <div class="slide stage-center">
-      <img class="lightbox-image" src="{{stageCenter.image}}">
-      <div class="lightbox-caption">{{stageCenter.caption}}</div>
-    </div>
-    <div class="slide stage-right">
-      <img class="lightbox-image" src="{{stageRight.image}}">
-      <div class="lightbox-caption">{{stageRight.caption}}</div>
+    <div class="stage">
+      <div class="slide stage-left">
+        <img class="lightbox-image" src="{{stageLeft.image}}">
+        <div class="lightbox-caption">{{stageLeft.caption}}</div>
+      </div>
+      <div class="slide stage-center">
+        <img class="lightbox-image" src="{{stageCenter.image}}">
+        <div class="lightbox-caption">{{stageCenter.caption}}</div>
+      </div>
+      <div class="slide stage-right">
+        <img class="lightbox-image" src="{{stageRight.image}}">
+        <div class="lightbox-caption">{{stageRight.caption}}</div>
+      </div>
     </div>
     <button class="btn-scroll next-pic" (click)="nextPic()" (keydown)="scroll($event)">
       <span class="chevron right-chevron"></span>

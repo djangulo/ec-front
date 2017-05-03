@@ -20,12 +20,12 @@
 .lightbox-inner {
     position: relative;
     margin: 5% auto;
-    width: 85%;
-    height: 90%;
+    width: 75%;
+    height: 75%;
     padding: 0;
     max-width: 990px;
     background-color: #282625;
-    overflow-x: hidden;
+    overflow: hidden;
 }
 
 .lightbox-title {
@@ -118,6 +118,12 @@
 	transform: rotate(-135deg);
 }
 
+.stage {
+    overflow: hidden;
+    width: 80%;
+    height: 80%;
+    margin: 0 auto;
+}
 
 .stage-center {
     transform: translateX(0);

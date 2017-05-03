@@ -12,7 +12,7 @@
     border: 0;
     outline: 0;
     float: left;
-
+    transform: translate3d(-50%, 0, 0);
 }
 
 .category-description p {

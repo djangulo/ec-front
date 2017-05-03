@@ -1,4 +1,4 @@
-<div [@flyIn]="in" class="categories menu">
+<div [@flySecondIn]="selectionState" [@flySecondRight]="selectionState" class="categories menu">
   <ul class="category menu-item"
   *ngFor="let category of categories"
   (click)="onSelect(category)"
@@ -8,11 +8,9 @@
   </ul>
 </div>
 
-<div [@deOpacify]="hoverState" class="category-description" *ngIf="hoveredCategory && !selectedCategory">
-  <p>{{hoveredCategory.description}}</p>
+<div [@deOpacify]="hoverState" class="category-description">
+  <p *ngIf="hoveredCategory && !selectedCategory">{{hoveredCategory.description}}</p>
 </div>
 
 
-<div class="works">
-  <router-outlet  [@flyIn]="in"></router-outlet>
-</div>
+<router-outlet></router-outlet>

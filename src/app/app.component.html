@@ -1,12 +1,42 @@
-<nav [@flyIn]='in' class="menu nav-menu">
-    <a class="menu-item nav-menu-item" routerLink="works/categories" routerLinkActive="active">works</a>
-    <a class="menu-item nav-menu-item" routerLink="publications/categories" routerLinkActive="active">publications</a>
-    <a class="menu-item nav-menu-item" routerLink="press" routerLinkActive="active">press</a>
-    <a class="menu-item nav-menu-item" routerLink="staff" routerLinkActive="active">staff</a>
-    <a class="menu-item nav-menu-item" routerLink="contact" routerLinkActive="active">contact</a>
-    <a class="menu-item nav-menu-item" routerLink="/">home</a>
+<nav 
+[@flyNavIn]="homeState" [@flyNavRight]="homeState" class="menu nav-menu">
+
+    <a class="menu-item nav-menu-item"
+    routerLink="works/categories"
+    routerLinkActive="active"
+    (click)="changeState('other')">works</a>
+    
+    <a 
+    class="menu-item nav-menu-item" 
+    routerLink="publications/categories" 
+    routerLinkActive="active"
+    (click)="changeState('other')">publications</a>
+
+    <a 
+    class="menu-item nav-menu-item" 
+    routerLink="press" 
+    routerLinkActive="active"
+    (click)="changeState('other')">press</a>
+
+    <a 
+    class="menu-item nav-menu-item" 
+    routerLink="staff" 
+    routerLinkActive="active"
+    (click)="changeState('other')">staff</a>
+
+    <a 
+    class="menu-item nav-menu-item" 
+    routerLink="contact" 
+    routerLinkActive="active"
+    (click)="changeState('other')">contact</a>
+
+    <a 
+    class="menu-item nav-menu-item" 
+    routerLink="/"
+    (click)="changeState('home')">home</a>
+
 </nav>
 
-<router-outlet class="router"></router-outlet>
+<router-outlet [@flySecondIn]="in" class="router"></router-outlet>
 
 

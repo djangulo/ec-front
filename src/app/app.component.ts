@@ -1,5 +1,6 @@
-import { ActivatedRoute, Router } from '@angular/router';
 import { Animations } from './animations';
+import { Location } from '@angular/common';
+import { ActivatedRoute, Router } from '@angular/router';
 import { Category } from './categories/category.model';
 import { Component, OnInit } from '@angular/core';
 
@@ -9,21 +10,31 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css'],
   animations: [
-    Animations.flyIn
+    Animations.flyNavIn,
+    Animations.flyNavRight,
+    Animations.flySecondIn
   ]
 })
-export class AppComponent {
-  selection: string;
+export class AppComponent implements OnInit {
+  homeState: string;
+  
 
   constructor(
     private route: ActivatedRoute,
-    private router: Router
+    private router: Router,
+    private location: Location
   ) { }
-  
-  sel(sel): void {
-    this.selection = sel;
+
+  ngOnInit(){
+    if(this.location.isCurrentPathEqualTo('/')){
+      this.homeState = 'home';
+    }else{
+      this.homeState = 'other';
+    }
   }
-  deSelect(): void {
-    this.selection = null;
+
+  changeState(arg){
+    this.homeState = arg;
   }
+
 }

@@ -14,7 +14,7 @@ import { WorkService } from './../work.service';
         './work-list.component.css',
     ],
     animations: [
-        Animations.flyIn
+      Animations.flyThirdIn
     ]
 })
 export class WorkListComponent implements OnInit {
