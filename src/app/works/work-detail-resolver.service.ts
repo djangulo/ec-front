@@ -6,9 +6,16 @@ import { Work, WorkPicture } from './work.model';
 import { WorkService } from './work.service';
 
 @Injectable()
-export class WorkDetailResolverService implements Resolve<Work> {
-    constructor(private ws: WorkService, private router: Router) {}
-    resolve(route: ActivatedRouteSnapshot, state: RouterStateSnapshot): Promise<Work> {
+export class WorkDetailResolver implements Resolve<Work> {
+    constructor(
+        private ws: WorkService,
+        private router: Router
+    ) { }
+
+    resolve(
+        route: ActivatedRouteSnapshot,
+        state: RouterStateSnapshot
+    ): Promise<Work> {
     let id = route.params['id'];
     return this.ws.getWork(id).then(work => {
         if (work) {

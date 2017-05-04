@@ -36,11 +36,11 @@ export class WorkService {
             .catch(this.handleError);
     }
 
-    getWorksByCategory(slug: string): Promise<Work[]> {
+    getWorksByCategory(slug: string): Promise<WorkShort[]> {
         const url = `${this.workCategoriesUrl}/${slug}`;
         return this.http.get(url)
             .toPromise()
-            .then(response => response.json().results as Work[])
+            .then(response => response.json().results as WorkShort[])
             .catch(this.handleError);
     }
 

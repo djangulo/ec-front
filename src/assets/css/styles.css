@@ -47,7 +47,8 @@ header a img {
 }
 
 .home-menu {
-        background: rgba(255,255,255,0.7);
+    background: rgba(255,255,255,0.7);
+    padding-left: 12px;
 }
 
 .menu-item {

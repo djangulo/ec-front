@@ -1,32 +1,35 @@
 <nav 
-[@flyNavIn]="homeState" [@flyNavRight]="homeState" class="menu nav-menu">
+[@flyNavIn]="homeState" 
+[@flyNavRight]="homeState" 
+class="menu nav-menu" 
+[ngClass]="{'home-menu': homeState === 'home'}">
 
     <a class="menu-item nav-menu-item"
-    routerLink="works/categories"
+    routerLink="/works"
     routerLinkActive="active"
     (click)="changeState('other')">works</a>
     
     <a 
     class="menu-item nav-menu-item" 
-    routerLink="publications/categories" 
+    routerLink="/publications" 
     routerLinkActive="active"
     (click)="changeState('other')">publications</a>
 
     <a 
     class="menu-item nav-menu-item" 
-    routerLink="press" 
+    routerLink="/press" 
     routerLinkActive="active"
     (click)="changeState('other')">press</a>
 
     <a 
     class="menu-item nav-menu-item" 
-    routerLink="staff" 
+    routerLink="/staff" 
     routerLinkActive="active"
     (click)="changeState('other')">staff</a>
 
     <a 
     class="menu-item nav-menu-item" 
-    routerLink="contact" 
+    routerLink="/contact" 
     routerLinkActive="active"
     (click)="changeState('other')">contact</a>
 
@@ -37,6 +40,6 @@
 
 </nav>
 
-<router-outlet [@flySecondIn]="in" class="router"></router-outlet>
+<router-outlet class="app"></router-outlet>
 
 

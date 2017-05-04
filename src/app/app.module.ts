@@ -9,6 +9,7 @@ import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 
+// Directives
 
 // Modules
 import { ContactModule } from './contact';
@@ -43,7 +44,7 @@ import { HomeComponent } from './home/home.component';
   declarations: [
     AppComponent,
     PageNotFoundComponent,
-    HomeComponent,
+    HomeComponent
   ],
   providers: [
     CategoryService,
