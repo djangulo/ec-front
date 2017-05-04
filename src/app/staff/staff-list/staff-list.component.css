@@ -2,12 +2,13 @@
     margin: 0;
     padding: 0;
     width: 60%;
-    overflow-y: scroll;
+    overflow-y: auto;
 }
 
 .staff li {
     float: left;
     width: 25.3333333333%;
+    height: 90%;
     margin: 3% 4%;
     padding: 0;
     background-color: #eee;
@@ -21,7 +22,7 @@
 
 .staff li p {
     width: 100%;
-    padding: 5%;
+    padding: 5% 1%;
     margin: 0;
     font-size: 1.2em;
 }
@@ -40,3 +41,4 @@
     padding: 2%;
     margin: 0;
 }
+

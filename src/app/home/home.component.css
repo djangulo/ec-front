@@ -17,10 +17,10 @@
 
 .background-image {
     z-index: 100;
-    -o-animation: bg-move 30s linear;
+    /*-o-animation: bg-move 30s linear;
     -moz-animation: bg-move 30s linear;
     -webkit-animation: bg-move 30s linear;
-    animation: bg-move 30s linear;
+    animation: bg-move 30s linear;*/
     animation-fill-mode: forwards;
     background-color: #eee;
     transform-origin: 1000px 1200px;
@@ -30,7 +30,7 @@
 
 }
 
-@-webkit-keyframes bg-move {
+/*@-webkit-keyframes bg-move {
 	0%   { background-position:  0 0; }
 	100% { background-position: -50px -50px; transform: scale(1.1); }
 }
@@ -43,4 +43,4 @@
 @keyframes bg-move {
 	0%   { background-position:  0 0; }
 	100% { background-position: -50px -50px; transform: scale(1.1); }
-}
+}*/

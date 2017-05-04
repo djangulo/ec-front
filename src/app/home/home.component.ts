@@ -11,7 +11,8 @@ import { Animations } from './../animations';
   styleUrls: ['./home.component.css'],
   providers: [ HomeImageService ],
   animations: [
-    Animations.fade
+    Animations.fade,
+    Animations.parallax
   ]
 })
 export class HomeComponent implements OnInit, OnDestroy {
@@ -19,16 +20,22 @@ export class HomeComponent implements OnInit, OnDestroy {
   currentImage: HomeImage;
   index: number;
   fadeState: string;
+  parallaxState: string;
   @ViewChild('theDiv') div: ElementRef;
 
   constructor(
     private homeImageService: HomeImageService,
     private sanitizer: DomSanitizer
-  ) {}
+  ) {
+    setInterval(() => {this.fadeState = 'invisible';}, 29000);
+    setInterval(() => {this.rotateImages();  this.parallaxState = 'reset';}, 29700);
+    setInterval(() => {this.fadeState = 'visible'; this.parallaxState = 'do';}, 30000);
+  }
 
 
   ngOnInit() {
     this.fadeState = 'invisible';
+    this.parallaxState = 'reset';
     this.getHomeImages();
   }
   ngOnDestroy() {
@@ -46,23 +53,24 @@ export class HomeComponent implements OnInit, OnDestroy {
         this.currentImage = images[this.index];
         this.updateBackground();
         this.fadeState = 'visible';
+        this.parallaxState = 'do';
       });
   }
 
   increaseIndex() {
     const i = this.images.length - 1;
-    while(this.currentImage.order === 0){
-      switch(this.index){
-        case i: {this.index = 0}
-        default: {this.index++}
+      if(this.index === i){
+        this.index = 0;
+      }else{
+        this.index++;
       }
-    }
     return this.index
   }
 
   rotateImages() {
     this.currentImage = this.images[this.increaseIndex()]
-  }
+    this.updateBackground();
+ }
   updateBackground(){
     this.div.nativeElement.style.backgroundImage = `url(${this.currentImage.image})`;
   }

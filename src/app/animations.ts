@@ -61,6 +61,12 @@ export const Animations = {
     fade: trigger('fade', [
         state('visible', style({ opacity: 1 })),
         state('invisible', style({ opacity: 0 })),
-        transition('invisible <=> visible', animate('1000ms ease-in')),
+        transition('invisible <=> visible', animate('700ms ease-in')),
     ]),
+    parallax: trigger('parallax', [
+        state('reset', style({ backgroundPosition: "0px 0px", transform: "scale(1)" })),
+        state('do', style({ backgroundPosition: "-50px -50px", transform: "scale(1.1)" })),
+        transition('reset => do', animate('29s linear')),
+        transition('do => reset', animate('0.1s linear'))
+    ])
 }
