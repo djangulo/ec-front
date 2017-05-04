@@ -1,0 +1,42 @@
+.staff {
+    margin: 0;
+    padding: 0;
+    width: 60%;
+    overflow-y: scroll;
+}
+
+.staff li {
+    float: left;
+    width: 25.3333333333%;
+    margin: 3% 4%;
+    padding: 0;
+    background-color: #eee;
+    list-style: none;
+}
+
+.staff li img {
+    margin: 0 auto;
+    width: 100%;
+}
+
+.staff li p {
+    width: 100%;
+    padding: 5%;
+    margin: 0;
+    font-size: 1.2em;
+}
+
+.interns {
+    float: left;
+    width: 16%;
+}
+
+.interns li {
+    list-style: none;
+}
+
+.interns li p {
+    width: 100%;
+    padding: 2%;
+    margin: 0;
+}

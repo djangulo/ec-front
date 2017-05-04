@@ -8,15 +8,10 @@ import {
 } from '@angular/animations';
 
 export const Animations = {
-    flyNavIn: trigger('flyNavIn', [
-        state('home', style({ transform: 'translate3d(0,0,0)', opacity: 1})),
-        state('other', style({ transform: 'translate3d(340%, 0, 0)', opacity: 1})),
-        transition('void => home', [
-            style({transform: 'translate3d(0, 100%, 0)', opacity: 0}),
-            animate('500ms cubic-bezier(.4,-0.31,.66,1.26)')
-        ]),
-        transition('void => other', [
-            style({transform: 'translate3d(340%, 100%, 0)', opacity: 0}),
+    flyStaffIn: trigger('flyStaffIn', [
+        state('*', style({ transform: 'translate3d(-48%,0,0)', opacity: 1})),
+        transition('void => *', [
+            style({transform: 'translate3d(-48%, 200%, 0)', opacity: 0}),
             animate('500ms cubic-bezier(.4,-0.31,.66,1.26)')
         ])
     ]),

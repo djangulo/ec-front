@@ -7,5 +7,5 @@ export class Staff {
     bio: string;
     is_active: boolean;
     is_admin: boolean;
-    staff_of_intern: string;
+    staff_or_intern: string;
 }

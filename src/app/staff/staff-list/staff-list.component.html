@@ -1,25 +1,23 @@
-<div class="staff">
-  <ul class *ngFor="let member of staffMembers">
-    <li *ngIf="member.staff_or_intern === 'Staff'"  (click)="onSelect(member)">
-      <figure>
+<div [@flyStaffIn]="in" class="staff">
+  <ul>
+    <li class="staff-member card" *ngFor="let member of staff" (click)="onSelect(member)">
         <img src="{{member.photo}}" alt="{{member.username}}'s photo'">
-        <figcaption>{{member.first_name}} {{member.last_name}}</figcaption>
-      </figure>
+        <p>{{member.first_name}} {{member.last_name}}</p>
     </li>
   </ul>
 </div>
 <div class="interns">
   <h4>Interns</h4>
-  <ul  *ngFor="let member of staffMembers">
-    <li *ngIf="member.staff_or_intern === 'Intern'" (click)="onSelect(member)">
-      {{member.first_name}} {{member.last_name}}
+  <ul>
+    <li class="intern" *ngFor="let member of interns" (click)="onSelect(member)">
+      <p>{{member.first_name}} {{member.last_name}}</p>
     </li>
   </ul>
 </div>
 <div class="member-details" *ngIf="selectedMember">
   <span (click)="clearSelection()">Close</span>
   <h3>{{selectedMember.first_name}} {{selectedMember.last_name}}</h3>
-  <img src="{{selectedMember.photo}}" *ngIf="selectedMember.photo != null">
+  <img src="{{selectedMember.photo}}" *ngIf="selectedMember.photo !== null">
   <h5>Bio</h5>
   <p>{{selectedMember.bio}}</p>
   
