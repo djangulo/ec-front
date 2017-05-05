@@ -14,7 +14,7 @@ import { WorkDetailResolver } from './work-detail-resolver.service';
 
 const workRoutes: Routes = [
   {
-    path: '',
+    path: 'works',
     component: WorksComponent,
     children: [
       {

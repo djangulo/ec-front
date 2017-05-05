@@ -1,5 +1,6 @@
 import {
   Component,
+  HostBinding,
   OnInit,
   Output,
   Input,
@@ -7,7 +8,8 @@ import {
   ElementRef,
   ViewChild
 } from '@angular/core';
-import { Router, ActivatedRoute, Params } from '@angular/router';
+
+import { Router, ActivatedRoute } from '@angular/router';
 
 import 'rxjs/add/operator/switchMap';
 
@@ -37,38 +39,41 @@ export class WorkDetailComponent implements OnInit {
 
 
   constructor(
-    private workService: WorkService,
+    private service: WorkService,
+    private router: Router,
     private route: ActivatedRoute
-  ) {
-    this.pictures = [];
-  }
+    // private params: Params
+  ) { }
 
   ngOnInit() {
-    this.route.data
-      .subscribe((data: {work: Work }) => {
-        this.work
-      })
-    this.getWork(this.workId);
+    // this.route.data
+    //   .subscribe((data: {work: Work }) => {
+    //     this.work
+    //   })
+
   }
 
   close() {
     this.closeEvent.emit(null)
   }
 
-  getWork(id: number): void {
-      this.route.params
-          .switchMap((params: Params) => this.workService.getWork(+params['id']))
-          .subscribe((work: Work) => this.work = work);
-      console.log(this.route.params['id'])
-      console.log(this.route.params)
-    }
+  // getWork(id: number): void {
+  //     this.route.params
+  //         .switchMap((params: Params) => this.service.getWork(+params['id']))
+  //         .subscribe((work: Work) => this.work = work);
+  //   }
 
-
-  addBeans() {
-    for(let i = 0; i < this.pictures.length; i++){
-      document.querySelector('#lightbox-counter').innerHTML += '<div class="lightbox-counter"></div>'
-    }
+  gotoWorks() {
+    let categorySlug = this.work ? this.work.category_slug : null;
+    this.router.navigate(['/works/categories', { slug: categorySlug }])
   }
+
+
+  // addBeans() {
+  //   for(let i = 0; i < this.pictures.length; i++){
+  //     document.querySelector('#lightbox-counter').innerHTML += '<div class="lightbox-counter"></div>'
+  //   }
+  // }
 
 //   setInitialStage() {
 //     this.pictures = [];

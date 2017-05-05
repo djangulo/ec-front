@@ -47,8 +47,7 @@ export class WorkListComponent implements OnInit {
 
     onSelect(work: WorkShort) {
         this.selectedId = work.id;
-        this.router.navigate([work.id], {relativeTo: this.route})
-        this.router.navigate(['../',])
+        this.router.navigate(['/works', work.id]);
     }
 
 //   setInitialStage() {

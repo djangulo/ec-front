@@ -9,26 +9,26 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
 import { HomeComponent } from './home/home.component';
 
 const routes: Routes = [
-  {
-    path: 'works',
-    loadChildren: 'app/works/works.module#WorksModule'
-  },
-  {
-    path: 'publications',
-    loadChildren: 'app/publications/publications.module#PublicationsModule'
-  },
-  {
-    path: 'press',
-    loadChildren: 'app/press/press.module#PressModule'
-  },
-  {
-    path: 'staff',
-    loadChildren: 'app/staff/staff.module#StaffModule'
-  },
-  {
-    path: 'contact',
-    loadChildren: 'app/contact/contact.module#ContactModule',
-  },
+  // {
+  //   path: 'works',
+  //   loadChildren: 'app/works/works.module#WorksModule'
+  // },
+  // {
+  //   path: 'publications',
+  //   loadChildren: 'app/publications/publications.module#PublicationsModule'
+  // },
+  // {
+  //   path: 'press',
+  //   loadChildren: 'app/press/press.module#PressModule'
+  // },
+  // {
+  //   path: 'staff',
+  //   loadChildren: 'app/staff/staff.module#StaffModule'
+  // },
+  // {
+  //   path: 'contact',
+  //   loadChildren: 'app/contact/contact.module#ContactModule',
+  // },
   { path: '', component: HomeComponent },
   { path: '**', component: PageNotFoundComponent }
 ];

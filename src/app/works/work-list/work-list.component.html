@@ -1,5 +1,7 @@
 <div class="works"  [@flyThirdIn]="in">
-  <div class="work" *ngFor="let work of works | async" (click)="onSelect(work)">
+  <div class="work" *ngFor="let work of works | async" 
+  [class.selected]="isSelected(work)" 
+  (click)="onSelect(work)">
     <img src="{{work.cover.image}}">
     <p><strong>Project: </strong>{{work.title}}</p>
     <p><strong>Program: </strong>{{work.program}}</p>
