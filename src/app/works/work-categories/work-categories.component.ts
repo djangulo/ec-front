@@ -10,7 +10,7 @@ import {
 
 import { Category } from './../../categories/category.model';
 import { WorkService } from './../work.service';
-import { Animations } from './../../animations';
+import { Animations } from './../work-animations';
 
 @Component({
   templateUrl: './work-categories.component.html',

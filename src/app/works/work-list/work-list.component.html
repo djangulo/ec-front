@@ -18,16 +18,26 @@
       <span class="close-icon"></span>
     </button>
     <div class="stage">
-      <figure>
       <button class="btn-scroll prev-pic" (click)="prevPic()" (keydown)="scroll($event)">
         <span class="chevron left-chevron"></span>
       </button>
-        <div #imgDiv class="image"></div>
-        <figcaption class="caption">{{stageCenter.caption}}</figcaption>
+      <figure>
+        <div 
+        [@fade]="fadeState" 
+        #cImgDiv 
+        class="stage-center image" 
+        [style.backgroundImage]="getBackground(stageCenter.image)"></div>
+        <figcaption 
+        [@fadeLight]="fadeState" 
+        class="caption">{{stageCenter.caption}}</figcaption>
+      </figure>
       <button class="btn-scroll next-pic" (click)="nextPic()" (keydown)="scroll($event)">
         <span class="chevron right-chevron"></span>
       </button>
-      </figure>
+
     </div>
+      <!--<button class="btn-more">
+        THIS IS BYTTON<span class="chevron right-chevron"></span>
+      </button>-->
   </div>
 </div>

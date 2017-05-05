@@ -4,7 +4,7 @@ import { Router, ActivatedRoute, Params } from '@angular/router';
 
 import 'rxjs/add/operator/switchMap';
 
-import { Animations } from './../../animations';
+import { Animations } from './../work-animations';
 import { Category, CategoryService } from './../../categories';
 import { Work, WorkPicture } from './../work.model';
 import { WorkService } from './../work.service';
@@ -15,13 +15,15 @@ import { WorkService } from './../work.service';
         './work-list.component.css',
     ],
     animations: [
-      Animations.flyThirdIn
+      Animations.flyThirdIn,
+      Animations.fade,
+      Animations.fadeLight
     ]
 })
 export class WorkListComponent implements OnInit {
   works: Work[];
   selectedWork: Work;
-  @ViewChild('imgDiv') imgDiv: ElementRef;
+  @ViewChild('cImgDiv') cImgDiv: ElementRef;
   pictures: WorkPicture[]
   stageCenter: WorkPicture;
   stageLeft: WorkPicture;
@@ -30,6 +32,7 @@ export class WorkListComponent implements OnInit {
   c: number;
   l: number;
   r: number;
+  fadeState: string;
 
   constructor(
     private workService: WorkService,
@@ -51,7 +54,6 @@ export class WorkListComponent implements OnInit {
     onSelect(work: Work): void {
         this.selectedWork = work;
         this.setInitialStage();
-        this.updateBackground();
     }
 
     deSelect(): void {
@@ -90,7 +92,7 @@ export class WorkListComponent implements OnInit {
     this.stageCenter = this.pictures[this.c];
     this.stageRight = this.pictures[this.r];
     this.stageLeft = this.pictures[this.l];
-    this.updateBackground();
+    this.fadeState = 'in';
 }
 
 // on lcick left, select left image
@@ -101,100 +103,109 @@ export class WorkListComponent implements OnInit {
 //  two image case
 
   prevPic() {
-    switch(this.i){
-      case 0: {
-        return null;
-      }
-      case 1: {
-        this.c = 0;
-        this.l = 0;
-        this.r = 0;
-        break;
-      }
-      case 2: {
-        if(this.c === 0){
-          this.c = 1;
-        } else {
+    this.fadeState = 'out';
+    setTimeout(() => {
+      switch(this.i){
+        case 0: {
+          return null;
+        }
+        case 1: {
           this.c = 0;
-        }
-        if(this.c === 0){
-          this.r = 1;
-          this.l = 1;
-        } else {
-          this.r = 0;
           this.l = 0;
+          this.r = 0;
+          break;
+        }
+        case 2: {
+          if(this.c === 0){
+            this.c = 1;
+          } else {
+            this.c = 0;
+          }
+          if(this.c === 0){
+            this.r = 1;
+            this.l = 1;
+          } else {
+            this.r = 0;
+            this.l = 0;
+          }
+          break;
+        }
+        default: {
+          if(this.c === 1){
+            this.c = this.c - 1;
+            this.r = this.c + 1;
+            this.l = this.i - 1;
+          } else if(this.c === 0){
+            this.c = this.i - 1;
+            this.r = 0;
+            this.l = this.i - 2;
+          } else {
+            this.c = this.c - 1;
+            this.r = this.c + 1;
+            this.l = this.c - 1
+          }
         }
         break;
       }
-      default: {
-        if(this.c === 1){
-          this.c = this.c - 1;
-          this.r = this.c + 1;
-          this.l = this.i - 1;
-        } else if(this.c === 0){
-          this.c = this.i - 1;
-          this.r = 0;
-          this.l = this.i - 2;
-        } else {
-          this.c = this.c - 1;
-          this.r = this.c + 1;
-          this.l = this.c - 1
-        }
-      }
-      break;
-    }
-    this.stageCenter = this.pictures[this.c];
-    this.stageRight = this.pictures[this.r];
-    this.stageLeft = this.pictures[this.l];
-    this.updateBackground();
+      this.stageCenter = this.pictures[this.c];
+      this.stageRight = this.pictures[this.r];
+      this.stageLeft = this.pictures[this.l];
+      this.updateBackground();
+      this.fadeState = 'in';
+    }, 300);
+
   }
   nextPic() {
-    switch(this.i){
-      case 0: {
-        return null;
-      }
-      case 1: {
-        this.c = 0;
-        this.l = 0;
-        this.r = 0;
-        break;
-      }
-      case 2: {
-        if(this.c === (this.i - 1)){
-          this.c = 0;
-        } else {
-          this.c = 1;
+    this.fadeState = 'out';
+    setTimeout(() => {
+      switch(this.i){
+        case 0: {
+          return null;
         }
-        if(this.c === 0){
-          this.r = 1;
-          this.l = 1;
-        } else {
-          this.r = 0;
+        case 1: {
+          this.c = 0;
           this.l = 0;
-        }
-        break;
-      }
-      default: {
-        if(this.c === (this.i - 2)){
-          this.c = this.c + 1;
           this.r = 0;
-          this.l = this.c - 1;
-        } else if(this.c === (this.i - 1)){
-          this.c = 0;
-          this.r = 1;
-          this.l = this.i - 1;
-        } else {
-          this.c = this.c + 1;
-          this.r = this.c + 1;
-          this.l = this.c - 1
+          break;
         }
-        break;
+        case 2: {
+          if(this.c === (this.i - 1)){
+            this.c = 0;
+          } else {
+            this.c = 1;
+          }
+          if(this.c === 0){
+            this.r = 1;
+            this.l = 1;
+          } else {
+            this.r = 0;
+            this.l = 0;
+          }
+          break;
+        }
+        default: {
+          if(this.c === (this.i - 2)){
+            this.c = this.c + 1;
+            this.r = 0;
+            this.l = this.c - 1;
+          } else if(this.c === (this.i - 1)){
+            this.c = 0;
+            this.r = 1;
+            this.l = this.i - 1;
+          } else {
+            this.c = this.c + 1;
+            this.r = this.c + 1;
+            this.l = this.c - 1
+          }
+          break;
+        }
       }
-    }
-    this.stageCenter = this.pictures[this.c];
-    this.stageRight = this.pictures[this.r];
-    this.stageLeft = this.pictures[this.l];
-    this.updateBackground();
+      this.stageCenter = this.pictures[this.c];
+      this.stageRight = this.pictures[this.r];
+      this.stageLeft = this.pictures[this.l];
+      this.updateBackground();
+      this.fadeState = 'in';
+    }, 300);
   }
 
   scroll(event: KeyboardEvent) {
@@ -213,7 +224,7 @@ export class WorkListComponent implements OnInit {
     } else return;
   }
   updateBackground(){
-    this.imgDiv.nativeElement.style.backgroundImage = `url(${this.stageCenter.image})`;
+    this.cImgDiv.nativeElement.style.backgroundImage = `url(${this.stageCenter.image})`;
   }
   getBackground (image) {
     return this.sanitizer.bypassSecurityTrustStyle(`url(${image})`);
