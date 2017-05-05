@@ -3,19 +3,22 @@
 
 .works {
     width: 48%;
-    max-height: 80vh;
+    height: 80vh;
     margin: 0;
     padding: 0;
     border: 0;
     outline: 0;
     float: right;
     overflow-y: auto;
+    overflow-x: hidden;
 }
 
 .work {
+    position: relative;
+    height: 325px;
     width: 90%;
     margin: 2% auto;
-    padding: 0 2%;
+    padding: 0;
     float: none;
     clear: both;
 }
@@ -24,3 +27,26 @@ p {
     margin: 2px 0;
 }
 
+.work .image {
+    position: relative;
+    float: left;
+    width: 444px;
+    height: 250px;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+p {
+    margin: 2px 0;
+}
+
+
+.work .caption {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 5px 0 5px 5px;
+    clear: both;
+}

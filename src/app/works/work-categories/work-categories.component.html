@@ -9,7 +9,7 @@
 </div>
 
 <div [@deOpacify]="hoverState" class="category-description">
-  <p *ngIf="hoveredCategory && !selectedCategory">{{hoveredCategory.description}}</p>
+  <p *ngIf="hoveredCategory && selectionState === 'noSelection'">{{hoveredCategory.description}}</p>
 </div>
 
 

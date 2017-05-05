@@ -40,7 +40,7 @@ export class WorkCategoriesComponent implements OnInit {
   ngOnInit() {
     this.determineSelectionState();
     this.getCategories();
-    console.log(JSON.stringify(this.router.url).split('/')[3] === undefined)
+    console.log(this.selectionState)
   }
 
   getCategories(): void {

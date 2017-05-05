@@ -19,13 +19,12 @@
 
 .lightbox-inner {
     position: relative;
-    margin: 5% auto;
-    width: 75%;
-    height: 75%;
+    margin: 3% auto;
+    width: 90%;
+    height: 90%;
     padding: 0;
-    max-width: 990px;
     background-color: #282625;
-    overflow: hidden;
+    overflow: auto;
 }
 
 .lightbox-title {
@@ -35,26 +34,52 @@
     margin-top: 2%;
 }
 
-.lightbox-image {
-    position: absolute;
-    display: inline-block;
-    text-align: center;
+
+
+.stage {
+    position: relative;
+    overflow: hidden;
+    width: 90%;
+    height: 90%;
+    margin: 0 auto;
+    margin-bottom: 10px;
+}
+
+.stage figure {
+    width: 100%;
+    height: 100%;
+    max-height: 920px;
+    position: relative;
+    margin: 0;
     padding: 0;
-    border: none;
-    margin: auto;
-    width: 100%;
 }
 
-.lightbox-caption {
-    background: rgba(0,0,0,.6);
+.stage .image {
+    position: relative;
+    float: left;
+    width: 100%;
+    height: 100%;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.stage .caption {
+    position: absolute;
+    bottom: 0;
+    left: 0;
     color: #eee;
+    background-color: rgba(0,0,0,0.7);
     width: 100%;
+    padding: 5px 0 5px 5px;
+    clear: both;
 }
 
-.lightbox-inner .btn-scroll {
-    display: inline-block;
-    width: 4%;
-    height: 46px;
+.stage .btn-scroll {
+    position: absolute;
+    width: 50px;
+    height: 56px;
+    top: 10px;
     margin-top: 25%;
     padding: 0;
     background-color: rgba(0,0,0,0.1);
@@ -64,11 +89,22 @@
     transition: background-color 200ms;
 }
 
-.lightbox-inner .btn-scroll:hover {
+.prev-pic {
+    position: absolute;
+    left: 0;
+}
+
+.next-pic {
+    position: absolute;
+    right: 0;
+}
+
+.stage .btn-scroll:hover {
     background-color:  rgba(0,0,0,0.5);
 }
-.lightbox-inner .btn-scroll span {
+.stage .btn-scroll span {
     margin: 0 auto;
+    padding: 0;
 }
 
 .btn-close {
@@ -82,16 +118,6 @@
     border-radius: 8px;
 }
 
-.prev-pic {
-    position: absolute;
-    left: 0;
-}
-
-.next-pic {
-    position: absolute;
-    right: 0;
-}
-
 .chevron {
     margin: 0 auto;
     vertical-align: center;
@@ -102,10 +128,10 @@
 	border-style: solid;
 	border-width: 0.25em 0.25em 0 0;
 	content: '';
-	display: block;
-	height: 0.45em;
+	display: inline-block;
+	height: 13px;
+	width: 12px;
 	transform: rotate(-45deg);
-	width: 0.45em;
 }
 
 .chevron.right-chevron:before {
@@ -118,12 +144,7 @@
 	transform: rotate(-135deg);
 }
 
-.stage {
-    overflow: hidden;
-    width: 80%;
-    height: 80%;
-    margin: 0 auto;
-}
+
 
 .stage-center {
     transform: translateX(0);
@@ -141,4 +162,8 @@
     .lightbox-inner {
         width: 100%;
     }
+}
+
+.hidden {
+    display: none;
 }

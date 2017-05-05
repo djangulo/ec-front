@@ -1,4 +1,5 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { DomSanitizer } from '@angular/platform-browser';
+import { Component, OnInit, Input, ViewChild, ElementRef } from '@angular/core';
 import { Router, ActivatedRoute, Params } from '@angular/router';
 
 import 'rxjs/add/operator/switchMap';
@@ -20,6 +21,7 @@ import { WorkService } from './../work.service';
 export class WorkListComponent implements OnInit {
   works: Work[];
   selectedWork: Work;
+  @ViewChild('imgDiv') imgDiv: ElementRef;
   pictures: WorkPicture[]
   stageCenter: WorkPicture;
   stageLeft: WorkPicture;
@@ -32,7 +34,8 @@ export class WorkListComponent implements OnInit {
   constructor(
     private workService: WorkService,
     private route: ActivatedRoute,
-    private router: Router
+    private router: Router,
+    private sanitizer: DomSanitizer
     ){ }
 
     ngOnInit(): void {
@@ -48,6 +51,7 @@ export class WorkListComponent implements OnInit {
     onSelect(work: Work): void {
         this.selectedWork = work;
         this.setInitialStage();
+        this.updateBackground();
     }
 
     deSelect(): void {
@@ -86,6 +90,7 @@ export class WorkListComponent implements OnInit {
     this.stageCenter = this.pictures[this.c];
     this.stageRight = this.pictures[this.r];
     this.stageLeft = this.pictures[this.l];
+    this.updateBackground();
 }
 
 // on lcick left, select left image
@@ -141,6 +146,7 @@ export class WorkListComponent implements OnInit {
     this.stageCenter = this.pictures[this.c];
     this.stageRight = this.pictures[this.r];
     this.stageLeft = this.pictures[this.l];
+    this.updateBackground();
   }
   nextPic() {
     switch(this.i){
@@ -188,6 +194,7 @@ export class WorkListComponent implements OnInit {
     this.stageCenter = this.pictures[this.c];
     this.stageRight = this.pictures[this.r];
     this.stageLeft = this.pictures[this.l];
+    this.updateBackground();
   }
 
   scroll(event: KeyboardEvent) {
@@ -205,7 +212,12 @@ export class WorkListComponent implements OnInit {
       this.deSelect();
     } else return;
   }
-
+  updateBackground(){
+    this.imgDiv.nativeElement.style.backgroundImage = `url(${this.stageCenter.image})`;
+  }
+  getBackground (image) {
+    return this.sanitizer.bypassSecurityTrustStyle(`url(${image})`);
+  }
 
 
 }
