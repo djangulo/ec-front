@@ -8,4 +8,5 @@ export class Staff {
     is_active: boolean;
     is_admin: boolean;
     staff_or_intern: string;
+    display_order: number;
 }
