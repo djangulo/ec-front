@@ -1,15 +1,15 @@
 webpackJsonp([2,4],{
 
-/***/ 113:
+/***/ 114:
 /***/ (function(module, exports, __webpack_require__) {
 
 // style-loader: Adds some css to the DOM by adding a <style> tag
 
 // load the styles
-var content = __webpack_require__(61);
+var content = __webpack_require__(41);
 if(typeof content === 'string') content = [[module.i, content, '']];
 // add the styles to the DOM
-var update = __webpack_require__(241)(content, {});
+var update = __webpack_require__(242)(content, {});
 if(content.locals) module.exports = content.locals;
 // Hot Module Replacement
 if(false) {
@@ -55,7 +55,7 @@ module.exports = g;
 
 /***/ }),
 
-/***/ 241:
+/***/ 242:
 /***/ (function(module, exports) {
 
 /*
@@ -308,15 +308,30 @@ function updateLink(linkElement, obj) {
 
 /***/ }),
 
-/***/ 243:
+/***/ 244:
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(113);
+module.exports = __webpack_require__(114);
 
 
 /***/ }),
 
-/***/ 42:
+/***/ 41:
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__(5)(false);
+// imports
+
+
+// module
+exports.push([module.i, "/* You can add global styles to this file, and also import other style files */\nbody {\n    font-family: 'Helvetica Neue', Helvetica, 'Open Sans', sans-serif, Arial;\n    font-weight: 300;\n    font-size: 12px;\n    list-style: none;\n    text-decoration: none;\n    background-color: #eee;\n}\n\nheader {\n    float: left;\n    margin: 0 0 30px 0;\n    padding: 5px 0 0 0 ;\n    width: 100%;\n    height: 120px;\n}\n\nheader a img {\n    margin: 45px 0 0 45px;\n}\n\n::-webkit-scrollbar {\n    display: none;\n}\n\n.noscroll {\n    overflow: hidden;\n}\n\n.content {\n    max-width: 990px;\n    margin: 0 auto;\n    padding: 0 1.5%;\n}\n\n.menu {\n    width: 24%;\n    margin: 0;\n    padding: 0;\n    border: 0;\n    outline: 0;\n    font-weight: inherit;\n    font-style: inherit;\n    vertical-align: baseline;\n    float: left;\n}\n\n.home-menu {\n        background: rgba(255,255,255,0.7);\n}\n\n.menu-item {\n    cursor: pointer;\n    width: 100%;\n    color: #444;\n    font-size: 1.8em;\n    display: block;\n    margin: 10% 0;\n    text-decoration: underline;\n    list-style: inherit;\n}\n\n.menu-item:hover {\n    color: #b72175;\n}\n\n.active {\n    color: #b72175;\n}", ""]);
+
+// exports
+
+
+/***/ }),
+
+/***/ 44:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -438,7 +453,7 @@ function fromByteArray (uint8) {
 
 /***/ }),
 
-/***/ 43:
+/***/ 45:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -452,7 +467,7 @@ function fromByteArray (uint8) {
 
 
 
-var base64 = __webpack_require__(42)
+var base64 = __webpack_require__(44)
 var ieee754 = __webpack_require__(62)
 var isArray = __webpack_require__(63)
 
@@ -2315,22 +2330,7 @@ function toComment(sourceMap) {
   return '/*# ' + data + ' */';
 }
 
-/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(43).Buffer))
-
-/***/ }),
-
-/***/ 61:
-/***/ (function(module, exports, __webpack_require__) {
-
-exports = module.exports = __webpack_require__(5)(false);
-// imports
-
-
-// module
-exports.push([module.i, "/* You can add global styles to this file, and also import other style files */\r\nbody {\r\n    font-family: 'Helvetica Neue', Helvetica, 'Open Sans', sans-serif, Arial;\r\n    font-weight: 300;\r\n    font-size: 12px;\r\n    list-style: none;\r\n    text-decoration: none;\r\n    background-color: #eee;\r\n}\r\n\r\nheader {\r\n    float: left;\r\n    margin: 0 0 30px 0;\r\n    padding: 5px 0 0 0 ;\r\n    width: 100%;\r\n    height: 120px;\r\n}\r\n\r\nheader a img {\r\n    margin: 45px 0 0 45px;\r\n}\r\n\r\n::-webkit-scrollbar {\r\n    display: none;\r\n}\r\n\r\n.noscroll {\r\n    overflow: hidden;\r\n}\r\n\r\n.content {\r\n    max-width: 990px;\r\n    margin: 0 auto;\r\n    padding: 0 1.5%;\r\n}\r\n\r\n.menu {\r\n    width: 24%;\r\n    margin: 0;\r\n    padding: 0;\r\n    border: 0;\r\n    outline: 0;\r\n    font-weight: inherit;\r\n    font-style: inherit;\r\n    vertical-align: baseline;\r\n    float: left;\r\n}\r\n\r\n.home-menu {\r\n        background: rgba(255,255,255,0.7);\r\n}\r\n\r\n.menu-item {\r\n    cursor: pointer;\r\n    width: 100%;\r\n    color: #444;\r\n    font-size: 1.8em;\r\n    display: block;\r\n    margin: 10% 0;\r\n    text-decoration: none;\r\n    list-style: inherit;\r\n}\r\n\r\n.active {\r\n    color: #6d456d;\r\n}", ""]);
-
-// exports
-
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(45).Buffer))
 
 /***/ }),
 
@@ -2437,5 +2437,5 @@ module.exports = Array.isArray || function (arr) {
 
 /***/ })
 
-},[243]);
+},[244]);
 //# sourceMappingURL=styles.bundle.js.map

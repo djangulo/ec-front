@@ -5,11 +5,11 @@ webpackJsonp([3,4],[
 "use strict";
 /* WEBPACK VAR INJECTION */(function(global) {/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_rxjs_Observable__ = __webpack_require__(2);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_rxjs_Observable___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_rxjs_Observable__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_rxjs_observable_merge__ = __webpack_require__(222);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_rxjs_observable_merge__ = __webpack_require__(223);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_rxjs_observable_merge___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_rxjs_observable_merge__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_operator_share__ = __webpack_require__(235);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_operator_share__ = __webpack_require__(236);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_operator_share___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_rxjs_operator_share__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_rxjs_Subject__ = __webpack_require__(30);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_rxjs_Subject__ = __webpack_require__(31);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_rxjs_Subject___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_rxjs_Subject__);
 /* unused harmony export Class */
 /* unused harmony export createPlatform */
@@ -6081,7 +6081,7 @@ var SystemJsNgModuleLoader = (function () {
         if (exportName === undefined) {
             exportName = 'default';
         }
-        return __webpack_require__(110)(module)
+        return __webpack_require__(111)(module)
             .then(function (module) { return module[exportName]; })
             .then(function (type) { return checkNotEmpty(type, module, exportName); })
             .then(function (type) { return _this._compiler.compileModuleAsync(type); });
@@ -6097,7 +6097,7 @@ var SystemJsNgModuleLoader = (function () {
             exportName = 'default';
             factoryClassSuffix = '';
         }
-        return __webpack_require__(110)(this._config.factoryPathPrefix + module + this._config.factoryPathSuffix)
+        return __webpack_require__(111)(this._config.factoryPathPrefix + module + this._config.factoryPathSuffix)
             .then(function (module) { return module[exportName + factoryClassSuffix]; })
             .then(function (factory) { return checkNotEmpty(factory, module, exportName); });
     };
@@ -14223,7 +14223,7 @@ function transition$$1(stateChangeExpr, steps) {
 "use strict";
 
 var root_1 = __webpack_require__(16);
-var toSubscriber_1 = __webpack_require__(239);
+var toSubscriber_1 = __webpack_require__(240);
 var observable_1 = __webpack_require__(68);
 /**
  * A representation of any set of values over any amount of time. This the most basic building block
@@ -14446,7 +14446,7 @@ function toComment(sourceMap) {
   return '/*# ' + data + ' */';
 }
 
-/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(43).Buffer))
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(45).Buffer))
 
 /***/ }),
 /* 6 */
@@ -18477,42 +18477,42 @@ var VERSION = new __WEBPACK_IMPORTED_MODULE_0__angular_core__["d" /* Version */]
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_common__ = __webpack_require__(6);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_BehaviorSubject__ = __webpack_require__(211);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_BehaviorSubject__ = __webpack_require__(212);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_BehaviorSubject___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_rxjs_BehaviorSubject__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_rxjs_Subject__ = __webpack_require__(30);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_rxjs_Subject__ = __webpack_require__(31);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_rxjs_Subject___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_rxjs_Subject__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_rxjs_observable_from__ = __webpack_require__(221);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_rxjs_observable_from__ = __webpack_require__(222);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_rxjs_observable_from___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4_rxjs_observable_from__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_rxjs_observable_of__ = __webpack_require__(223);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_rxjs_observable_of__ = __webpack_require__(224);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_rxjs_observable_of___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_5_rxjs_observable_of__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_rxjs_operator_concatMap__ = __webpack_require__(226);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_rxjs_operator_concatMap__ = __webpack_require__(227);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_rxjs_operator_concatMap___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_6_rxjs_operator_concatMap__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7_rxjs_operator_every__ = __webpack_require__(227);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7_rxjs_operator_every__ = __webpack_require__(228);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_7_rxjs_operator_every___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_7_rxjs_operator_every__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8_rxjs_operator_first__ = __webpack_require__(229);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8_rxjs_operator_first__ = __webpack_require__(230);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_8_rxjs_operator_first___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_8_rxjs_operator_first__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9_rxjs_operator_map__ = __webpack_require__(101);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9_rxjs_operator_map__ = __webpack_require__(102);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_9_rxjs_operator_map___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_9_rxjs_operator_map__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10_rxjs_operator_mergeMap__ = __webpack_require__(102);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10_rxjs_operator_mergeMap__ = __webpack_require__(103);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_10_rxjs_operator_mergeMap___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_10_rxjs_operator_mergeMap__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11_rxjs_operator_reduce__ = __webpack_require__(234);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11_rxjs_operator_reduce__ = __webpack_require__(235);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_11_rxjs_operator_reduce___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_11_rxjs_operator_reduce__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_12_rxjs_Observable__ = __webpack_require__(2);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_12_rxjs_Observable___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_12_rxjs_Observable__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13_rxjs_operator_catch__ = __webpack_require__(224);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13_rxjs_operator_catch__ = __webpack_require__(225);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_13_rxjs_operator_catch___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_13_rxjs_operator_catch__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_14_rxjs_operator_concatAll__ = __webpack_require__(225);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_14_rxjs_operator_concatAll__ = __webpack_require__(226);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_14_rxjs_operator_concatAll___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_14_rxjs_operator_concatAll__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_15_rxjs_util_EmptyError__ = __webpack_require__(70);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_15_rxjs_util_EmptyError___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_15_rxjs_util_EmptyError__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_16_rxjs_observable_fromPromise__ = __webpack_require__(100);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_16_rxjs_observable_fromPromise__ = __webpack_require__(101);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_16_rxjs_observable_fromPromise___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_16_rxjs_observable_fromPromise__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_17_rxjs_operator_last__ = __webpack_require__(230);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_17_rxjs_operator_last__ = __webpack_require__(231);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_17_rxjs_operator_last___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_17_rxjs_operator_last__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_18_rxjs_operator_mergeAll__ = __webpack_require__(66);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_18_rxjs_operator_mergeAll___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_18_rxjs_operator_mergeAll__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_19__angular_platform_browser__ = __webpack_require__(13);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_20_rxjs_operator_filter__ = __webpack_require__(228);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_19__angular_platform_browser__ = __webpack_require__(11);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_20_rxjs_operator_filter__ = __webpack_require__(229);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_20_rxjs_operator_filter___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_20_rxjs_operator_filter__);
 /* unused harmony export RouterLink */
 /* unused harmony export RouterLinkWithHref */
@@ -24642,9 +24642,9 @@ var __extends = (this && this.__extends) || function (d, b) {
     function __() { this.constructor = d; }
     d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
 };
-var isFunction_1 = __webpack_require__(106);
-var Subscription_1 = __webpack_require__(40);
-var Observer_1 = __webpack_require__(96);
+var isFunction_1 = __webpack_require__(107);
+var Subscription_1 = __webpack_require__(42);
+var Observer_1 = __webpack_require__(97);
 var rxSubscriber_1 = __webpack_require__(69);
 /**
  * Implements the {@link Observer} interface and extends the
@@ -24902,9 +24902,7 @@ var SafeSubscriber = (function (_super) {
 /***/ }),
 /* 9 */,
 /* 10 */,
-/* 11 */,
-/* 12 */,
-/* 13 */
+/* 11 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -29411,6 +29409,8 @@ var VERSION = new __WEBPACK_IMPORTED_MODULE_1__angular_core__["d" /* Version */]
 
 
 /***/ }),
+/* 12 */,
+/* 13 */,
 /* 14 */,
 /* 15 */,
 /* 16 */
@@ -29475,7 +29475,7 @@ module.exports = g;
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_rxjs_Observable__ = __webpack_require__(2);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_rxjs_Observable___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_rxjs_Observable__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_platform_browser__ = __webpack_require__(13);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_platform_browser__ = __webpack_require__(11);
 /* unused harmony export BrowserXhr */
 /* unused harmony export JSONPBackend */
 /* unused harmony export JSONPConnection */
@@ -31653,14 +31653,884 @@ var VERSION = new __WEBPACK_IMPORTED_MODULE_0__angular_core__["d" /* Version */]
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "h", function() { return AUTO_STYLE; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "e", function() { return animate; });
+/* unused harmony export group */
+/* unused harmony export keyframes */
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "g", function() { return sequence; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "b", function() { return state; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "c", function() { return style; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "d", function() { return transition; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return trigger; });
+/* unused harmony export AnimationPlayer */
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "f", function() { return NoopAnimationPlayer; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "i", function() { return AnimationGroupPlayer; });
+/**
+ * @license Angular v4.1.1
+ * (c) 2010-2017 Google, Inc. https://angular.io/
+ * License: MIT
+ */
+/**
+ * \@experimental Animation support is experimental.
+ */
+var AUTO_STYLE = '*';
+/**
+ * `trigger` is an animation-specific function that is designed to be used inside of Angular's
+ * animation DSL language. If this information is new, please navigate to the {\@link
+ * Component#animations-anchor component animations metadata page} to gain a better understanding of
+ * how animations in Angular are used.
+ *
+ * `trigger` Creates an animation trigger which will a list of {\@link state state} and {\@link
+ * transition transition} entries that will be evaluated when the expression bound to the trigger
+ * changes.
+ *
+ * Triggers are registered within the component annotation data under the {\@link
+ * Component#animations-anchor animations section}. An animation trigger can be placed on an element
+ * within a template by referencing the name of the trigger followed by the expression value that the
+ * trigger is bound to (in the form of `[\@triggerName]="expression"`.
+ *
+ * ### Usage
+ *
+ * `trigger` will create an animation trigger reference based on the provided `name` value. The
+ * provided `animation` value is expected to be an array consisting of {\@link state state} and {\@link
+ * transition transition} declarations.
+ *
+ * ```typescript
+ * \@Component({
+ *   selector: 'my-component',
+ *   templateUrl: 'my-component-tpl.html',
+ *   animations: [
+ *     trigger("myAnimationTrigger", [
+ *       state(...),
+ *       state(...),
+ *       transition(...),
+ *       transition(...)
+ *     ])
+ *   ]
+ * })
+ * class MyComponent {
+ *   myStatusExp = "something";
+ * }
+ * ```
+ *
+ * The template associated with this component will make use of the `myAnimationTrigger` animation
+ * trigger by binding to an element within its template code.
+ *
+ * ```html
+ * <!-- somewhere inside of my-component-tpl.html -->
+ * <div [\@myAnimationTrigger]="myStatusExp">...</div>
+ * tools/gulp-tasks/validate-commit-message.js ```
+ *
+ * {\@example core/animation/ts/dsl/animation_example.ts region='Component'}
+ *
+ * \@experimental Animation support is experimental.
+ * @param {?} name
+ * @param {?} definitions
+ * @return {?}
+ */
+function trigger(name, definitions) {
+    return { name: name, definitions: definitions };
+}
+/**
+ * `animate` is an animation-specific function that is designed to be used inside of Angular's
+ * animation DSL language. If this information is new, please navigate to the {\@link
+ * Component#animations-anchor component animations metadata page} to gain a better understanding of
+ * how animations in Angular are used.
+ *
+ * `animate` specifies an animation step that will apply the provided `styles` data for a given
+ * amount of time based on the provided `timing` expression value. Calls to `animate` are expected
+ * to be used within {\@link sequence an animation sequence}, {\@link group group}, or {\@link
+ * transition transition}.
+ *
+ * ### Usage
+ *
+ * The `animate` function accepts two input parameters: `timing` and `styles`:
+ *
+ * - `timing` is a string based value that can be a combination of a duration with optional delay
+ * and easing values. The format for the expression breaks down to `duration delay easing`
+ * (therefore a value such as `1s 100ms ease-out` will be parse itself into `duration=1000,
+ * delay=100, easing=ease-out`. If a numeric value is provided then that will be used as the
+ * `duration` value in millisecond form.
+ * - `styles` is the style input data which can either be a call to {\@link style style} or {\@link
+ * keyframes keyframes}. If left empty then the styles from the destination state will be collected
+ * and used (this is useful when describing an animation step that will complete an animation by
+ * {\@link transition#the-final-animate-call animating to the final state}).
+ *
+ * ```typescript
+ * // various functions for specifying timing data
+ * animate(500, style(...))
+ * animate("1s", style(...))
+ * animate("100ms 0.5s", style(...))
+ * animate("5s ease", style(...))
+ * animate("5s 10ms cubic-bezier(.17,.67,.88,.1)", style(...))
+ *
+ * // either style() of keyframes() can be used
+ * animate(500, style({ background: "red" }))
+ * animate(500, keyframes([
+ *   style({ background: "blue" })),
+ *   style({ background: "red" }))
+ * ])
+ * ```
+ *
+ * {\@example core/animation/ts/dsl/animation_example.ts region='Component'}
+ *
+ * \@experimental Animation support is experimental.
+ * @param {?} timings
+ * @param {?=} styles
+ * @return {?}
+ */
+function animate(timings, styles) {
+    if (styles === void 0) { styles = null; }
+    return { type: 4 /* Animate */, styles: styles, timings: timings };
+}
+/**
+ * `group` is an animation-specific function that is designed to be used inside of Angular's
+ * animation DSL language. If this information is new, please navigate to the {\@link
+ * Component#animations-anchor component animations metadata page} to gain a better understanding of
+ * how animations in Angular are used.
+ *
+ * `group` specifies a list of animation steps that are all run in parallel. Grouped animations are
+ * useful when a series of styles must be animated/closed off at different statrting/ending times.
+ *
+ * The `group` function can either be used within a {\@link sequence sequence} or a {\@link transition
+ * transition} and it will only continue to the next instruction once all of the inner animation
+ * steps have completed.
+ *
+ * ### Usage
+ *
+ * The `steps` data that is passed into the `group` animation function can either consist of {\@link
+ * style style} or {\@link animate animate} function calls. Each call to `style()` or `animate()`
+ * within a group will be executed instantly (use {\@link keyframes keyframes} or a {\@link
+ * animate#usage animate() with a delay value} to offset styles to be applied at a later time).
+ *
+ * ```typescript
+ * group([
+ *   animate("1s", { background: "black" }))
+ *   animate("2s", { color: "white" }))
+ * ])
+ * ```
+ *
+ * {\@example core/animation/ts/dsl/animation_example.ts region='Component'}
+ *
+ * \@experimental Animation support is experimental.
+ * @param {?} steps
+ * @return {?}
+ */
+function group(steps) {
+    return { type: 3 /* Group */, steps: steps };
+}
+/**
+ * `sequence` is an animation-specific function that is designed to be used inside of Angular's
+ * animation DSL language. If this information is new, please navigate to the {\@link
+ * Component#animations-anchor component animations metadata page} to gain a better understanding of
+ * how animations in Angular are used.
+ *
+ * `sequence` Specifies a list of animation steps that are run one by one. (`sequence` is used by
+ * default when an array is passed as animation data into {\@link transition transition}.)
+ *
+ * The `sequence` function can either be used within a {\@link group group} or a {\@link transition
+ * transition} and it will only continue to the next instruction once each of the inner animation
+ * steps have completed.
+ *
+ * To perform animation styling in parallel with other animation steps then have a look at the
+ * {\@link group group} animation function.
+ *
+ * ### Usage
+ *
+ * The `steps` data that is passed into the `sequence` animation function can either consist of
+ * {\@link style style} or {\@link animate animate} function calls. A call to `style()` will apply the
+ * provided styling data immediately while a call to `animate()` will apply its styling data over a
+ * given time depending on its timing data.
+ *
+ * ```typescript
+ * sequence([
+ *   style({ opacity: 0 })),
+ *   animate("1s", { opacity: 1 }))
+ * ])
+ * ```
+ *
+ * {\@example core/animation/ts/dsl/animation_example.ts region='Component'}
+ *
+ * \@experimental Animation support is experimental.
+ * @param {?} steps
+ * @return {?}
+ */
+function sequence(steps) {
+    return { type: 2 /* Sequence */, steps: steps };
+}
+/**
+ * `style` is an animation-specific function that is designed to be used inside of Angular's
+ * animation DSL language. If this information is new, please navigate to the {\@link
+ * Component#animations-anchor component animations metadata page} to gain a better understanding of
+ * how animations in Angular are used.
+ *
+ * `style` declares a key/value object containing CSS properties/styles that can then be used for
+ * {\@link state animation states}, within an {\@link sequence animation sequence}, or as styling data
+ * for both {\@link animate animate} and {\@link keyframes keyframes}.
+ *
+ * ### Usage
+ *
+ * `style` takes in a key/value string map as data and expects one or more CSS property/value pairs
+ * to be defined.
+ *
+ * ```typescript
+ * // string values are used for css properties
+ * style({ background: "red", color: "blue" })
+ *
+ * // numerical (pixel) values are also supported
+ * style({ width: 100, height: 0 })
+ * ```
+ *
+ * #### Auto-styles (using `*`)
+ *
+ * When an asterix (`*`) character is used as a value then it will be detected from the element
+ * being animated and applied as animation data when the animation starts.
+ *
+ * This feature proves useful for a state depending on layout and/or environment factors; in such
+ * cases the styles are calculated just before the animation starts.
+ *
+ * ```typescript
+ * // the steps below will animate from 0 to the
+ * // actual height of the element
+ * style({ height: 0 }),
+ * animate("1s", style({ height: "*" }))
+ * ```
+ *
+ * {\@example core/animation/ts/dsl/animation_example.ts region='Component'}
+ *
+ * \@experimental Animation support is experimental.
+ * @param {?} tokens
+ * @return {?}
+ */
+function style(tokens) {
+    return { type: 6 /* Style */, styles: tokens };
+}
+/**
+ * `state` is an animation-specific function that is designed to be used inside of Angular's
+ * animation DSL language. If this information is new, please navigate to the {\@link
+ * Component#animations-anchor component animations metadata page} to gain a better understanding of
+ * how animations in Angular are used.
+ *
+ * `state` declares an animation state within the given trigger. When a state is active within a
+ * component then its associated styles will persist on the element that the trigger is attached to
+ * (even when the animation ends).
+ *
+ * To animate between states, have a look at the animation {\@link transition transition} DSL
+ * function. To register states to an animation trigger please have a look at the {\@link trigger
+ * trigger} function.
+ *
+ * #### The `void` state
+ *
+ * The `void` state value is a reserved word that angular uses to determine when the element is not
+ * apart of the application anymore (e.g. when an `ngIf` evaluates to false then the state of the
+ * associated element is void).
+ *
+ * #### The `*` (default) state
+ *
+ * The `*` state (when styled) is a fallback state that will be used if the state that is being
+ * animated is not declared within the trigger.
+ *
+ * ### Usage
+ *
+ * `state` will declare an animation state with its associated styles
+ * within the given trigger.
+ *
+ * - `stateNameExpr` can be one or more state names separated by commas.
+ * - `styles` refers to the {\@link style styling data} that will be persisted on the element once
+ * the state has been reached.
+ *
+ * ```typescript
+ * // "void" is a reserved name for a state and is used to represent
+ * // the state in which an element is detached from from the application.
+ * state("void", style({ height: 0 }))
+ *
+ * // user-defined states
+ * state("closed", style({ height: 0 }))
+ * state("open, visible", style({ height: "*" }))
+ * ```
+ *
+ * {\@example core/animation/ts/dsl/animation_example.ts region='Component'}
+ *
+ * \@experimental Animation support is experimental.
+ * @param {?} name
+ * @param {?} styles
+ * @return {?}
+ */
+function state(name, styles) {
+    return { type: 0 /* State */, name: name, styles: styles };
+}
+/**
+ * `keyframes` is an animation-specific function that is designed to be used inside of Angular's
+ * animation DSL language. If this information is new, please navigate to the {\@link
+ * Component#animations-anchor component animations metadata page} to gain a better understanding of
+ * how animations in Angular are used.
+ *
+ * `keyframes` specifies a collection of {\@link style style} entries each optionally characterized
+ * by an `offset` value.
+ *
+ * ### Usage
+ *
+ * The `keyframes` animation function is designed to be used alongside the {\@link animate animate}
+ * animation function. Instead of applying animations from where they are currently to their
+ * destination, keyframes can describe how each style entry is applied and at what point within the
+ * animation arc (much like CSS Keyframe Animations do).
+ *
+ * For each `style()` entry an `offset` value can be set. Doing so allows to specifiy at what
+ * percentage of the animate time the styles will be applied.
+ *
+ * ```typescript
+ * // the provided offset values describe when each backgroundColor value is applied.
+ * animate("5s", keyframes([
+ *   style({ backgroundColor: "red", offset: 0 }),
+ *   style({ backgroundColor: "blue", offset: 0.2 }),
+ *   style({ backgroundColor: "orange", offset: 0.3 }),
+ *   style({ backgroundColor: "black", offset: 1 })
+ * ]))
+ * ```
+ *
+ * Alternatively, if there are no `offset` values used within the style entries then the offsets
+ * will be calculated automatically.
+ *
+ * ```typescript
+ * animate("5s", keyframes([
+ *   style({ backgroundColor: "red" }) // offset = 0
+ *   style({ backgroundColor: "blue" }) // offset = 0.33
+ *   style({ backgroundColor: "orange" }) // offset = 0.66
+ *   style({ backgroundColor: "black" }) // offset = 1
+ * ]))
+ * ```
+ *
+ * {\@example core/animation/ts/dsl/animation_example.ts region='Component'}
+ *
+ * \@experimental Animation support is experimental.
+ * @param {?} steps
+ * @return {?}
+ */
+function keyframes(steps) {
+    return { type: 5 /* KeyframeSequence */, steps: steps };
+}
+/**
+ * `transition` is an animation-specific function that is designed to be used inside of Angular's
+ * animation DSL language. If this information is new, please navigate to the {\@link
+ * Component#animations-anchor component animations metadata page} to gain a better understanding of
+ * how animations in Angular are used.
+ *
+ * `transition` declares the {\@link sequence sequence of animation steps} that will be run when the
+ * provided `stateChangeExpr` value is satisfied. The `stateChangeExpr` consists of a `state1 =>
+ * state2` which consists of two known states (use an asterix (`*`) to refer to a dynamic starting
+ * and/or ending state).
+ *
+ * A function can also be provided as the `stateChangeExpr` argument for a transition and this
+ * function will be executed each time a state change occurs. If the value returned within the
+ * function is true then the associated animation will be run.
+ *
+ * Animation transitions are placed within an {\@link trigger animation trigger}. For an transition
+ * to animate to a state value and persist its styles then one or more {\@link state animation
+ * states} is expected to be defined.
+ *
+ * ### Usage
+ *
+ * An animation transition is kicked off the `stateChangeExpr` predicate evaluates to true based on
+ * what the previous state is and what the current state has become. In other words, if a transition
+ * is defined that matches the old/current state criteria then the associated animation will be
+ * triggered.
+ *
+ * ```typescript
+ * // all transition/state changes are defined within an animation trigger
+ * trigger("myAnimationTrigger", [
+ *   // if a state is defined then its styles will be persisted when the
+ *   // animation has fully completed itself
+ *   state("on", style({ background: "green" })),
+ *   state("off", style({ background: "grey" })),
+ *
+ *   // a transition animation that will be kicked off when the state value
+ *   // bound to "myAnimationTrigger" changes from "on" to "off"
+ *   transition("on => off", animate(500)),
+ *
+ *   // it is also possible to do run the same animation for both directions
+ *   transition("on <=> off", animate(500)),
+ *
+ *   // or to define multiple states pairs separated by commas
+ *   transition("on => off, off => void", animate(500)),
+ *
+ *   // this is a catch-all state change for when an element is inserted into
+ *   // the page and the destination state is unknown
+ *   transition("void => *", [
+ *     style({ opacity: 0 }),
+ *     animate(500)
+ *   ]),
+ *
+ *   // this will capture a state change between any states
+ *   transition("* => *", animate("1s 0s")),
+ *
+ *   // you can also go full out and include a function
+ *   transition((fromState, toState) => {
+ *     // when `true` then it will allow the animation below to be invoked
+ *     return fromState == "off" && toState == "on";
+ *   }, animate("1s 0s"))
+ * ])
+ * ```
+ *
+ * The template associated with this component will make use of the `myAnimationTrigger` animation
+ * trigger by binding to an element within its template code.
+ *
+ * ```html
+ * <!-- somewhere inside of my-component-tpl.html -->
+ * <div [\@myAnimationTrigger]="myStatusExp">...</div>
+ * ```
+ *
+ * #### The final `animate` call
+ *
+ * If the final step within the transition steps is a call to `animate()` that **only** uses a
+ * timing value with **no style data** then it will be automatically used as the final animation arc
+ * for the element to animate itself to the final state. This involves an automatic mix of
+ * adding/removing CSS styles so that the element will be in the exact state it should be for the
+ * applied state to be presented correctly.
+ *
+ * ```
+ * // start off by hiding the element, but make sure that it animates properly to whatever state
+ * // is currently active for "myAnimationTrigger"
+ * transition("void => *", [
+ *   style({ opacity: 0 }),
+ *   animate(500)
+ * ])
+ * ```
+ *
+ * ### Transition Aliases (`:enter` and `:leave`)
+ *
+ * Given that enter (insertion) and leave (removal) animations are so common, the `transition`
+ * function accepts both `:enter` and `:leave` values which are aliases for the `void => *` and `*
+ * => void` state changes.
+ *
+ * ```
+ * transition(":enter", [
+ *   style({ opacity: 0 }),
+ *   animate(500, style({ opacity: 1 }))
+ * ])
+ * transition(":leave", [
+ *   animate(500, style({ opacity: 0 }))
+ * ])
+ * ```
+ *
+ * {\@example core/animation/ts/dsl/animation_example.ts region='Component'}
+ *
+ * \@experimental Animation support is experimental.
+ * @param {?} stateChangeExpr
+ * @param {?} steps
+ * @return {?}
+ */
+function transition(stateChangeExpr, steps) {
+    return { type: 1 /* Transition */, expr: stateChangeExpr, animation: steps };
+}
+/**
+ * @license
+ * Copyright Google Inc. All Rights Reserved.
+ *
+ * Use of this source code is governed by an MIT-style license that can be
+ * found in the LICENSE file at https://angular.io/license
+ * @param {?} cb
+ * @return {?}
+ */
+function scheduleMicroTask(cb) {
+    Promise.resolve(null).then(cb);
+}
+/**
+ * @license
+ * Copyright Google Inc. All Rights Reserved.
+ *
+ * Use of this source code is governed by an MIT-style license that can be
+ * found in the LICENSE file at https://angular.io/license
+ */
+/**
+ * \@experimental Animation support is experimental.
+ * @abstract
+ */
+var AnimationPlayer = (function () {
+    function AnimationPlayer() {
+    }
+    /**
+     * @abstract
+     * @param {?} fn
+     * @return {?}
+     */
+    AnimationPlayer.prototype.onDone = function (fn) { };
+    /**
+     * @abstract
+     * @param {?} fn
+     * @return {?}
+     */
+    AnimationPlayer.prototype.onStart = function (fn) { };
+    /**
+     * @abstract
+     * @param {?} fn
+     * @return {?}
+     */
+    AnimationPlayer.prototype.onDestroy = function (fn) { };
+    /**
+     * @abstract
+     * @return {?}
+     */
+    AnimationPlayer.prototype.init = function () { };
+    /**
+     * @abstract
+     * @return {?}
+     */
+    AnimationPlayer.prototype.hasStarted = function () { };
+    /**
+     * @abstract
+     * @return {?}
+     */
+    AnimationPlayer.prototype.play = function () { };
+    /**
+     * @abstract
+     * @return {?}
+     */
+    AnimationPlayer.prototype.pause = function () { };
+    /**
+     * @abstract
+     * @return {?}
+     */
+    AnimationPlayer.prototype.restart = function () { };
+    /**
+     * @abstract
+     * @return {?}
+     */
+    AnimationPlayer.prototype.finish = function () { };
+    /**
+     * @abstract
+     * @return {?}
+     */
+    AnimationPlayer.prototype.destroy = function () { };
+    /**
+     * @abstract
+     * @return {?}
+     */
+    AnimationPlayer.prototype.reset = function () { };
+    /**
+     * @abstract
+     * @param {?} p
+     * @return {?}
+     */
+    AnimationPlayer.prototype.setPosition = function (p) { };
+    /**
+     * @abstract
+     * @return {?}
+     */
+    AnimationPlayer.prototype.getPosition = function () { };
+    Object.defineProperty(AnimationPlayer.prototype, "parentPlayer", {
+        /**
+         * @return {?}
+         */
+        get: function () { throw new Error('NOT IMPLEMENTED: Base Class'); },
+        /**
+         * @param {?} player
+         * @return {?}
+         */
+        set: function (player) { throw new Error('NOT IMPLEMENTED: Base Class'); },
+        enumerable: true,
+        configurable: true
+    });
+    return AnimationPlayer;
+}());
+/**
+ * \@experimental Animation support is experimental.
+ */
+var NoopAnimationPlayer = (function () {
+    function NoopAnimationPlayer() {
+        this._onDoneFns = [];
+        this._onStartFns = [];
+        this._onDestroyFns = [];
+        this._started = false;
+        this._destroyed = false;
+        this._finished = false;
+        this.parentPlayer = null;
+    }
+    /**
+     * @return {?}
+     */
+    NoopAnimationPlayer.prototype._onFinish = function () {
+        if (!this._finished) {
+            this._finished = true;
+            this._onDoneFns.forEach(function (fn) { return fn(); });
+            this._onDoneFns = [];
+        }
+    };
+    /**
+     * @param {?} fn
+     * @return {?}
+     */
+    NoopAnimationPlayer.prototype.onStart = function (fn) { this._onStartFns.push(fn); };
+    /**
+     * @param {?} fn
+     * @return {?}
+     */
+    NoopAnimationPlayer.prototype.onDone = function (fn) { this._onDoneFns.push(fn); };
+    /**
+     * @param {?} fn
+     * @return {?}
+     */
+    NoopAnimationPlayer.prototype.onDestroy = function (fn) { this._onDestroyFns.push(fn); };
+    /**
+     * @return {?}
+     */
+    NoopAnimationPlayer.prototype.hasStarted = function () { return this._started; };
+    /**
+     * @return {?}
+     */
+    NoopAnimationPlayer.prototype.init = function () { };
+    /**
+     * @return {?}
+     */
+    NoopAnimationPlayer.prototype.play = function () {
+        var _this = this;
+        if (!this.hasStarted()) {
+            scheduleMicroTask(function () { return _this._onFinish(); });
+            this._onStart();
+        }
+        this._started = true;
+    };
+    /**
+     * @return {?}
+     */
+    NoopAnimationPlayer.prototype._onStart = function () {
+        this._onStartFns.forEach(function (fn) { return fn(); });
+        this._onStartFns = [];
+    };
+    /**
+     * @return {?}
+     */
+    NoopAnimationPlayer.prototype.pause = function () { };
+    /**
+     * @return {?}
+     */
+    NoopAnimationPlayer.prototype.restart = function () { };
+    /**
+     * @return {?}
+     */
+    NoopAnimationPlayer.prototype.finish = function () { this._onFinish(); };
+    /**
+     * @return {?}
+     */
+    NoopAnimationPlayer.prototype.destroy = function () {
+        if (!this._destroyed) {
+            this._destroyed = true;
+            if (!this.hasStarted()) {
+                this._onStart();
+            }
+            this.finish();
+            this._onDestroyFns.forEach(function (fn) { return fn(); });
+            this._onDestroyFns = [];
+        }
+    };
+    /**
+     * @return {?}
+     */
+    NoopAnimationPlayer.prototype.reset = function () { };
+    /**
+     * @param {?} p
+     * @return {?}
+     */
+    NoopAnimationPlayer.prototype.setPosition = function (p) { };
+    /**
+     * @return {?}
+     */
+    NoopAnimationPlayer.prototype.getPosition = function () { return 0; };
+    return NoopAnimationPlayer;
+}());
+/**
+ * @license
+ * Copyright Google Inc. All Rights Reserved.
+ *
+ * Use of this source code is governed by an MIT-style license that can be
+ * found in the LICENSE file at https://angular.io/license
+ */
+var AnimationGroupPlayer = (function () {
+    /**
+     * @param {?} _players
+     */
+    function AnimationGroupPlayer(_players) {
+        var _this = this;
+        this._players = _players;
+        this._onDoneFns = [];
+        this._onStartFns = [];
+        this._finished = false;
+        this._started = false;
+        this._destroyed = false;
+        this._onDestroyFns = [];
+        this.parentPlayer = null;
+        var count = 0;
+        var total = this._players.length;
+        if (total == 0) {
+            scheduleMicroTask(function () { return _this._onFinish(); });
+        }
+        else {
+            this._players.forEach(function (player) {
+                player.parentPlayer = _this;
+                player.onDone(function () {
+                    if (++count >= total) {
+                        _this._onFinish();
+                    }
+                });
+            });
+        }
+    }
+    /**
+     * @return {?}
+     */
+    AnimationGroupPlayer.prototype._onFinish = function () {
+        if (!this._finished) {
+            this._finished = true;
+            this._onDoneFns.forEach(function (fn) { return fn(); });
+            this._onDoneFns = [];
+        }
+    };
+    /**
+     * @return {?}
+     */
+    AnimationGroupPlayer.prototype.init = function () { this._players.forEach(function (player) { return player.init(); }); };
+    /**
+     * @param {?} fn
+     * @return {?}
+     */
+    AnimationGroupPlayer.prototype.onStart = function (fn) { this._onStartFns.push(fn); };
+    /**
+     * @param {?} fn
+     * @return {?}
+     */
+    AnimationGroupPlayer.prototype.onDone = function (fn) { this._onDoneFns.push(fn); };
+    /**
+     * @param {?} fn
+     * @return {?}
+     */
+    AnimationGroupPlayer.prototype.onDestroy = function (fn) { this._onDestroyFns.push(fn); };
+    /**
+     * @return {?}
+     */
+    AnimationGroupPlayer.prototype.hasStarted = function () { return this._started; };
+    /**
+     * @return {?}
+     */
+    AnimationGroupPlayer.prototype.play = function () {
+        if (!this.parentPlayer) {
+            this.init();
+        }
+        if (!this.hasStarted()) {
+            this._onStartFns.forEach(function (fn) { return fn(); });
+            this._onStartFns = [];
+            this._started = true;
+        }
+        this._players.forEach(function (player) { return player.play(); });
+    };
+    /**
+     * @return {?}
+     */
+    AnimationGroupPlayer.prototype.pause = function () { this._players.forEach(function (player) { return player.pause(); }); };
+    /**
+     * @return {?}
+     */
+    AnimationGroupPlayer.prototype.restart = function () { this._players.forEach(function (player) { return player.restart(); }); };
+    /**
+     * @return {?}
+     */
+    AnimationGroupPlayer.prototype.finish = function () {
+        this._onFinish();
+        this._players.forEach(function (player) { return player.finish(); });
+    };
+    /**
+     * @return {?}
+     */
+    AnimationGroupPlayer.prototype.destroy = function () {
+        if (!this._destroyed) {
+            this._onFinish();
+            this._players.forEach(function (player) { return player.destroy(); });
+            this._destroyed = true;
+            this._onDestroyFns.forEach(function (fn) { return fn(); });
+            this._onDestroyFns = [];
+        }
+    };
+    /**
+     * @return {?}
+     */
+    AnimationGroupPlayer.prototype.reset = function () {
+        this._players.forEach(function (player) { return player.reset(); });
+        this._destroyed = false;
+        this._finished = false;
+        this._started = false;
+    };
+    /**
+     * @param {?} p
+     * @return {?}
+     */
+    AnimationGroupPlayer.prototype.setPosition = function (p) {
+        this._players.forEach(function (player) { player.setPosition(p); });
+    };
+    /**
+     * @return {?}
+     */
+    AnimationGroupPlayer.prototype.getPosition = function () {
+        var /** @type {?} */ min = 0;
+        this._players.forEach(function (player) {
+            var /** @type {?} */ p = player.getPosition();
+            min = Math.min(p, min);
+        });
+        return min;
+    };
+    Object.defineProperty(AnimationGroupPlayer.prototype, "players", {
+        /**
+         * @return {?}
+         */
+        get: function () { return this._players; },
+        enumerable: true,
+        configurable: true
+    });
+    return AnimationGroupPlayer;
+}());
+/**
+ * @license
+ * Copyright Google Inc. All Rights Reserved.
+ *
+ * Use of this source code is governed by an MIT-style license that can be
+ * found in the LICENSE file at https://angular.io/license
+ */
+/**
+ * @license
+ * Copyright Google Inc. All Rights Reserved.
+ *
+ * Use of this source code is governed by an MIT-style license that can be
+ * found in the LICENSE file at https://angular.io/license
+ */
+/**
+ * @license
+ * Copyright Google Inc. All Rights Reserved.
+ *
+ * Use of this source code is governed by an MIT-style license that can be
+ * found in the LICENSE file at https://angular.io/license
+ */
+/**
+ * @module
+ * @description
+ * Entry point for all public APIs of the animation package.
+ */
+/**
+ * Generated bundle index. Do not edit.
+ */
+
+//# sourceMappingURL=animations.es5.js.map
+
+
+/***/ }),
+/* 22 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_rxjs_observable_forkJoin__ = __webpack_require__(220);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_rxjs_observable_forkJoin__ = __webpack_require__(221);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_rxjs_observable_forkJoin___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_rxjs_observable_forkJoin__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_observable_fromPromise__ = __webpack_require__(100);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_observable_fromPromise__ = __webpack_require__(101);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_observable_fromPromise___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_rxjs_observable_fromPromise__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_rxjs_operator_map__ = __webpack_require__(101);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_rxjs_operator_map__ = __webpack_require__(102);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_rxjs_operator_map___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_rxjs_operator_map__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__angular_platform_browser__ = __webpack_require__(13);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__angular_platform_browser__ = __webpack_require__(11);
 /* unused harmony export AbstractControlDirective */
 /* unused harmony export AbstractFormGroupDirective */
 /* unused harmony export CheckboxControlValueAccessor */
@@ -37729,14 +38599,14 @@ ReactiveFormsModule.ctorParameters = function () { return []; };
 
 
 /***/ }),
-/* 22 */,
 /* 23 */,
 /* 24 */,
 /* 25 */,
 /* 26 */,
 /* 27 */,
 /* 28 */,
-/* 29 */
+/* 29 */,
+/* 30 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -37772,7 +38642,7 @@ exports.OuterSubscriber = OuterSubscriber;
 //# sourceMappingURL=OuterSubscriber.js.map
 
 /***/ }),
-/* 30 */
+/* 31 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -37784,9 +38654,9 @@ var __extends = (this && this.__extends) || function (d, b) {
 };
 var Observable_1 = __webpack_require__(2);
 var Subscriber_1 = __webpack_require__(8);
-var Subscription_1 = __webpack_require__(40);
-var ObjectUnsubscribedError_1 = __webpack_require__(103);
-var SubjectSubscription_1 = __webpack_require__(214);
+var Subscription_1 = __webpack_require__(42);
+var ObjectUnsubscribedError_1 = __webpack_require__(104);
+var SubjectSubscription_1 = __webpack_require__(215);
 var rxSubscriber_1 = __webpack_require__(69);
 /**
  * @class SubjectSubscriber<T>
@@ -37946,29 +38816,29 @@ exports.AnonymousSubject = AnonymousSubject;
 //# sourceMappingURL=Subject.js.map
 
 /***/ }),
-/* 31 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-var Observable_1 = __webpack_require__(2);
-var toPromise_1 = __webpack_require__(237);
-Observable_1.Observable.prototype.toPromise = toPromise_1.toPromise;
-//# sourceMappingURL=toPromise.js.map
-
-/***/ }),
 /* 32 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
+var Observable_1 = __webpack_require__(2);
+var toPromise_1 = __webpack_require__(238);
+Observable_1.Observable.prototype.toPromise = toPromise_1.toPromise;
+//# sourceMappingURL=toPromise.js.map
+
+/***/ }),
+/* 33 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
 var root_1 = __webpack_require__(16);
-var isArrayLike_1 = __webpack_require__(105);
-var isPromise_1 = __webpack_require__(108);
-var isObject_1 = __webpack_require__(107);
+var isArrayLike_1 = __webpack_require__(106);
+var isPromise_1 = __webpack_require__(109);
+var isObject_1 = __webpack_require__(108);
 var Observable_1 = __webpack_require__(2);
 var iterator_1 = __webpack_require__(67);
-var InnerSubscriber_1 = __webpack_require__(212);
+var InnerSubscriber_1 = __webpack_require__(213);
 var observable_1 = __webpack_require__(68);
 function subscribeToResult(outerSubscriber, result, outerValue, outerIndex) {
     var destination = new InnerSubscriber_1.InnerSubscriber(outerSubscriber, outerValue, outerIndex);
@@ -38041,893 +38911,25 @@ exports.subscribeToResult = subscribeToResult;
 //# sourceMappingURL=subscribeToResult.js.map
 
 /***/ }),
-/* 33 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "h", function() { return AUTO_STYLE; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "e", function() { return animate; });
-/* unused harmony export group */
-/* unused harmony export keyframes */
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "g", function() { return sequence; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "b", function() { return state; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "c", function() { return style; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "d", function() { return transition; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return trigger; });
-/* unused harmony export AnimationPlayer */
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "f", function() { return NoopAnimationPlayer; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "i", function() { return AnimationGroupPlayer; });
-/**
- * @license Angular v4.1.1
- * (c) 2010-2017 Google, Inc. https://angular.io/
- * License: MIT
- */
-/**
- * \@experimental Animation support is experimental.
- */
-var AUTO_STYLE = '*';
-/**
- * `trigger` is an animation-specific function that is designed to be used inside of Angular's
- * animation DSL language. If this information is new, please navigate to the {\@link
- * Component#animations-anchor component animations metadata page} to gain a better understanding of
- * how animations in Angular are used.
- *
- * `trigger` Creates an animation trigger which will a list of {\@link state state} and {\@link
- * transition transition} entries that will be evaluated when the expression bound to the trigger
- * changes.
- *
- * Triggers are registered within the component annotation data under the {\@link
- * Component#animations-anchor animations section}. An animation trigger can be placed on an element
- * within a template by referencing the name of the trigger followed by the expression value that the
- * trigger is bound to (in the form of `[\@triggerName]="expression"`.
- *
- * ### Usage
- *
- * `trigger` will create an animation trigger reference based on the provided `name` value. The
- * provided `animation` value is expected to be an array consisting of {\@link state state} and {\@link
- * transition transition} declarations.
- *
- * ```typescript
- * \@Component({
- *   selector: 'my-component',
- *   templateUrl: 'my-component-tpl.html',
- *   animations: [
- *     trigger("myAnimationTrigger", [
- *       state(...),
- *       state(...),
- *       transition(...),
- *       transition(...)
- *     ])
- *   ]
- * })
- * class MyComponent {
- *   myStatusExp = "something";
- * }
- * ```
- *
- * The template associated with this component will make use of the `myAnimationTrigger` animation
- * trigger by binding to an element within its template code.
- *
- * ```html
- * <!-- somewhere inside of my-component-tpl.html -->
- * <div [\@myAnimationTrigger]="myStatusExp">...</div>
- * tools/gulp-tasks/validate-commit-message.js ```
- *
- * {\@example core/animation/ts/dsl/animation_example.ts region='Component'}
- *
- * \@experimental Animation support is experimental.
- * @param {?} name
- * @param {?} definitions
- * @return {?}
- */
-function trigger(name, definitions) {
-    return { name: name, definitions: definitions };
-}
-/**
- * `animate` is an animation-specific function that is designed to be used inside of Angular's
- * animation DSL language. If this information is new, please navigate to the {\@link
- * Component#animations-anchor component animations metadata page} to gain a better understanding of
- * how animations in Angular are used.
- *
- * `animate` specifies an animation step that will apply the provided `styles` data for a given
- * amount of time based on the provided `timing` expression value. Calls to `animate` are expected
- * to be used within {\@link sequence an animation sequence}, {\@link group group}, or {\@link
- * transition transition}.
- *
- * ### Usage
- *
- * The `animate` function accepts two input parameters: `timing` and `styles`:
- *
- * - `timing` is a string based value that can be a combination of a duration with optional delay
- * and easing values. The format for the expression breaks down to `duration delay easing`
- * (therefore a value such as `1s 100ms ease-out` will be parse itself into `duration=1000,
- * delay=100, easing=ease-out`. If a numeric value is provided then that will be used as the
- * `duration` value in millisecond form.
- * - `styles` is the style input data which can either be a call to {\@link style style} or {\@link
- * keyframes keyframes}. If left empty then the styles from the destination state will be collected
- * and used (this is useful when describing an animation step that will complete an animation by
- * {\@link transition#the-final-animate-call animating to the final state}).
- *
- * ```typescript
- * // various functions for specifying timing data
- * animate(500, style(...))
- * animate("1s", style(...))
- * animate("100ms 0.5s", style(...))
- * animate("5s ease", style(...))
- * animate("5s 10ms cubic-bezier(.17,.67,.88,.1)", style(...))
- *
- * // either style() of keyframes() can be used
- * animate(500, style({ background: "red" }))
- * animate(500, keyframes([
- *   style({ background: "blue" })),
- *   style({ background: "red" }))
- * ])
- * ```
- *
- * {\@example core/animation/ts/dsl/animation_example.ts region='Component'}
- *
- * \@experimental Animation support is experimental.
- * @param {?} timings
- * @param {?=} styles
- * @return {?}
- */
-function animate(timings, styles) {
-    if (styles === void 0) { styles = null; }
-    return { type: 4 /* Animate */, styles: styles, timings: timings };
-}
-/**
- * `group` is an animation-specific function that is designed to be used inside of Angular's
- * animation DSL language. If this information is new, please navigate to the {\@link
- * Component#animations-anchor component animations metadata page} to gain a better understanding of
- * how animations in Angular are used.
- *
- * `group` specifies a list of animation steps that are all run in parallel. Grouped animations are
- * useful when a series of styles must be animated/closed off at different statrting/ending times.
- *
- * The `group` function can either be used within a {\@link sequence sequence} or a {\@link transition
- * transition} and it will only continue to the next instruction once all of the inner animation
- * steps have completed.
- *
- * ### Usage
- *
- * The `steps` data that is passed into the `group` animation function can either consist of {\@link
- * style style} or {\@link animate animate} function calls. Each call to `style()` or `animate()`
- * within a group will be executed instantly (use {\@link keyframes keyframes} or a {\@link
- * animate#usage animate() with a delay value} to offset styles to be applied at a later time).
- *
- * ```typescript
- * group([
- *   animate("1s", { background: "black" }))
- *   animate("2s", { color: "white" }))
- * ])
- * ```
- *
- * {\@example core/animation/ts/dsl/animation_example.ts region='Component'}
- *
- * \@experimental Animation support is experimental.
- * @param {?} steps
- * @return {?}
- */
-function group(steps) {
-    return { type: 3 /* Group */, steps: steps };
-}
-/**
- * `sequence` is an animation-specific function that is designed to be used inside of Angular's
- * animation DSL language. If this information is new, please navigate to the {\@link
- * Component#animations-anchor component animations metadata page} to gain a better understanding of
- * how animations in Angular are used.
- *
- * `sequence` Specifies a list of animation steps that are run one by one. (`sequence` is used by
- * default when an array is passed as animation data into {\@link transition transition}.)
- *
- * The `sequence` function can either be used within a {\@link group group} or a {\@link transition
- * transition} and it will only continue to the next instruction once each of the inner animation
- * steps have completed.
- *
- * To perform animation styling in parallel with other animation steps then have a look at the
- * {\@link group group} animation function.
- *
- * ### Usage
- *
- * The `steps` data that is passed into the `sequence` animation function can either consist of
- * {\@link style style} or {\@link animate animate} function calls. A call to `style()` will apply the
- * provided styling data immediately while a call to `animate()` will apply its styling data over a
- * given time depending on its timing data.
- *
- * ```typescript
- * sequence([
- *   style({ opacity: 0 })),
- *   animate("1s", { opacity: 1 }))
- * ])
- * ```
- *
- * {\@example core/animation/ts/dsl/animation_example.ts region='Component'}
- *
- * \@experimental Animation support is experimental.
- * @param {?} steps
- * @return {?}
- */
-function sequence(steps) {
-    return { type: 2 /* Sequence */, steps: steps };
-}
-/**
- * `style` is an animation-specific function that is designed to be used inside of Angular's
- * animation DSL language. If this information is new, please navigate to the {\@link
- * Component#animations-anchor component animations metadata page} to gain a better understanding of
- * how animations in Angular are used.
- *
- * `style` declares a key/value object containing CSS properties/styles that can then be used for
- * {\@link state animation states}, within an {\@link sequence animation sequence}, or as styling data
- * for both {\@link animate animate} and {\@link keyframes keyframes}.
- *
- * ### Usage
- *
- * `style` takes in a key/value string map as data and expects one or more CSS property/value pairs
- * to be defined.
- *
- * ```typescript
- * // string values are used for css properties
- * style({ background: "red", color: "blue" })
- *
- * // numerical (pixel) values are also supported
- * style({ width: 100, height: 0 })
- * ```
- *
- * #### Auto-styles (using `*`)
- *
- * When an asterix (`*`) character is used as a value then it will be detected from the element
- * being animated and applied as animation data when the animation starts.
- *
- * This feature proves useful for a state depending on layout and/or environment factors; in such
- * cases the styles are calculated just before the animation starts.
- *
- * ```typescript
- * // the steps below will animate from 0 to the
- * // actual height of the element
- * style({ height: 0 }),
- * animate("1s", style({ height: "*" }))
- * ```
- *
- * {\@example core/animation/ts/dsl/animation_example.ts region='Component'}
- *
- * \@experimental Animation support is experimental.
- * @param {?} tokens
- * @return {?}
- */
-function style(tokens) {
-    return { type: 6 /* Style */, styles: tokens };
-}
-/**
- * `state` is an animation-specific function that is designed to be used inside of Angular's
- * animation DSL language. If this information is new, please navigate to the {\@link
- * Component#animations-anchor component animations metadata page} to gain a better understanding of
- * how animations in Angular are used.
- *
- * `state` declares an animation state within the given trigger. When a state is active within a
- * component then its associated styles will persist on the element that the trigger is attached to
- * (even when the animation ends).
- *
- * To animate between states, have a look at the animation {\@link transition transition} DSL
- * function. To register states to an animation trigger please have a look at the {\@link trigger
- * trigger} function.
- *
- * #### The `void` state
- *
- * The `void` state value is a reserved word that angular uses to determine when the element is not
- * apart of the application anymore (e.g. when an `ngIf` evaluates to false then the state of the
- * associated element is void).
- *
- * #### The `*` (default) state
- *
- * The `*` state (when styled) is a fallback state that will be used if the state that is being
- * animated is not declared within the trigger.
- *
- * ### Usage
- *
- * `state` will declare an animation state with its associated styles
- * within the given trigger.
- *
- * - `stateNameExpr` can be one or more state names separated by commas.
- * - `styles` refers to the {\@link style styling data} that will be persisted on the element once
- * the state has been reached.
- *
- * ```typescript
- * // "void" is a reserved name for a state and is used to represent
- * // the state in which an element is detached from from the application.
- * state("void", style({ height: 0 }))
- *
- * // user-defined states
- * state("closed", style({ height: 0 }))
- * state("open, visible", style({ height: "*" }))
- * ```
- *
- * {\@example core/animation/ts/dsl/animation_example.ts region='Component'}
- *
- * \@experimental Animation support is experimental.
- * @param {?} name
- * @param {?} styles
- * @return {?}
- */
-function state(name, styles) {
-    return { type: 0 /* State */, name: name, styles: styles };
-}
-/**
- * `keyframes` is an animation-specific function that is designed to be used inside of Angular's
- * animation DSL language. If this information is new, please navigate to the {\@link
- * Component#animations-anchor component animations metadata page} to gain a better understanding of
- * how animations in Angular are used.
- *
- * `keyframes` specifies a collection of {\@link style style} entries each optionally characterized
- * by an `offset` value.
- *
- * ### Usage
- *
- * The `keyframes` animation function is designed to be used alongside the {\@link animate animate}
- * animation function. Instead of applying animations from where they are currently to their
- * destination, keyframes can describe how each style entry is applied and at what point within the
- * animation arc (much like CSS Keyframe Animations do).
- *
- * For each `style()` entry an `offset` value can be set. Doing so allows to specifiy at what
- * percentage of the animate time the styles will be applied.
- *
- * ```typescript
- * // the provided offset values describe when each backgroundColor value is applied.
- * animate("5s", keyframes([
- *   style({ backgroundColor: "red", offset: 0 }),
- *   style({ backgroundColor: "blue", offset: 0.2 }),
- *   style({ backgroundColor: "orange", offset: 0.3 }),
- *   style({ backgroundColor: "black", offset: 1 })
- * ]))
- * ```
- *
- * Alternatively, if there are no `offset` values used within the style entries then the offsets
- * will be calculated automatically.
- *
- * ```typescript
- * animate("5s", keyframes([
- *   style({ backgroundColor: "red" }) // offset = 0
- *   style({ backgroundColor: "blue" }) // offset = 0.33
- *   style({ backgroundColor: "orange" }) // offset = 0.66
- *   style({ backgroundColor: "black" }) // offset = 1
- * ]))
- * ```
- *
- * {\@example core/animation/ts/dsl/animation_example.ts region='Component'}
- *
- * \@experimental Animation support is experimental.
- * @param {?} steps
- * @return {?}
- */
-function keyframes(steps) {
-    return { type: 5 /* KeyframeSequence */, steps: steps };
-}
-/**
- * `transition` is an animation-specific function that is designed to be used inside of Angular's
- * animation DSL language. If this information is new, please navigate to the {\@link
- * Component#animations-anchor component animations metadata page} to gain a better understanding of
- * how animations in Angular are used.
- *
- * `transition` declares the {\@link sequence sequence of animation steps} that will be run when the
- * provided `stateChangeExpr` value is satisfied. The `stateChangeExpr` consists of a `state1 =>
- * state2` which consists of two known states (use an asterix (`*`) to refer to a dynamic starting
- * and/or ending state).
- *
- * A function can also be provided as the `stateChangeExpr` argument for a transition and this
- * function will be executed each time a state change occurs. If the value returned within the
- * function is true then the associated animation will be run.
- *
- * Animation transitions are placed within an {\@link trigger animation trigger}. For an transition
- * to animate to a state value and persist its styles then one or more {\@link state animation
- * states} is expected to be defined.
- *
- * ### Usage
- *
- * An animation transition is kicked off the `stateChangeExpr` predicate evaluates to true based on
- * what the previous state is and what the current state has become. In other words, if a transition
- * is defined that matches the old/current state criteria then the associated animation will be
- * triggered.
- *
- * ```typescript
- * // all transition/state changes are defined within an animation trigger
- * trigger("myAnimationTrigger", [
- *   // if a state is defined then its styles will be persisted when the
- *   // animation has fully completed itself
- *   state("on", style({ background: "green" })),
- *   state("off", style({ background: "grey" })),
- *
- *   // a transition animation that will be kicked off when the state value
- *   // bound to "myAnimationTrigger" changes from "on" to "off"
- *   transition("on => off", animate(500)),
- *
- *   // it is also possible to do run the same animation for both directions
- *   transition("on <=> off", animate(500)),
- *
- *   // or to define multiple states pairs separated by commas
- *   transition("on => off, off => void", animate(500)),
- *
- *   // this is a catch-all state change for when an element is inserted into
- *   // the page and the destination state is unknown
- *   transition("void => *", [
- *     style({ opacity: 0 }),
- *     animate(500)
- *   ]),
- *
- *   // this will capture a state change between any states
- *   transition("* => *", animate("1s 0s")),
- *
- *   // you can also go full out and include a function
- *   transition((fromState, toState) => {
- *     // when `true` then it will allow the animation below to be invoked
- *     return fromState == "off" && toState == "on";
- *   }, animate("1s 0s"))
- * ])
- * ```
- *
- * The template associated with this component will make use of the `myAnimationTrigger` animation
- * trigger by binding to an element within its template code.
- *
- * ```html
- * <!-- somewhere inside of my-component-tpl.html -->
- * <div [\@myAnimationTrigger]="myStatusExp">...</div>
- * ```
- *
- * #### The final `animate` call
- *
- * If the final step within the transition steps is a call to `animate()` that **only** uses a
- * timing value with **no style data** then it will be automatically used as the final animation arc
- * for the element to animate itself to the final state. This involves an automatic mix of
- * adding/removing CSS styles so that the element will be in the exact state it should be for the
- * applied state to be presented correctly.
- *
- * ```
- * // start off by hiding the element, but make sure that it animates properly to whatever state
- * // is currently active for "myAnimationTrigger"
- * transition("void => *", [
- *   style({ opacity: 0 }),
- *   animate(500)
- * ])
- * ```
- *
- * ### Transition Aliases (`:enter` and `:leave`)
- *
- * Given that enter (insertion) and leave (removal) animations are so common, the `transition`
- * function accepts both `:enter` and `:leave` values which are aliases for the `void => *` and `*
- * => void` state changes.
- *
- * ```
- * transition(":enter", [
- *   style({ opacity: 0 }),
- *   animate(500, style({ opacity: 1 }))
- * ])
- * transition(":leave", [
- *   animate(500, style({ opacity: 0 }))
- * ])
- * ```
- *
- * {\@example core/animation/ts/dsl/animation_example.ts region='Component'}
- *
- * \@experimental Animation support is experimental.
- * @param {?} stateChangeExpr
- * @param {?} steps
- * @return {?}
- */
-function transition(stateChangeExpr, steps) {
-    return { type: 1 /* Transition */, expr: stateChangeExpr, animation: steps };
-}
-/**
- * @license
- * Copyright Google Inc. All Rights Reserved.
- *
- * Use of this source code is governed by an MIT-style license that can be
- * found in the LICENSE file at https://angular.io/license
- * @param {?} cb
- * @return {?}
- */
-function scheduleMicroTask(cb) {
-    Promise.resolve(null).then(cb);
-}
-/**
- * @license
- * Copyright Google Inc. All Rights Reserved.
- *
- * Use of this source code is governed by an MIT-style license that can be
- * found in the LICENSE file at https://angular.io/license
- */
-/**
- * \@experimental Animation support is experimental.
- * @abstract
- */
-var AnimationPlayer = (function () {
-    function AnimationPlayer() {
-    }
-    /**
-     * @abstract
-     * @param {?} fn
-     * @return {?}
-     */
-    AnimationPlayer.prototype.onDone = function (fn) { };
-    /**
-     * @abstract
-     * @param {?} fn
-     * @return {?}
-     */
-    AnimationPlayer.prototype.onStart = function (fn) { };
-    /**
-     * @abstract
-     * @param {?} fn
-     * @return {?}
-     */
-    AnimationPlayer.prototype.onDestroy = function (fn) { };
-    /**
-     * @abstract
-     * @return {?}
-     */
-    AnimationPlayer.prototype.init = function () { };
-    /**
-     * @abstract
-     * @return {?}
-     */
-    AnimationPlayer.prototype.hasStarted = function () { };
-    /**
-     * @abstract
-     * @return {?}
-     */
-    AnimationPlayer.prototype.play = function () { };
-    /**
-     * @abstract
-     * @return {?}
-     */
-    AnimationPlayer.prototype.pause = function () { };
-    /**
-     * @abstract
-     * @return {?}
-     */
-    AnimationPlayer.prototype.restart = function () { };
-    /**
-     * @abstract
-     * @return {?}
-     */
-    AnimationPlayer.prototype.finish = function () { };
-    /**
-     * @abstract
-     * @return {?}
-     */
-    AnimationPlayer.prototype.destroy = function () { };
-    /**
-     * @abstract
-     * @return {?}
-     */
-    AnimationPlayer.prototype.reset = function () { };
-    /**
-     * @abstract
-     * @param {?} p
-     * @return {?}
-     */
-    AnimationPlayer.prototype.setPosition = function (p) { };
-    /**
-     * @abstract
-     * @return {?}
-     */
-    AnimationPlayer.prototype.getPosition = function () { };
-    Object.defineProperty(AnimationPlayer.prototype, "parentPlayer", {
-        /**
-         * @return {?}
-         */
-        get: function () { throw new Error('NOT IMPLEMENTED: Base Class'); },
-        /**
-         * @param {?} player
-         * @return {?}
-         */
-        set: function (player) { throw new Error('NOT IMPLEMENTED: Base Class'); },
-        enumerable: true,
-        configurable: true
-    });
-    return AnimationPlayer;
-}());
-/**
- * \@experimental Animation support is experimental.
- */
-var NoopAnimationPlayer = (function () {
-    function NoopAnimationPlayer() {
-        this._onDoneFns = [];
-        this._onStartFns = [];
-        this._onDestroyFns = [];
-        this._started = false;
-        this._destroyed = false;
-        this._finished = false;
-        this.parentPlayer = null;
-    }
-    /**
-     * @return {?}
-     */
-    NoopAnimationPlayer.prototype._onFinish = function () {
-        if (!this._finished) {
-            this._finished = true;
-            this._onDoneFns.forEach(function (fn) { return fn(); });
-            this._onDoneFns = [];
-        }
-    };
-    /**
-     * @param {?} fn
-     * @return {?}
-     */
-    NoopAnimationPlayer.prototype.onStart = function (fn) { this._onStartFns.push(fn); };
-    /**
-     * @param {?} fn
-     * @return {?}
-     */
-    NoopAnimationPlayer.prototype.onDone = function (fn) { this._onDoneFns.push(fn); };
-    /**
-     * @param {?} fn
-     * @return {?}
-     */
-    NoopAnimationPlayer.prototype.onDestroy = function (fn) { this._onDestroyFns.push(fn); };
-    /**
-     * @return {?}
-     */
-    NoopAnimationPlayer.prototype.hasStarted = function () { return this._started; };
-    /**
-     * @return {?}
-     */
-    NoopAnimationPlayer.prototype.init = function () { };
-    /**
-     * @return {?}
-     */
-    NoopAnimationPlayer.prototype.play = function () {
-        var _this = this;
-        if (!this.hasStarted()) {
-            scheduleMicroTask(function () { return _this._onFinish(); });
-            this._onStart();
-        }
-        this._started = true;
-    };
-    /**
-     * @return {?}
-     */
-    NoopAnimationPlayer.prototype._onStart = function () {
-        this._onStartFns.forEach(function (fn) { return fn(); });
-        this._onStartFns = [];
-    };
-    /**
-     * @return {?}
-     */
-    NoopAnimationPlayer.prototype.pause = function () { };
-    /**
-     * @return {?}
-     */
-    NoopAnimationPlayer.prototype.restart = function () { };
-    /**
-     * @return {?}
-     */
-    NoopAnimationPlayer.prototype.finish = function () { this._onFinish(); };
-    /**
-     * @return {?}
-     */
-    NoopAnimationPlayer.prototype.destroy = function () {
-        if (!this._destroyed) {
-            this._destroyed = true;
-            if (!this.hasStarted()) {
-                this._onStart();
-            }
-            this.finish();
-            this._onDestroyFns.forEach(function (fn) { return fn(); });
-            this._onDestroyFns = [];
-        }
-    };
-    /**
-     * @return {?}
-     */
-    NoopAnimationPlayer.prototype.reset = function () { };
-    /**
-     * @param {?} p
-     * @return {?}
-     */
-    NoopAnimationPlayer.prototype.setPosition = function (p) { };
-    /**
-     * @return {?}
-     */
-    NoopAnimationPlayer.prototype.getPosition = function () { return 0; };
-    return NoopAnimationPlayer;
-}());
-/**
- * @license
- * Copyright Google Inc. All Rights Reserved.
- *
- * Use of this source code is governed by an MIT-style license that can be
- * found in the LICENSE file at https://angular.io/license
- */
-var AnimationGroupPlayer = (function () {
-    /**
-     * @param {?} _players
-     */
-    function AnimationGroupPlayer(_players) {
-        var _this = this;
-        this._players = _players;
-        this._onDoneFns = [];
-        this._onStartFns = [];
-        this._finished = false;
-        this._started = false;
-        this._destroyed = false;
-        this._onDestroyFns = [];
-        this.parentPlayer = null;
-        var count = 0;
-        var total = this._players.length;
-        if (total == 0) {
-            scheduleMicroTask(function () { return _this._onFinish(); });
-        }
-        else {
-            this._players.forEach(function (player) {
-                player.parentPlayer = _this;
-                player.onDone(function () {
-                    if (++count >= total) {
-                        _this._onFinish();
-                    }
-                });
-            });
-        }
-    }
-    /**
-     * @return {?}
-     */
-    AnimationGroupPlayer.prototype._onFinish = function () {
-        if (!this._finished) {
-            this._finished = true;
-            this._onDoneFns.forEach(function (fn) { return fn(); });
-            this._onDoneFns = [];
-        }
-    };
-    /**
-     * @return {?}
-     */
-    AnimationGroupPlayer.prototype.init = function () { this._players.forEach(function (player) { return player.init(); }); };
-    /**
-     * @param {?} fn
-     * @return {?}
-     */
-    AnimationGroupPlayer.prototype.onStart = function (fn) { this._onStartFns.push(fn); };
-    /**
-     * @param {?} fn
-     * @return {?}
-     */
-    AnimationGroupPlayer.prototype.onDone = function (fn) { this._onDoneFns.push(fn); };
-    /**
-     * @param {?} fn
-     * @return {?}
-     */
-    AnimationGroupPlayer.prototype.onDestroy = function (fn) { this._onDestroyFns.push(fn); };
-    /**
-     * @return {?}
-     */
-    AnimationGroupPlayer.prototype.hasStarted = function () { return this._started; };
-    /**
-     * @return {?}
-     */
-    AnimationGroupPlayer.prototype.play = function () {
-        if (!this.parentPlayer) {
-            this.init();
-        }
-        if (!this.hasStarted()) {
-            this._onStartFns.forEach(function (fn) { return fn(); });
-            this._onStartFns = [];
-            this._started = true;
-        }
-        this._players.forEach(function (player) { return player.play(); });
-    };
-    /**
-     * @return {?}
-     */
-    AnimationGroupPlayer.prototype.pause = function () { this._players.forEach(function (player) { return player.pause(); }); };
-    /**
-     * @return {?}
-     */
-    AnimationGroupPlayer.prototype.restart = function () { this._players.forEach(function (player) { return player.restart(); }); };
-    /**
-     * @return {?}
-     */
-    AnimationGroupPlayer.prototype.finish = function () {
-        this._onFinish();
-        this._players.forEach(function (player) { return player.finish(); });
-    };
-    /**
-     * @return {?}
-     */
-    AnimationGroupPlayer.prototype.destroy = function () {
-        if (!this._destroyed) {
-            this._onFinish();
-            this._players.forEach(function (player) { return player.destroy(); });
-            this._destroyed = true;
-            this._onDestroyFns.forEach(function (fn) { return fn(); });
-            this._onDestroyFns = [];
-        }
-    };
-    /**
-     * @return {?}
-     */
-    AnimationGroupPlayer.prototype.reset = function () {
-        this._players.forEach(function (player) { return player.reset(); });
-        this._destroyed = false;
-        this._finished = false;
-        this._started = false;
-    };
-    /**
-     * @param {?} p
-     * @return {?}
-     */
-    AnimationGroupPlayer.prototype.setPosition = function (p) {
-        this._players.forEach(function (player) { player.setPosition(p); });
-    };
-    /**
-     * @return {?}
-     */
-    AnimationGroupPlayer.prototype.getPosition = function () {
-        var /** @type {?} */ min = 0;
-        this._players.forEach(function (player) {
-            var /** @type {?} */ p = player.getPosition();
-            min = Math.min(p, min);
-        });
-        return min;
-    };
-    Object.defineProperty(AnimationGroupPlayer.prototype, "players", {
-        /**
-         * @return {?}
-         */
-        get: function () { return this._players; },
-        enumerable: true,
-        configurable: true
-    });
-    return AnimationGroupPlayer;
-}());
-/**
- * @license
- * Copyright Google Inc. All Rights Reserved.
- *
- * Use of this source code is governed by an MIT-style license that can be
- * found in the LICENSE file at https://angular.io/license
- */
-/**
- * @license
- * Copyright Google Inc. All Rights Reserved.
- *
- * Use of this source code is governed by an MIT-style license that can be
- * found in the LICENSE file at https://angular.io/license
- */
-/**
- * @license
- * Copyright Google Inc. All Rights Reserved.
- *
- * Use of this source code is governed by an MIT-style license that can be
- * found in the LICENSE file at https://angular.io/license
- */
-/**
- * @module
- * @description
- * Entry point for all public APIs of the animation package.
- */
-/**
- * Generated bundle index. Do not edit.
- */
-
-//# sourceMappingURL=animations.es5.js.map
-
-
-/***/ }),
 /* 34 */,
 /* 35 */,
 /* 36 */,
 /* 37 */,
 /* 38 */,
 /* 39 */,
-/* 40 */
+/* 40 */,
+/* 41 */,
+/* 42 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 var isArray_1 = __webpack_require__(71);
-var isObject_1 = __webpack_require__(107);
-var isFunction_1 = __webpack_require__(106);
-var tryCatch_1 = __webpack_require__(240);
-var errorObject_1 = __webpack_require__(104);
-var UnsubscriptionError_1 = __webpack_require__(238);
+var isObject_1 = __webpack_require__(108);
+var isFunction_1 = __webpack_require__(107);
+var tryCatch_1 = __webpack_require__(241);
+var errorObject_1 = __webpack_require__(105);
+var UnsubscriptionError_1 = __webpack_require__(239);
 /**
  * Represents a disposable resource, such as the execution of an Observable. A
  * Subscription has one important method, `unsubscribe`, that takes no argument
@@ -39116,8 +39118,8 @@ function flattenUnsubscriptionErrors(errors) {
 //# sourceMappingURL=Subscription.js.map
 
 /***/ }),
-/* 41 */,
-/* 42 */
+/* 43 */,
+/* 44 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -39238,7 +39240,7 @@ function fromByteArray (uint8) {
 
 
 /***/ }),
-/* 43 */
+/* 45 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -39252,7 +39254,7 @@ function fromByteArray (uint8) {
 
 
 
-var base64 = __webpack_require__(42)
+var base64 = __webpack_require__(44)
 var ieee754 = __webpack_require__(62)
 var isArray = __webpack_require__(63)
 
@@ -41035,8 +41037,6 @@ function isnan (val) {
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(19)))
 
 /***/ }),
-/* 44 */,
-/* 45 */,
 /* 46 */,
 /* 47 */,
 /* 48 */,
@@ -41165,9 +41165,9 @@ var __extends = (this && this.__extends) || function (d, b) {
     d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
 };
 var Observable_1 = __webpack_require__(2);
-var ScalarObservable_1 = __webpack_require__(99);
+var ScalarObservable_1 = __webpack_require__(100);
 var EmptyObservable_1 = __webpack_require__(65);
-var isScheduler_1 = __webpack_require__(109);
+var isScheduler_1 = __webpack_require__(110);
 /**
  * We need this JSDoc comment for affecting ESDoc.
  * @extends {Ignored}
@@ -41379,8 +41379,8 @@ var __extends = (this && this.__extends) || function (d, b) {
     function __() { this.constructor = d; }
     d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
 };
-var OuterSubscriber_1 = __webpack_require__(29);
-var subscribeToResult_1 = __webpack_require__(32);
+var OuterSubscriber_1 = __webpack_require__(30);
+var subscribeToResult_1 = __webpack_require__(33);
 /**
  * Converts a higher-order Observable into a first-order Observable which
  * concurrently delivers all values that are emitted on the inner Observables.
@@ -41645,7 +41645,8 @@ exports.isArray = Array.isArray || (function (x) { return x && typeof x.length =
 /* 93 */,
 /* 94 */,
 /* 95 */,
-/* 96 */
+/* 96 */,
+/* 97 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -41659,18 +41660,18 @@ exports.empty = {
 //# sourceMappingURL=Observer.js.map
 
 /***/ }),
-/* 97 */
+/* 98 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 var Observable_1 = __webpack_require__(2);
-var switchMap_1 = __webpack_require__(236);
+var switchMap_1 = __webpack_require__(237);
 Observable_1.Observable.prototype.switchMap = switchMap_1.switchMap;
 //# sourceMappingURL=switchMap.js.map
 
 /***/ }),
-/* 98 */
+/* 99 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -41797,7 +41798,7 @@ function dispatchError(arg) {
 //# sourceMappingURL=PromiseObservable.js.map
 
 /***/ }),
-/* 99 */
+/* 100 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -41861,17 +41862,17 @@ exports.ScalarObservable = ScalarObservable;
 //# sourceMappingURL=ScalarObservable.js.map
 
 /***/ }),
-/* 100 */
+/* 101 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
-var PromiseObservable_1 = __webpack_require__(98);
+var PromiseObservable_1 = __webpack_require__(99);
 exports.fromPromise = PromiseObservable_1.PromiseObservable.create;
 //# sourceMappingURL=fromPromise.js.map
 
 /***/ }),
-/* 101 */
+/* 102 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -41964,7 +41965,7 @@ var MapSubscriber = (function (_super) {
 //# sourceMappingURL=map.js.map
 
 /***/ }),
-/* 102 */
+/* 103 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -41974,8 +41975,8 @@ var __extends = (this && this.__extends) || function (d, b) {
     function __() { this.constructor = d; }
     d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
 };
-var subscribeToResult_1 = __webpack_require__(32);
-var OuterSubscriber_1 = __webpack_require__(29);
+var subscribeToResult_1 = __webpack_require__(33);
+var OuterSubscriber_1 = __webpack_require__(30);
 /* tslint:enable:max-line-length */
 /**
  * Projects each source value to an Observable which is merged in the output
@@ -42141,7 +42142,7 @@ exports.MergeMapSubscriber = MergeMapSubscriber;
 //# sourceMappingURL=mergeMap.js.map
 
 /***/ }),
-/* 103 */
+/* 104 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -42174,7 +42175,7 @@ exports.ObjectUnsubscribedError = ObjectUnsubscribedError;
 //# sourceMappingURL=ObjectUnsubscribedError.js.map
 
 /***/ }),
-/* 104 */
+/* 105 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -42184,7 +42185,7 @@ exports.errorObject = { e: {} };
 //# sourceMappingURL=errorObject.js.map
 
 /***/ }),
-/* 105 */
+/* 106 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -42193,7 +42194,7 @@ exports.isArrayLike = (function (x) { return x && typeof x.length === 'number'; 
 //# sourceMappingURL=isArrayLike.js.map
 
 /***/ }),
-/* 106 */
+/* 107 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -42205,7 +42206,7 @@ exports.isFunction = isFunction;
 //# sourceMappingURL=isFunction.js.map
 
 /***/ }),
-/* 107 */
+/* 108 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -42217,7 +42218,7 @@ exports.isObject = isObject;
 //# sourceMappingURL=isObject.js.map
 
 /***/ }),
-/* 108 */
+/* 109 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -42229,7 +42230,7 @@ exports.isPromise = isPromise;
 //# sourceMappingURL=isPromise.js.map
 
 /***/ }),
-/* 109 */
+/* 110 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -42241,15 +42242,15 @@ exports.isScheduler = isScheduler;
 //# sourceMappingURL=isScheduler.js.map
 
 /***/ }),
-/* 110 */,
 /* 111 */,
 /* 112 */,
 /* 113 */,
-/* 114 */
+/* 114 */,
+/* 115 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_animations__ = __webpack_require__(33);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_animations__ = __webpack_require__(21);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "c", function() { return AnimationDriver; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AnimationEngine; });
 /* unused harmony export ɵAnimation */
@@ -44782,7 +44783,7 @@ function supportsWebAnimations() {
 
 
 /***/ }),
-/* 115 */
+/* 116 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -71398,14 +71399,14 @@ var ImportResolver = (function () {
 //# sourceMappingURL=compiler.es5.js.map
 
 /***/ }),
-/* 116 */
+/* 117 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_compiler__ = __webpack_require__(115);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_compiler__ = __webpack_require__(116);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_common__ = __webpack_require__(6);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_platform_browser__ = __webpack_require__(13);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_platform_browser__ = __webpack_require__(11);
 /* unused harmony export RESOURCE_CACHE_PROVIDER */
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return platformBrowserDynamic; });
 /* unused harmony export VERSION */
@@ -71584,13 +71585,13 @@ var platformBrowserDynamic = __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1__
 
 
 /***/ }),
-/* 117 */
+/* 118 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_platform_browser__ = __webpack_require__(13);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_animations_browser__ = __webpack_require__(114);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_platform_browser__ = __webpack_require__(11);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_animations_browser__ = __webpack_require__(115);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return BrowserAnimationsModule; });
 /* unused harmony export NoopAnimationsModule */
 /* unused harmony export ɵAnimationRenderer */
@@ -72070,7 +72071,6 @@ NoopAnimationsModule.ctorParameters = function () { return []; };
 
 
 /***/ }),
-/* 118 */,
 /* 119 */,
 /* 120 */,
 /* 121 */,
@@ -72163,7 +72163,8 @@ NoopAnimationsModule.ctorParameters = function () { return []; };
 /* 208 */,
 /* 209 */,
 /* 210 */,
-/* 211 */
+/* 211 */,
+/* 212 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -72173,8 +72174,8 @@ var __extends = (this && this.__extends) || function (d, b) {
     function __() { this.constructor = d; }
     d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
 };
-var Subject_1 = __webpack_require__(30);
-var ObjectUnsubscribedError_1 = __webpack_require__(103);
+var Subject_1 = __webpack_require__(31);
+var ObjectUnsubscribedError_1 = __webpack_require__(104);
 /**
  * @class BehaviorSubject<T>
  */
@@ -72218,7 +72219,7 @@ exports.BehaviorSubject = BehaviorSubject;
 //# sourceMappingURL=BehaviorSubject.js.map
 
 /***/ }),
-/* 212 */
+/* 213 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -72260,7 +72261,7 @@ exports.InnerSubscriber = InnerSubscriber;
 //# sourceMappingURL=InnerSubscriber.js.map
 
 /***/ }),
-/* 213 */
+/* 214 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -72393,7 +72394,7 @@ exports.Notification = Notification;
 //# sourceMappingURL=Notification.js.map
 
 /***/ }),
-/* 214 */
+/* 215 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -72403,7 +72404,7 @@ var __extends = (this && this.__extends) || function (d, b) {
     function __() { this.constructor = d; }
     d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
 };
-var Subscription_1 = __webpack_require__(40);
+var Subscription_1 = __webpack_require__(42);
 /**
  * We need this JSDoc comment for affecting ESDoc.
  * @ignore
@@ -72439,7 +72440,7 @@ exports.SubjectSubscription = SubjectSubscription;
 //# sourceMappingURL=SubjectSubscription.js.map
 
 /***/ }),
-/* 215 */
+/* 216 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -72450,7 +72451,7 @@ var __extends = (this && this.__extends) || function (d, b) {
     d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
 };
 var Observable_1 = __webpack_require__(2);
-var ScalarObservable_1 = __webpack_require__(99);
+var ScalarObservable_1 = __webpack_require__(100);
 var EmptyObservable_1 = __webpack_require__(65);
 /**
  * We need this JSDoc comment for affecting ESDoc.
@@ -72515,7 +72516,7 @@ exports.ArrayLikeObservable = ArrayLikeObservable;
 //# sourceMappingURL=ArrayLikeObservable.js.map
 
 /***/ }),
-/* 216 */
+/* 217 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -72525,10 +72526,10 @@ var __extends = (this && this.__extends) || function (d, b) {
     function __() { this.constructor = d; }
     d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
 };
-var Subject_1 = __webpack_require__(30);
+var Subject_1 = __webpack_require__(31);
 var Observable_1 = __webpack_require__(2);
 var Subscriber_1 = __webpack_require__(8);
-var Subscription_1 = __webpack_require__(40);
+var Subscription_1 = __webpack_require__(42);
 /**
  * @class ConnectableObservable<T>
  */
@@ -72685,7 +72686,7 @@ var RefCountSubscriber = (function (_super) {
 //# sourceMappingURL=ConnectableObservable.js.map
 
 /***/ }),
-/* 217 */
+/* 218 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -72698,8 +72699,8 @@ var __extends = (this && this.__extends) || function (d, b) {
 var Observable_1 = __webpack_require__(2);
 var EmptyObservable_1 = __webpack_require__(65);
 var isArray_1 = __webpack_require__(71);
-var subscribeToResult_1 = __webpack_require__(32);
-var OuterSubscriber_1 = __webpack_require__(29);
+var subscribeToResult_1 = __webpack_require__(33);
+var OuterSubscriber_1 = __webpack_require__(30);
 /**
  * We need this JSDoc comment for affecting ESDoc.
  * @extends {Ignored}
@@ -72803,7 +72804,7 @@ var ForkJoinSubscriber = (function (_super) {
 //# sourceMappingURL=ForkJoinObservable.js.map
 
 /***/ }),
-/* 218 */
+/* 219 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -72814,15 +72815,15 @@ var __extends = (this && this.__extends) || function (d, b) {
     d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
 };
 var isArray_1 = __webpack_require__(71);
-var isArrayLike_1 = __webpack_require__(105);
-var isPromise_1 = __webpack_require__(108);
-var PromiseObservable_1 = __webpack_require__(98);
-var IteratorObservable_1 = __webpack_require__(219);
+var isArrayLike_1 = __webpack_require__(106);
+var isPromise_1 = __webpack_require__(109);
+var PromiseObservable_1 = __webpack_require__(99);
+var IteratorObservable_1 = __webpack_require__(220);
 var ArrayObservable_1 = __webpack_require__(64);
-var ArrayLikeObservable_1 = __webpack_require__(215);
+var ArrayLikeObservable_1 = __webpack_require__(216);
 var iterator_1 = __webpack_require__(67);
 var Observable_1 = __webpack_require__(2);
-var observeOn_1 = __webpack_require__(233);
+var observeOn_1 = __webpack_require__(234);
 var observable_1 = __webpack_require__(68);
 /**
  * We need this JSDoc comment for affecting ESDoc.
@@ -72931,7 +72932,7 @@ exports.FromObservable = FromObservable;
 //# sourceMappingURL=FromObservable.js.map
 
 /***/ }),
-/* 219 */
+/* 220 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -73100,24 +73101,14 @@ function sign(value) {
 //# sourceMappingURL=IteratorObservable.js.map
 
 /***/ }),
-/* 220 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-var ForkJoinObservable_1 = __webpack_require__(217);
-exports.forkJoin = ForkJoinObservable_1.ForkJoinObservable.create;
-//# sourceMappingURL=forkJoin.js.map
-
-/***/ }),
 /* 221 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
-var FromObservable_1 = __webpack_require__(218);
-exports.from = FromObservable_1.FromObservable.create;
-//# sourceMappingURL=from.js.map
+var ForkJoinObservable_1 = __webpack_require__(218);
+exports.forkJoin = ForkJoinObservable_1.ForkJoinObservable.create;
+//# sourceMappingURL=forkJoin.js.map
 
 /***/ }),
 /* 222 */
@@ -73125,12 +73116,22 @@ exports.from = FromObservable_1.FromObservable.create;
 
 "use strict";
 
-var merge_1 = __webpack_require__(231);
+var FromObservable_1 = __webpack_require__(219);
+exports.from = FromObservable_1.FromObservable.create;
+//# sourceMappingURL=from.js.map
+
+/***/ }),
+/* 223 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+var merge_1 = __webpack_require__(232);
 exports.merge = merge_1.mergeStatic;
 //# sourceMappingURL=merge.js.map
 
 /***/ }),
-/* 223 */
+/* 224 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -73140,7 +73141,7 @@ exports.of = ArrayObservable_1.ArrayObservable.of;
 //# sourceMappingURL=of.js.map
 
 /***/ }),
-/* 224 */
+/* 225 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -73150,8 +73151,8 @@ var __extends = (this && this.__extends) || function (d, b) {
     function __() { this.constructor = d; }
     d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
 };
-var OuterSubscriber_1 = __webpack_require__(29);
-var subscribeToResult_1 = __webpack_require__(32);
+var OuterSubscriber_1 = __webpack_require__(30);
+var subscribeToResult_1 = __webpack_require__(33);
 /**
  * Catches errors on the observable to be handled by returning a new observable or throwing an error.
  *
@@ -73262,7 +73263,7 @@ var CatchSubscriber = (function (_super) {
 //# sourceMappingURL=catch.js.map
 
 /***/ }),
-/* 225 */
+/* 226 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -73324,12 +73325,12 @@ exports.concatAll = concatAll;
 //# sourceMappingURL=concatAll.js.map
 
 /***/ }),
-/* 226 */
+/* 227 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
-var mergeMap_1 = __webpack_require__(102);
+var mergeMap_1 = __webpack_require__(103);
 /* tslint:enable:max-line-length */
 /**
  * Projects each source value to an Observable which is merged in the output
@@ -73400,7 +73401,7 @@ exports.concatMap = concatMap;
 //# sourceMappingURL=concatMap.js.map
 
 /***/ }),
-/* 227 */
+/* 228 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -73480,7 +73481,7 @@ var EverySubscriber = (function (_super) {
 //# sourceMappingURL=every.js.map
 
 /***/ }),
-/* 228 */
+/* 229 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -73579,7 +73580,7 @@ var FilterSubscriber = (function (_super) {
 //# sourceMappingURL=filter.js.map
 
 /***/ }),
-/* 229 */
+/* 230 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -73737,7 +73738,7 @@ var FirstSubscriber = (function (_super) {
 //# sourceMappingURL=first.js.map
 
 /***/ }),
-/* 230 */
+/* 231 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -73862,7 +73863,7 @@ var LastSubscriber = (function (_super) {
 //# sourceMappingURL=last.js.map
 
 /***/ }),
-/* 231 */
+/* 232 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -73870,7 +73871,7 @@ var LastSubscriber = (function (_super) {
 var Observable_1 = __webpack_require__(2);
 var ArrayObservable_1 = __webpack_require__(64);
 var mergeAll_1 = __webpack_require__(66);
-var isScheduler_1 = __webpack_require__(109);
+var isScheduler_1 = __webpack_require__(110);
 /* tslint:enable:max-line-length */
 /**
  * Creates an output Observable which concurrently emits all values from every
@@ -74013,12 +74014,12 @@ exports.mergeStatic = mergeStatic;
 //# sourceMappingURL=merge.js.map
 
 /***/ }),
-/* 232 */
+/* 233 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
-var ConnectableObservable_1 = __webpack_require__(216);
+var ConnectableObservable_1 = __webpack_require__(217);
 /* tslint:enable:max-line-length */
 /**
  * Returns an Observable that emits the results of invoking a specified selector on items
@@ -74076,7 +74077,7 @@ exports.MulticastOperator = MulticastOperator;
 //# sourceMappingURL=multicast.js.map
 
 /***/ }),
-/* 233 */
+/* 234 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -74087,7 +74088,7 @@ var __extends = (this && this.__extends) || function (d, b) {
     d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
 };
 var Subscriber_1 = __webpack_require__(8);
-var Notification_1 = __webpack_require__(213);
+var Notification_1 = __webpack_require__(214);
 /**
  * @see {@link Notification}
  *
@@ -74158,7 +74159,7 @@ exports.ObserveOnMessage = ObserveOnMessage;
 //# sourceMappingURL=observeOn.js.map
 
 /***/ }),
-/* 234 */
+/* 235 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -74290,13 +74291,13 @@ exports.ReduceSubscriber = ReduceSubscriber;
 //# sourceMappingURL=reduce.js.map
 
 /***/ }),
-/* 235 */
+/* 236 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
-var multicast_1 = __webpack_require__(232);
-var Subject_1 = __webpack_require__(30);
+var multicast_1 = __webpack_require__(233);
+var Subject_1 = __webpack_require__(31);
 function shareSubjectFactory() {
     return new Subject_1.Subject();
 }
@@ -74320,7 +74321,7 @@ exports.share = share;
 //# sourceMappingURL=share.js.map
 
 /***/ }),
-/* 236 */
+/* 237 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -74330,8 +74331,8 @@ var __extends = (this && this.__extends) || function (d, b) {
     function __() { this.constructor = d; }
     d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
 };
-var OuterSubscriber_1 = __webpack_require__(29);
-var subscribeToResult_1 = __webpack_require__(32);
+var OuterSubscriber_1 = __webpack_require__(30);
+var subscribeToResult_1 = __webpack_require__(33);
 /* tslint:enable:max-line-length */
 /**
  * Projects each source value to an Observable which is merged in the output
@@ -74466,7 +74467,7 @@ var SwitchMapSubscriber = (function (_super) {
 //# sourceMappingURL=switchMap.js.map
 
 /***/ }),
-/* 237 */
+/* 238 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -74544,7 +74545,7 @@ exports.toPromise = toPromise;
 //# sourceMappingURL=toPromise.js.map
 
 /***/ }),
-/* 238 */
+/* 239 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -74575,14 +74576,14 @@ exports.UnsubscriptionError = UnsubscriptionError;
 //# sourceMappingURL=UnsubscriptionError.js.map
 
 /***/ }),
-/* 239 */
+/* 240 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 var Subscriber_1 = __webpack_require__(8);
 var rxSubscriber_1 = __webpack_require__(69);
-var Observer_1 = __webpack_require__(96);
+var Observer_1 = __webpack_require__(97);
 function toSubscriber(nextOrObserver, error, complete) {
     if (nextOrObserver) {
         if (nextOrObserver instanceof Subscriber_1.Subscriber) {
@@ -74601,12 +74602,12 @@ exports.toSubscriber = toSubscriber;
 //# sourceMappingURL=toSubscriber.js.map
 
 /***/ }),
-/* 240 */
+/* 241 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
-var errorObject_1 = __webpack_require__(104);
+var errorObject_1 = __webpack_require__(105);
 var tryCatchTarget;
 function tryCatcher() {
     try {

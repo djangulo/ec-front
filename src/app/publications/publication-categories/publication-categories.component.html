@@ -1,9 +1,16 @@
-<div class="categories">
-  <ul class *ngFor="let category of categories" (click)="onSelect(category)">
+<div [@flySecondIn]="selectionState" [@flySecondRight]="selectionState" class="categories menu">
+  <ul class="category menu-item"
+  *ngFor="let category of categories"
+  (click)="onSelect(category)"
+  (mouseenter)="onHover(category)"
+  (mouseleave)="offHover()">
     <li>{{category.name}}</li>
   </ul>
 </div>
 
-<div class="publications">
-  <router-outlet></router-outlet>
+<div [@deOpacify]="hoverState" class="category-description">
+  <p *ngIf="hoveredCategory && selectionState === 'noSelection'">{{hoveredCategory.description}}</p>
 </div>
+
+
+<router-outlet></router-outlet>

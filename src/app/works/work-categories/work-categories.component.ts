@@ -14,7 +14,7 @@ import { Animations } from './../work-animations';
 
 @Component({
   templateUrl: './work-categories.component.html',
-  styleUrls: ['./work-categories.component.css'
+  styleUrls:     ['./work-categories.component.css'
     ],
   animations: [
     Animations.deOpacify,

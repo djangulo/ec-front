@@ -1,0 +1,25 @@
+@import url('../../../assets/css/styles.css');
+
+/*:host {
+    display: inline-block;
+    width: 
+}*/
+
+.category-description {
+    width: 48%;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    float: left;
+    transform: translate3d(-50%, 0, 0);
+}
+
+.category-description p {
+    font-size: 1.4em;
+    color: #444;
+}
+
+.category {
+    text-decoration: none;
+}

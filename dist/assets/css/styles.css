@@ -57,10 +57,14 @@ header a img {
     font-size: 1.8em;
     display: block;
     margin: 10% 0;
-    text-decoration: none;
+    text-decoration: underline;
     list-style: inherit;
 }
 
+.menu-item:hover {
+    color: #b72175;
+}
+
 .active {
-    color: #6d456d;
+    color: #b72175;
 }

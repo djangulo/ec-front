@@ -9,7 +9,7 @@ import { Category } from './../categories';
 @Injectable()
 export class PublicationService {
     private headers = new Headers({'Content-Type': 'application/json'});
-    private publicationsUrl = 'https://ec.djangulo.com/api/v1/publications/'; // currently on localhost:8000, change later to actual domain
+    private publicationsUrl = 'https://ec.djangulo.com/api/v1/publications/';
     private publicationCategoriesUrl = 'https://ec.djangulo.com/api/v1/publications/categories';
 
     constructor(private http: Http) { }
@@ -24,7 +24,7 @@ export class PublicationService {
         const url = `${this.publicationsUrl}/${id}/`;
         return this.http.get(url)
             .toPromise()
-            .then(response => response.json().data as Publication)
+            .then(response => response.json() as Publication)
             .catch(this.handleError);
     }
 

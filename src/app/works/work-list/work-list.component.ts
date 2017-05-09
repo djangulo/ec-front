@@ -17,7 +17,9 @@ import { WorkService } from './../work.service';
     animations: [
       Animations.flyThirdIn,
       Animations.fade,
-      Animations.fadeLight
+      Animations.fadeLight,
+      Animations.shrinkContainer,
+      Animations.dropCaption
     ]
 })
 export class WorkListComponent implements OnInit {
@@ -33,6 +35,8 @@ export class WorkListComponent implements OnInit {
   l: number;
   r: number;
   fadeState: string;
+  detailState: string;
+  showDetails: boolean;
 
   constructor(
     private workService: WorkService,
@@ -57,8 +61,16 @@ export class WorkListComponent implements OnInit {
     }
 
     deSelect(): void {
-        this.selectedWork = null;
+      this.selectedWork = null;
+      this.showDetails = false;
+      this.fadeState = 'in';
+      this.detailState = 'false';
     }
+
+  toggleDetails() {
+    this.showDetails = !this.showDetails;
+    this.detailState = JSON.stringify(this.showDetails);
+  }
 
   setInitialStage() {
     this.pictures = [];
@@ -93,6 +105,7 @@ export class WorkListComponent implements OnInit {
     this.stageRight = this.pictures[this.r];
     this.stageLeft = this.pictures[this.l];
     this.fadeState = 'in';
+    this.detailState = 'false';
 }
 
 // on lcick left, select left image

@@ -9,15 +9,15 @@ import { Category } from './../categories';
 @Injectable()
 export class WorkService {
     private headers = new Headers({'Content-Type': 'application/json'});
-    private worksUrl = 'https://ec.djangulo.com/api/v1/works/'; // currently on localhost:8000, change later to actual domain
+    private worksUrl = 'https://ec.djangulo.com/api/v1/works/';
     private workCategoriesUrl = 'https://ec.djangulo.com/api/v1/works/categories';
 
     constructor(private http: Http) { }
 
-    getWorks(): Promise<WorkShort[]> {
+    getWorks(): Promise<Work[]> {
         return this.http.get(this.worksUrl)
             .toPromise()
-            .then(response => response.json().results as WorkShort[])
+            .then(response => response.json().results as Work[])
             .catch(this.handleError);
     }
 

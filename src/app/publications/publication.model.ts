@@ -7,5 +7,7 @@ export class Publication {
     category_slug: string;
     medium_id: number;
     medium_slug: string;
+    medium: string;
     image: any;
+    url: string;
 }
