@@ -6,7 +6,7 @@
     </li>
   </ul>
 </div>
-<div class="interns">
+<div [@flyInternsIn]="in" class="interns">
   <h4>Interns</h4>
   <ul>
     <li class="intern" *ngFor="let member of interns" (click)="onSelect(member)">
@@ -14,11 +14,11 @@
     </li>
   </ul>
 </div>
-<div class="member-details" *ngIf="selectedMember">
+<!--<div class="member-details" *ngIf="selectedMember">
   <span (click)="clearSelection()">Close</span>
   <h3>{{selectedMember.first_name}} {{selectedMember.last_name}}</h3>
   <img src="{{selectedMember.photo}}" *ngIf="selectedMember.photo !== null">
   <h5>Bio</h5>
   <p>{{selectedMember.bio}}</p>
   
-</div>
+</div>-->

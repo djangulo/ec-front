@@ -390,7 +390,8 @@ StaffListComponent = __decorate([
         template: __webpack_require__(209),
         styles: [__webpack_require__(199)],
         animations: [
-            __WEBPACK_IMPORTED_MODULE_4__staff_animations__["a" /* Animations */].flyStaffIn
+            __WEBPACK_IMPORTED_MODULE_4__staff_animations__["a" /* Animations */].flyStaffIn,
+            __WEBPACK_IMPORTED_MODULE_4__staff_animations__["a" /* Animations */].flyInternsIn
         ]
     }),
     __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_3__staff_service__["a" /* StaffService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_3__staff_service__["a" /* StaffService */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_1__angular_router__["b" /* Router */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__angular_router__["b" /* Router */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_1__angular_router__["a" /* ActivatedRoute */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__angular_router__["a" /* ActivatedRoute */]) === "function" && _c || Object, typeof (_d = typeof __WEBPACK_IMPORTED_MODULE_0__angular_common__["d" /* Location */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_0__angular_common__["d" /* Location */]) === "function" && _d || Object])
@@ -2155,9 +2156,16 @@ PublicationsModule = __decorate([
 
 var Animations = {
     flyStaffIn: __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_animations__["a" /* trigger */])('flyStaffIn', [
-        __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_animations__["b" /* state */])('*', __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_animations__["c" /* style */])({ transform: 'translate3d(-48%,0,0)', opacity: 1 })),
+        __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_animations__["b" /* state */])('*', __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_animations__["c" /* style */])({ transform: 'translate3d(-76%,0,0)', opacity: 1 })),
         __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_animations__["d" /* transition */])('void => *', [
-            __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_animations__["c" /* style */])({ transform: 'translate3d(-48%, 200%, 0)', opacity: 0 }),
+            __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_animations__["c" /* style */])({ transform: 'translate3d(-76%, 200%, 0)', opacity: 0 }),
+            __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_animations__["e" /* animate */])('500ms cubic-bezier(.4,-0.31,.66,1.26)')
+        ])
+    ]),
+    flyInternsIn: __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_animations__["a" /* trigger */])('flyInternsIn', [
+        __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_animations__["b" /* state */])('*', __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_animations__["c" /* style */])({ transform: 'translate3d(179%,25%,0)', opacity: 1 })),
+        __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_animations__["d" /* transition */])('void => *', [
+            __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_animations__["c" /* style */])({ transform: 'translate3d(179%, 200%, 0)', opacity: 0 }),
             __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_animations__["e" /* animate */])('500ms cubic-bezier(.4,-0.31,.66,1.26)')
         ])
     ]),
@@ -2612,7 +2620,7 @@ exports = module.exports = __webpack_require__(5)(false);
 
 
 // module
-exports.push([module.i, ".staff {\r\n    margin: 0;\r\n    padding: 0;\r\n    width: 60%;\r\n    overflow-y: auto;\r\n}\r\n\r\n.staff li {\r\n    float: left;\r\n    width: 25.3333333333%;\r\n    height: 90%;\r\n    margin: 3% 4%;\r\n    padding: 0;\r\n    background-color: #eee;\r\n    list-style: none;\r\n}\r\n\r\n.staff li img {\r\n    margin: 0 auto;\r\n    width: 100%;\r\n}\r\n\r\n.staff li p {\r\n    width: 100%;\r\n    padding: 5% 1%;\r\n    margin: 0;\r\n    font-size: 1.2em;\r\n}\r\n\r\n.interns {\r\n    float: left;\r\n    width: 16%;\r\n}\r\n\r\n.interns li {\r\n    list-style: none;\r\n}\r\n\r\n.interns li p {\r\n    width: 100%;\r\n    padding: 2%;\r\n    margin: 0;\r\n}\r\n\r\n", ""]);
+exports.push([module.i, ".staff {\r\n    margin: 0;\r\n    padding: 0;\r\n    width: 56%;\r\n    overflow-y: auto;\r\n    display: inline-block;\r\n}\r\n\r\n.staff li {\r\n    float: left;\r\n    width: 29%;\r\n    height: 90%;\r\n    margin: 3% 2%;\r\n    padding: 0;\r\n    background-color: #eee;\r\n    list-style: none;\r\n}\r\n\r\n.staff li img {\r\n    margin: 0 auto;\r\n    width: 100%;\r\n}\r\n\r\n.staff li p {\r\n    width: 100%;\r\n    padding: 5% 1%;\r\n    margin: 0;\r\n    font-size: 0.9em;\r\n}\r\n\r\n.interns {\r\n    float: left;\r\n    width: 20%;\r\n    overflow-y: auto;\r\n}\r\n\r\n.interns li {\r\n    list-style: none;\r\n}\r\n\r\n.interns li p {\r\n    width: 100%;\r\n    padding: 2%;\r\n    margin: 0;\r\n    margin-left: -25%;\r\n}\r\n\r\n", ""]);
 
 // exports
 
@@ -2660,7 +2668,7 @@ module.exports = module.exports.toString();
 /* 203 */
 /***/ (function(module, exports) {
 
-module.exports = "<nav \r\n[@flyNavIn]=\"homeState\" [@flyNavRight]=\"homeState\" class=\"menu nav-menu\">\r\n\r\n    <a class=\"menu-item nav-menu-item\"\r\n    routerLink=\"works/categories\"\r\n    routerLinkActive=\"active\"\r\n    (click)=\"changeState('other')\">works</a>\r\n    \r\n    <a \r\n    class=\"menu-item nav-menu-item\" \r\n    routerLink=\"publications/categories\" \r\n    routerLinkActive=\"active\"\r\n    (click)=\"changeState('other')\">publications</a>\r\n\r\n    <a \r\n    class=\"menu-item nav-menu-item\" \r\n    routerLink=\"press\" \r\n    routerLinkActive=\"active\"\r\n    (click)=\"changeState('other')\">press</a>\r\n\r\n    <a \r\n    class=\"menu-item nav-menu-item\" \r\n    routerLink=\"staff\" \r\n    routerLinkActive=\"active\"\r\n    (click)=\"changeState('other')\">staff</a>\r\n\r\n    <a \r\n    class=\"menu-item nav-menu-item\" \r\n    routerLink=\"contact\" \r\n    routerLinkActive=\"active\"\r\n    (click)=\"changeState('other')\">contact</a>\r\n\r\n    <a \r\n    class=\"menu-item nav-menu-item\" \r\n    routerLink=\"/\"\r\n    (click)=\"changeState('home')\">home</a>\r\n\r\n</nav>\r\n\r\n<router-outlet [@flySecondIn]=\"in\" class=\"router\"></router-outlet>\r\n\r\n\r\n"
+module.exports = "<nav \r\n[@flyNavIn]=\"homeState\" [@flyNavRight]=\"homeState\" class=\"menu nav-menu\">\r\n\r\n    <a class=\"menu-item nav-menu-item\"\r\n    routerLink=\"works/categories\"\r\n    routerLinkActive=\"active\"\r\n    (click)=\"changeState('other')\">works</a>\r\n    \r\n    <a \r\n    class=\"menu-item nav-menu-item\" \r\n    routerLink=\"publications/categories\" \r\n    routerLinkActive=\"active\"\r\n    (click)=\"changeState('other')\">publications</a>\r\n\r\n    <!--<a \r\n    class=\"menu-item nav-menu-item\" \r\n    routerLink=\"press\" \r\n    routerLinkActive=\"active\"\r\n    (click)=\"changeState('other')\">press</a>-->\r\n\r\n    <a \r\n    class=\"menu-item nav-menu-item\" \r\n    routerLink=\"staff\" \r\n    routerLinkActive=\"active\"\r\n    (click)=\"changeState('other')\">staff</a>\r\n\r\n    <a \r\n    class=\"menu-item nav-menu-item\" \r\n    routerLink=\"contact\" \r\n    routerLinkActive=\"active\"\r\n    (click)=\"changeState('other')\">contact</a>\r\n\r\n    <a \r\n    class=\"menu-item nav-menu-item\" \r\n    routerLink=\"/\"\r\n    (click)=\"changeState('home')\">home</a>\r\n\r\n</nav>\r\n\r\n<router-outlet [@flySecondIn]=\"in\" class=\"router\"></router-outlet>\r\n\r\n\r\n"
 
 /***/ }),
 /* 204 */
@@ -2696,7 +2704,7 @@ module.exports = "<div class=\"publications\"  [@flyThirdIn]=\"in\">\r\n  <div c
 /* 209 */
 /***/ (function(module, exports) {
 
-module.exports = "<div [@flyStaffIn]=\"in\" class=\"staff\">\r\n  <ul>\r\n    <li class=\"staff-member card\" *ngFor=\"let member of staff\" (click)=\"onSelect(member)\">\r\n        <img src=\"{{member.photo}}\" alt=\"{{member.username}}'s photo'\">\r\n        <p>{{member.first_name}} {{member.last_name}}</p>\r\n    </li>\r\n  </ul>\r\n</div>\r\n<div class=\"interns\">\r\n  <h4>Interns</h4>\r\n  <ul>\r\n    <li class=\"intern\" *ngFor=\"let member of interns\" (click)=\"onSelect(member)\">\r\n      <p>{{member.first_name}} {{member.last_name}}</p>\r\n    </li>\r\n  </ul>\r\n</div>\r\n<div class=\"member-details\" *ngIf=\"selectedMember\">\r\n  <span (click)=\"clearSelection()\">Close</span>\r\n  <h3>{{selectedMember.first_name}} {{selectedMember.last_name}}</h3>\r\n  <img src=\"{{selectedMember.photo}}\" *ngIf=\"selectedMember.photo !== null\">\r\n  <h5>Bio</h5>\r\n  <p>{{selectedMember.bio}}</p>\r\n  \r\n</div>"
+module.exports = "<div [@flyStaffIn]=\"in\" class=\"staff\">\r\n  <ul>\r\n    <li class=\"staff-member card\" *ngFor=\"let member of staff\" (click)=\"onSelect(member)\">\r\n        <img src=\"{{member.photo}}\" alt=\"{{member.username}}'s photo'\">\r\n        <p>{{member.first_name}} {{member.last_name}}</p>\r\n    </li>\r\n  </ul>\r\n</div>\r\n<div [@flyInternsIn]=\"in\" class=\"interns\">\r\n  <h4>Interns</h4>\r\n  <ul>\r\n    <li class=\"intern\" *ngFor=\"let member of interns\" (click)=\"onSelect(member)\">\r\n      <p>{{member.first_name}} {{member.last_name}}</p>\r\n    </li>\r\n  </ul>\r\n</div>\r\n<!--<div class=\"member-details\" *ngIf=\"selectedMember\">\r\n  <span (click)=\"clearSelection()\">Close</span>\r\n  <h3>{{selectedMember.first_name}} {{selectedMember.last_name}}</h3>\r\n  <img src=\"{{selectedMember.photo}}\" *ngIf=\"selectedMember.photo !== null\">\r\n  <h5>Bio</h5>\r\n  <p>{{selectedMember.bio}}</p>\r\n  \r\n</div>-->"
 
 /***/ }),
 /* 210 */

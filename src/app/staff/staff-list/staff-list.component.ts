@@ -11,7 +11,8 @@ import { Animations } from './../staff-animations';
   templateUrl: './staff-list.component.html',
   styleUrls: ['./staff-list.component.css'],
   animations: [
-    Animations.flyStaffIn
+    Animations.flyStaffIn,
+    Animations.flyInternsIn
   ]
 })
 export class StaffListComponent implements OnInit {

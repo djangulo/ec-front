@@ -9,9 +9,16 @@ import {
 
 export const Animations = {
     flyStaffIn: trigger('flyStaffIn', [
-        state('*', style({ transform: 'translate3d(-48%,0,0)', opacity: 1})),
+        state('*', style({ transform: 'translate3d(-76%,0,0)', opacity: 1})),
         transition('void => *', [
-            style({transform: 'translate3d(-48%, 200%, 0)', opacity: 0}),
+            style({transform: 'translate3d(-76%, 200%, 0)', opacity: 0}),
+            animate('500ms cubic-bezier(.4,-0.31,.66,1.26)')
+        ])
+    ]),
+    flyInternsIn: trigger('flyInternsIn', [
+        state('*', style({ transform: 'translate3d(179%,25%,0)', opacity: 1})),
+        transition('void => *', [
+            style({transform: 'translate3d(179%, 200%, 0)', opacity: 0}),
             animate('500ms cubic-bezier(.4,-0.31,.66,1.26)')
         ])
     ]),
