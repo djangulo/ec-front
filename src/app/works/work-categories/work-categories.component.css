@@ -23,3 +23,13 @@
 .category {
     text-decoration: none;
 }
+
+/*.category li {
+    margin-left: -5%;
+}*/
+
+.categories {
+    width: 24%;
+    overflow: hidden;
+}
+

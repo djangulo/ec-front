@@ -21,13 +21,15 @@
     -moz-animation: bg-move 30s linear;
     -webkit-animation: bg-move 30s linear;
     animation: bg-move 30s linear;*/
+    position: relative;
+    float: left;
+    width: 100%;
+    height: 100%;
     animation-fill-mode: forwards;
     background-color: #eee;
-    transform-origin: 1000px 1200px;
+    background-position: 20% 20%;
     background-size: cover;
     background-repeat: no-repeat;
-    height: 140%;
-
 }
 
 /*@-webkit-keyframes bg-move {

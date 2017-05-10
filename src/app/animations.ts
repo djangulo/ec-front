@@ -64,9 +64,9 @@ export const Animations = {
         transition('invisible <=> visible', animate('700ms ease-in')),
     ]),
     parallax: trigger('parallax', [
-        state('reset', style({ backgroundPosition: "0px 0px", transform: "scale(1)" })),
-        state('do', style({ backgroundPosition: "-50px -50px", transform: "scale(1.1)" })),
-        transition('reset => do', animate('29s linear')),
-        transition('do => reset', animate('0.1s linear'))
-    ])
+            state('reset', style({ transformOrigin: "20% 20%", transform: "scale(1)" })),
+            state('do', style({ transformOrigin: "80% 80%", transform: "scale(1.1)" })),
+            transition('reset => do', animate('29s ease-out')),
+            transition('do => reset', animate('0.1s linear'))
+        ])
 }

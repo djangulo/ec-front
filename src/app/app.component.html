@@ -1,5 +1,5 @@
 <nav 
-[@flyNavIn]="homeState" [@flyNavRight]="homeState" class="menu nav-menu">
+[@flyNavIn]="homeState" [@flyNavRight]="homeState" class="menu nav-menu" [ngClass]="{'home-menu': homeState === 'home'}">
 
     <a class="menu-item nav-menu-item"
     routerLink="works/categories"
