@@ -29,6 +29,10 @@ export const Animations = {
         transition('void => *', [
             style({transform: 'translate3d(-110%, 200%, 0)', opacity: 0}),
             animate('500ms cubic-bezier(.4,-0.31,.66,1.26)')
+        ]),
+        transition('* => void', [
+            style({transform: 'translate3d(-110%, -200%, 0)', opacity: 0}),
+            animate('500ms cubic-bezier(.4,-0.31,.66,1.26)')
         ])
     ]),
     deOpacify: trigger('deOpacify', [
@@ -75,5 +79,15 @@ export const Animations = {
             backgroundColor: 'transparent',
         })),
         transition('true <=> false', animate('500ms ease-in-out')),
+    ]),
+    showDeets: trigger('showDeets', [
+        state('true', style({
+            opacity: 1
+        })),
+        state('false', style({
+            opacity: 0
+        })),
+        transition('false => true', animate('400ms ease-out 500ms')),
+        transition('true => true', animate('400ms ease-out'))
     ])
 }

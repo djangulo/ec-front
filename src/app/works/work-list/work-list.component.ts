@@ -19,7 +19,8 @@ import { WorkService } from './../work.service';
       Animations.fade,
       Animations.fadeLight,
       Animations.shrinkContainer,
-      Animations.dropCaption
+      Animations.dropCaption,
+      Animations.showDeets
     ]
 })
 export class WorkListComponent implements OnInit {

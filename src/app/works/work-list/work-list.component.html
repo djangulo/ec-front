@@ -1,12 +1,13 @@
 <div class="works"  [@flyThirdIn]="in">
   <div class="work" *ngFor="let work of works" (click)="onSelect(work)">
-    <div class="image" [style.backgroundImage]="getBackground(work.cover.image)"></div>
     <div class="caption">
       <p><strong>Project: </strong>{{work.title}}</p>
-      <p><strong>Program: </strong>{{work.program}}</p>
+      <!--<p><strong>Program: </strong>{{work.program}}</p>
       <p><strong>Status: </strong>{{work.status}}</p>
-      <p><strong>Team: </strong>{{work.team}}</p>
+      <p><strong>Team: </strong>{{work.team}}</p>-->
     </div>
+    <div class="image" [style.backgroundImage]="getBackground(work.cover.image)"></div>
+
   </div>
 </div>
 <div class="lightbox-outer s-work" *ngIf="selectedWork">
@@ -44,9 +45,11 @@
         {{stageCenter.caption}}
       </div>
     </div>
-    <div class="details" *ngIf="showDetails">
-        <h3>{{selectedWork.title}}</h3>
-        <p>{{selectedWork.description}}</p>
+    <div  class="details" *ngIf="showDetails">
+        <h3 [@showDeets]="detailState">{{selectedWork.title}}</h3>
+        <p [@showDeets]="detailState">{{selectedWork.description}}</p>
+        <h4>Team:</h4>
+        <p>{{selectedWork.team}}</p>
         <a href="{{selectedWork.document}}" target="_blank" download>
           <button>
             Download
