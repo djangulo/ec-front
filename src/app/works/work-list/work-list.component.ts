@@ -17,7 +17,6 @@ import { WorkService } from './../work.service';
     animations: [
       Animations.flyThirdIn,
       Animations.fade,
-      Animations.fadeLight,
       Animations.shrinkContainer,
       Animations.dropCaption,
       Animations.showDeets

@@ -1,11 +1,11 @@
-<div [@flySecondIn]="selectionState" [@flySecondRight]="selectionState" class="categories menu">
-  <ul class="category menu-item"
+<div  [@flySecondIn]="selectionState" [@flySecondRight]="selectionState" class="categories menu">
+  <div class="category menu-item"
   *ngFor="let category of categories"
   (click)="onSelect(category)"
   (mouseenter)="onHover(category)"
   (mouseleave)="offHover()">
-    <li>{{category.name}}</li>
-  </ul>
+    <a>{{category.name}}</a>
+  </div>
 </div>
 
 <div [@deOpacify]="hoverState" class="category-description">

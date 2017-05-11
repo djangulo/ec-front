@@ -121,7 +121,7 @@
     padding: 0;
     background-color: #282625;
     line-height: center;
-    border: 1px solid #eee;
+    border: none;
     border-radius: 8px;
     color: #eee;
     z-index: 111;

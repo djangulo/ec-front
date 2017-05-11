@@ -1,3 +1,4 @@
+
 import { Location } from '@angular/common';
 import { Router, ActivatedRoute } from '@angular/router';
 import {
@@ -5,12 +6,15 @@ import {
   EventEmitter,
   OnInit,
   Output,
+  OnDestroy,
   ViewEncapsulation
 } from '@angular/core';
 
 import { Category } from './../../categories/category.model';
 import { WorkService } from './../work.service';
 import { Animations } from './../work-animations';
+import { AnimationService } from './../../animation.service';
+import { Subscription } from 'rxjs/Subscription';
 
 @Component({
   templateUrl: './work-categories.component.html',
@@ -23,19 +27,27 @@ import { Animations } from './../work-animations';
     Animations.flyThirdIn
   ]
 })
-export class WorkCategoriesComponent implements OnInit {
+export class WorkCategoriesComponent implements OnInit, OnDestroy {
   categories: Category[];
   selectedCategory: Category;
   hoveredCategory: Category;
   selectionState: string;
   hoverState: string = 'off';
+  subscription: Subscription;
+  categorySelected: string;
   
   constructor(
+    private animationService: AnimationService,
     private workService: WorkService,
     private router: Router,
     private route: ActivatedRoute,
     private location: Location
-  ) { }
+  ) {
+    this.subscription = animationService.categorySelected$.subscribe(
+      level => {
+        this.categorySelected = 'lvl1';
+      });
+  }
 
   ngOnInit() {
     this.determineSelectionState();
@@ -48,10 +60,11 @@ export class WorkCategoriesComponent implements OnInit {
       .getWorkCategories()
       .then(categories => this.categories = categories);
   }
-  onSelect(category: Category): void {
+  onSelect(category: Category) {
     this.selectedCategory = category;
     this.router.navigate([category.slug], { relativeTo: this.route })
     this.selectionState = 'selection';
+    this.animationService.categorySelected('lvl1');
   }
 
   determineSelectionState(){
@@ -69,6 +82,10 @@ export class WorkCategoriesComponent implements OnInit {
   offHover(): void {
 
     this.hoverState = 'off';
+  }
+
+  ngOnDestroy() {
+    this.subscription.unsubscribe();
   }
 
 

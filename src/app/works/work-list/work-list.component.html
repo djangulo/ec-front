@@ -7,7 +7,6 @@
       <p><strong>Team: </strong>{{work.team}}</p>-->
     </div>
     <div class="image" [style.backgroundImage]="getBackground(work.cover.image)"></div>
-
   </div>
 </div>
 <div class="lightbox-outer s-work" *ngIf="selectedWork">
@@ -39,8 +38,6 @@
         </button>
       </div>
       <div 
-        [@dropCaption]="detailState" 
-        [@fadeLight]="fadeState" 
         class="caption">
         {{stageCenter.caption}}
       </div>

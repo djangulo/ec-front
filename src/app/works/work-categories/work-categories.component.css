@@ -5,6 +5,16 @@
     width: 
 }*/
 
+.menu-item a {
+    cursor: pointer;
+    color: #444;
+    text-decoration: none;
+    list-style: inherit;
+    font-size: 24px;
+    font-weight: 300;
+}
+
+
 .category-description {
     width: 48%;
     margin: 0;

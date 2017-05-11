@@ -8,21 +8,21 @@ import {
 
 export const Animations = {
     flySecondIn: trigger('flySecondIn', [
-        state('noSelection', style({ transform: 'translate3d(-98%, 0, 0)', opacity: 1})),
-        state('selection', style({ transform: 'translate3d(135%, 0, 0)', opacity: 1})),
+        state('noSelection', style({ transform: 'translate3d(54%, -44%, 0)', opacity: 1})),
+        state('selection', style({ transform: 'translate3d(0, 0, 0)', opacity: 1})),
         transition('void => selection', [
-            style({transform: 'translate3d(135%, 200%, 0)', opacity: 0}),
+            style({transform: 'translate3d(0, 200%, 0)', opacity: 0}),
             animate('500ms cubic-bezier(.4,-0.31,.66,1.26)')
         ]),
         transition('void => noSelection', [
-            style({transform: 'translate3d(-98%, 200%, 0)', opacity: 0}),
+            style({transform: 'translate3d(54%, 200%, 0)', opacity: 0}),
             animate('500ms cubic-bezier(.4,-0.31,.66,1.26)')
         ])
     ]),
     flySecondRight: trigger('flySecondRight', [
-        state('selection', style({ transform: 'translate3d(135%,0,0)' })),
-        state('noSelection', style({ transform: 'translate3d(-98%, 0, 0)' })),
-        transition('selection <=> noSelection', animate('500ms ease-in'))
+        state('selection', style({ transform: 'translate3d(135%,-44%,0)' })),
+        state('noSelection', style({ transform: 'translate3d(54%, -44%, 0)' })),
+        transition('selection <=> noSelection', animate('500ms cubic-bezier(.4,-0.31,.66,1.26)'))
     ]),
     flyThirdIn: trigger('flyThirdIn', [
         state('*', style({ transform: 'translate3d(-110%, 0, 0)', opacity: 1})),
@@ -47,11 +47,6 @@ export const Animations = {
     fade: trigger('fade', [
         state('out', style({ opacity: 0, backgroundColor: '#000' })),
         state('in', style({ opacity: 1, backgroundColor: 'none' })),
-        transition('in <=> out', animate('300ms ease-in-out')),
-    ]),
-    fadeLight: trigger('fadeLight', [
-        state('out', style({ opacity: 0})),
-        state('in', style({ opacity: 0.7})),
         transition('in <=> out', animate('300ms ease-in-out')),
     ]),
     shrinkContainer: trigger('shrinkContainer', [
