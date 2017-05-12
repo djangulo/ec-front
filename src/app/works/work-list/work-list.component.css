@@ -2,21 +2,20 @@
 @import url('../../../assets/css/buttons.css');
 
 .works {
-    width: 48%;
+    width: 590px;
     height: 80vh;
     margin: 0;
     padding: 0;
     border: 0;
     outline: 0;
-    float: right;
+    /*float: right;*/
     overflow-y: auto;
-    overflow-x: hidden;
+    /*overflow-x: visible;*/
 }
 
 .work {
     position: relative;
-    height: 325px;
-    width: 90%;
+    height: 240px;
     margin: 2% auto;
     padding: 0;
     float: none;
@@ -25,26 +24,26 @@
 
 p {
     margin: 2px 0;
-    width: 100%;
 }
 
 .work .image {
     position: relative;
-    margin: 0 auto;
-    width: 391.111111111px;
-    height: 220px;
+    float: right;
+    width: 382.111111px;
+    height: 214.9375px;
     background-position: 50% 50%;
     background-repeat: no-repeat;
     background-size: cover;
 }
 
-.work .caption {
-    /*position: absolute;*/
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    padding: 5px 0 5px 5px;
-    clear: both;
-    display: block;
+p {
+    margin: 2px 0;
 }
 
+
+.work .caption {
+    width: 192px;
+    float: left;
+    padding: 5px 0 5px 5px;
+    clear: both;
+}

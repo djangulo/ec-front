@@ -1,7 +1,9 @@
-<div class="works"  [@flyThirdIn]="in">
+<div class="works"  [@flyThirdIn]="categorySwitched">
   <div class="work" *ngFor="let work of works" (click)="onSelect(work)">
     <div class="caption">
-      <p><strong>Project: </strong>{{work.title}}</p>
+      <p>{{work.published_date|date:'y'}}</p>
+      <p>{{work.title}}</p>
+      <p>{{work.program}}</p>
       <!--<p><strong>Program: </strong>{{work.program}}</p>
       <p><strong>Status: </strong>{{work.status}}</p>
       <p><strong>Team: </strong>{{work.team}}</p>-->

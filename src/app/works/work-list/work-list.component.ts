@@ -1,5 +1,5 @@
 import { DomSanitizer } from '@angular/platform-browser';
-import { Component, OnInit, Input, ViewChild, ElementRef } from '@angular/core';
+import { Component, OnInit, Input, OnDestroy, ViewChild, ElementRef } from '@angular/core';
 import { Router, ActivatedRoute, Params } from '@angular/router';
 
 import 'rxjs/add/operator/switchMap';
@@ -8,6 +8,8 @@ import { Animations } from './../work-animations';
 import { Category, CategoryService } from './../../categories';
 import { Work, WorkPicture } from './../work.model';
 import { WorkService } from './../work.service';
+import { AnimationService } from './../../animation.service';
+import { Subscription } from 'rxjs/Subscription';
 
 @Component({
     templateUrl: './work-list.component.html',
@@ -22,9 +24,10 @@ import { WorkService } from './../work.service';
       Animations.showDeets
     ]
 })
-export class WorkListComponent implements OnInit {
+export class WorkListComponent implements OnInit, OnDestroy {
   works: Work[];
   selectedWork: Work;
+  subscription: Subscription;
   @ViewChild('cImgDiv') cImgDiv: ElementRef;
   pictures: WorkPicture[]
   stageCenter: WorkPicture;
@@ -35,15 +38,23 @@ export class WorkListComponent implements OnInit {
   l: number;
   r: number;
   fadeState: string;
+  worksState: string;
   detailState: string;
   showDetails: boolean;
+  categorySwitched: string;
 
   constructor(
+    private animationService: AnimationService,
     private workService: WorkService,
     private route: ActivatedRoute,
     private router: Router,
     private sanitizer: DomSanitizer
-    ){ }
+    ){
+    this.subscription = animationService.categorySwitched$.subscribe();
+    animationService.categorySwitched$.subscribe(
+      state => {this.categorySwitched = state}
+    );
+    }
 
     ngOnInit(): void {
         this.getWorks();
@@ -86,7 +97,7 @@ export class WorkListComponent implements OnInit {
       case 1: {
         this.c = 0;
         this.l = 0;
-        this.r = 0;
+        this.r = 0; 
         break;
       }
       case 2: {
@@ -241,6 +252,10 @@ export class WorkListComponent implements OnInit {
   }
   getBackground (image) {
     return this.sanitizer.bypassSecurityTrustStyle(`url(${image})`);
+  }
+
+  ngOnDestroy() {
+    this.subscription.unsubscribe();
   }
 
 

@@ -10,13 +10,13 @@ import {
 export const Animations = {
     flyNavIn: trigger('flyNavIn', [
         state('lvl0', style({ transform: 'translate3d(0,0,0)', opacity: 1})),
-        state('lvl1', style({ transform: 'translate3d(340%, 0, 0)', opacity: 1})),
+        state('lvl1', style({ transform: 'translate3d(416%, 0, 0)', opacity: 1})),
         transition('void => lvl0', [
-            style({transform: 'translate3d(0, 100%, 0)', opacity: 0}),
+            style({transform: 'translate3d(0, 200%, 0)', opacity: 0}),
             animate('500ms cubic-bezier(.4,-0.31,.66,1.26)')
         ]),
         transition('void => lvl1', [
-            style({transform: 'translate3d(340%, 100%, 0)', opacity: 0}),
+            style({transform: 'translate3d(416%, 200%, 0)', opacity: 0}),
             animate('500ms cubic-bezier(.4,-0.31,.66,1.26)')
         ]),
         transition('lvl0 <=> lvl1', [
@@ -24,9 +24,9 @@ export const Animations = {
         ])
     ]),
     flyNavRight: trigger('flyNavRight', [
-        state('home', style({ transform: 'translate3d(0,0,0)' })),
-        state('other', style({ transform: 'translateX(340%,0,0)' })),
-        transition('home <=> other', animate('500ms ease-in'))
+        state('lvl0', style({ transform: 'translate3d(0,0,0)' })),
+        state('lvl1', style({ transform: 'translateX(416%,0,0)' })),
+        transition('lvl0 <=> lvl1', animate('500ms ease-in'))
     ]),
     flySecondIn: trigger('flySecondIn', [
         state('noSelection', style({ transform: 'translate3d(-98%, 0, 0)', opacity: 1})),

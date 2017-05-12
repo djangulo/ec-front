@@ -9,9 +9,9 @@ import {
 export const Animations = {
     flySecondIn: trigger('flySecondIn', [
         state('noSelection', style({ transform: 'translate3d(54%, -44%, 0)', opacity: 1})),
-        state('selection', style({ transform: 'translate3d(0, 0, 0)', opacity: 1})),
+        state('selection', style({ transform: 'translate3d(208%, -44%, 0)', opacity: 1})),
         transition('void => selection', [
-            style({transform: 'translate3d(0, 200%, 0)', opacity: 0}),
+            style({transform: 'translate3d(54%, 200%, 0)', opacity: 0}),
             animate('500ms cubic-bezier(.4,-0.31,.66,1.26)')
         ]),
         transition('void => noSelection', [
@@ -20,20 +20,27 @@ export const Animations = {
         ])
     ]),
     flySecondRight: trigger('flySecondRight', [
-        state('selection', style({ transform: 'translate3d(135%,-44%,0)' })),
+        state('selection', style({ transform: 'translate3d(208%,-44%,0)' })),
         state('noSelection', style({ transform: 'translate3d(54%, -44%, 0)' })),
         transition('selection <=> noSelection', animate('500ms cubic-bezier(.4,-0.31,.66,1.26)'))
     ]),
     flyThirdIn: trigger('flyThirdIn', [
-        state('*', style({ transform: 'translate3d(-110%, 0, 0)', opacity: 1})),
+        state('in', style({ transform: 'translate3d(-68%, 0, 0)', opacity: 1})),
+        state('reset', style({ transform: 'translate3d(-68%, 200%, 0)', opacity: 0})),
+        state('out', style({ transform: 'translate3d(-68%, -200%, 0)', opacity: 0})),
         transition('void => *', [
-            style({transform: 'translate3d(-110%, 200%, 0)', opacity: 0}),
+            style({transform: 'translate3d(-68%, 200%, 0)', opacity: 0}),
             animate('500ms cubic-bezier(.4,-0.31,.66,1.26)')
         ]),
-        transition('* => void', [
-            style({transform: 'translate3d(-110%, -200%, 0)', opacity: 0}),
+        transition('in => out', [
             animate('500ms cubic-bezier(.4,-0.31,.66,1.26)')
-        ])
+        ]),
+        transition('out => reset', [
+            animate('500ms linear')
+        ]),
+        transition('reset => in', [
+            animate('500ms cubic-bezier(.4,-0.31,.66,1.26)')
+        ]),
     ]),
     deOpacify: trigger('deOpacify', [
         state('off', style({
