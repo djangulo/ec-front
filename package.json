@@ -28,7 +28,8 @@
   "devDependencies": {
     "@angular/animations": "^4.0.2",
     "@angular/cli": "^1.0.0",
-    "@angular/compiler-cli": "^4.0.0",
+    "@angular/compiler": "^4.1.2",
+    "@angular/compiler-cli": "^4.1.2",
     "@angular/core": "^4.0.2",
     "@angular/http": "^4.0.2",
     "@types/jasmine": "2.5.38",
