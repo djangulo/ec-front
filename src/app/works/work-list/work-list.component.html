@@ -1,4 +1,4 @@
-<div class="works"  [@flyThirdIn]="categorySwitched">
+<div class="works"  [@flyThirdIn]="in">
   <div class="work" *ngFor="let work of works" (click)="onSelect(work)">
     <div class="caption">
       <p>{{work.published_date|date:'y'}}</p>
@@ -15,8 +15,11 @@
   <div class="lightbox-inner" (keydown)="escape($event)">
     <!--<button (click)="nextItem()">Next</button>-->
     <!--<button (click)="prevItem()">Previous</button>-->
-    <div class="lighbox-header">
-      <h2 class="lightbox-title">{{selectedWork.title}}</h2>
+    <div class="lightbox-header">
+      <h2 
+      class="lightbox-title" 
+      *ngIf="!showDetails" 
+      >{{selectedWork.published_date|date:'y'}} - {{selectedWork.title}} - {{selectedWork.program}}</h2>
       <button class="btn-close btn" (click)="deSelect()">
         <span class="close-icon"></span>
       </button>
@@ -44,16 +47,33 @@
         {{stageCenter.caption}}
       </div>
     </div>
-    <div  class="details" *ngIf="showDetails">
-        <h3 [@showDeets]="detailState">{{selectedWork.title}}</h3>
-        <p [@showDeets]="detailState">{{selectedWork.description}}</p>
-        <h4>Team:</h4>
-        <p>{{selectedWork.team}}</p>
+    <div 
+    class="details" 
+    *ngIf="showDetails" 
+    [@showDeets]="detailState">
+         <h2 
+      class="lightbox-title" 
+      *ngIf="showDetails" 
+      >{{selectedWork.published_date|date:'y'}} - {{selectedWork.title}}</h2>
+        <p><strong>Program: </strong>{{selectedWork.program}}</p>
+        <p><strong>Status: </strong>{{selectedWork.status}}</p>
+        <p><strong>Team: </strong>{{selectedWork.team}}</p>
         <a href="{{selectedWork.document}}" target="_blank" download>
-          <button>
-            Download
-          </button>
+          <button>Download</button>
         </a>
+        <div class="description">
+          <p>{{selectedWork.description}}</p>       
+        </div>
     </div>
+    <div class="thumbnails" *ngIf="showDetails">
+      <div class="thumbnail-container" [style.width]="(166 * i)+ 'px'">
+        <div 
+        class="thumbnail" 
+        *ngFor="let picture of pictures" 
+        (click)="switchPic(picture)"
+        [style.backgroundImage]="getBackground(picture.image)" 
+        [ngClass]="{'selected': picture.id === stageCenter.id}"
+        ></div>
+      </div>
   </div>
 </div>

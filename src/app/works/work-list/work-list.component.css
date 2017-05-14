@@ -22,8 +22,17 @@
     clear: both;
 }
 
-p {
+.work .caption {
+    width: 192px;
+    float: left;
+    padding: 5px 0 5px 5px;
+    clear: both;
+}
+
+.work .caption p {
     margin: 2px 0;
+    font-size: 13px;
+    font-weight: bold;
 }
 
 .work .image {
@@ -36,14 +45,4 @@ p {
     background-size: cover;
 }
 
-p {
-    margin: 2px 0;
-}
 
-
-.work .caption {
-    width: 192px;
-    float: left;
-    padding: 5px 0 5px 5px;
-    clear: both;
-}

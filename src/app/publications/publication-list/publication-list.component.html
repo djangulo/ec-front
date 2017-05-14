@@ -1,12 +1,12 @@
 <div class="publications"  [@flyThirdIn]="in">
   <div class="publication" *ngFor="let publication of publications" (click)="onSelect(publication)">
-    <div class="image" [style.backgroundImage]="getBackground(publication.image)"></div>
     <div class="caption">
       <p><strong>Title: </strong>{{publication.title}}</p>
       <p><strong>Description: </strong>{{publication.description}}</p>
       <p><strong>Medium: </strong>{{publication.medium_slug}}</p>
       <a *ngIf="publication.url !== ''" href="{{publication.url}}"><p>Link</p></a>
     </div>
+    <div class="image" [style.backgroundImage]="getBackground(publication.image)"></div>
   </div>
 </div>
 <!--<div *ngIf="selectedPublication">

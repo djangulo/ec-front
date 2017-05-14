@@ -89,6 +89,7 @@ export class WorkListComponent implements OnInit, OnDestroy {
       this.selectedWork.cover,
       this.selectedWork.pictures
     );
+    console.log(this.pictures)
     this.i = this.pictures.length;
     switch(this.i){
       case 0: {
@@ -252,6 +253,18 @@ export class WorkListComponent implements OnInit, OnDestroy {
   }
   getBackground (image) {
     return this.sanitizer.bypassSecurityTrustStyle(`url(${image})`);
+  }
+
+  switchPic(picture: WorkPicture){
+    if(this.stageCenter.id === picture.id){
+      return ;
+    }
+    this.fadeState = 'out';
+    setTimeout(() => {
+      this.stageCenter = picture;
+      this.updateBackground();
+      this.fadeState = 'in';
+    }, 300);
   }
 
   ngOnDestroy() {

@@ -1,5 +1,5 @@
 import { DomSanitizer } from '@angular/platform-browser';
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, OnDestroy } from '@angular/core';
 import { Router, ActivatedRoute, Params } from '@angular/router';
 
 import 'rxjs/add/operator/switchMap';
@@ -8,6 +8,9 @@ import { Animations } from './../publication-animations';
 import { Category, CategoryService } from './../../categories';
 import { Publication } from './../';
 import { PublicationService } from './../publication.service';
+import { AnimationService } from './../../animation.service';
+import { Subscription } from 'rxjs/Subscription';
+
 
 @Component({
   templateUrl: './publication-list.component.html',
@@ -16,16 +19,24 @@ import { PublicationService } from './../publication.service';
       Animations.flyThirdIn,
     ]
 })
-export class PublicationListComponent implements OnInit {
+export class PublicationListComponent implements OnInit, OnDestroy {
     @Input() category: Category;
     publications: Publication[];
     selectedPublication: Publication;
+    subscription: Subscription;
+  categorySwitched: string;
 
     constructor(
-        private publicationService: PublicationService,
-        private route: ActivatedRoute,
-        private router: Router,
-        private sanitizer: DomSanitizer){ }
+    private animationService: AnimationService,
+    private publicationService: PublicationService,
+    private route: ActivatedRoute,
+    private router: Router,
+    private sanitizer: DomSanitizer){
+    this.subscription = animationService.categorySwitched$.subscribe();
+    animationService.categorySwitched$.subscribe(
+      state => {this.categorySwitched = state}
+    );
+    }
 
     ngOnInit(): void {
         this.getPublications();
@@ -48,6 +59,10 @@ export class PublicationListComponent implements OnInit {
 
   getBackground (image) {
     return this.sanitizer.bypassSecurityTrustStyle(`url(${image})`);
+  }
+
+  ngOnDestroy() {
+    this.subscription.unsubscribe();
   }
 
 }

@@ -65,16 +65,15 @@ export class WorkCategoriesComponent implements OnInit, OnDestroy {
     this.router.navigate([category.slug], { relativeTo: this.route })
     this.selectionState = 'selection';
     this.animationService.categorySelected('lvl1');
-    this.animationService.categorySwitched('out');
-    setTimeout(() => {this.animationService.categorySwitched('reset')}, 500)
-    setTimeout(() => {this.animationService.categorySwitched('in')}, 500)
   }
 
   determineSelectionState(){
     if(JSON.stringify(this.router.url).split('/')[3] === undefined){
       this.selectionState = 'noSelection';
+      this.animationService.categorySelected('lvl0');
     }else{
       this.selectionState = 'selection';
+      this.animationService.categorySelected('lvl1');
     }
   }
 
@@ -83,7 +82,6 @@ export class WorkCategoriesComponent implements OnInit, OnDestroy {
     this.hoverState = 'on';
   }
   offHover(): void {
-
     this.hoverState = 'off';
   }
 

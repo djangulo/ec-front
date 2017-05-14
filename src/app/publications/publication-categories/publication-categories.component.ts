@@ -11,6 +11,8 @@ import {
 import { Category } from './../../categories/category.model';
 import { PublicationService } from './../publication.service';
 import { Animations } from './../publication-animations';
+import { AnimationService } from './../../animation.service';
+import { Subscription } from 'rxjs/Subscription';
 
 @Component({
   templateUrl: './publication-categories.component.html',
@@ -29,13 +31,21 @@ export class PublicationCategoriesComponent implements OnInit {
   hoveredCategory: Category;
   selectionState: string;
   hoverState: string = 'off';
+  subscription: Subscription;
+  categorySelected: string;
   
   constructor(
+    private animationService: AnimationService,
     private service: PublicationService,
     private router: Router,
     private route: ActivatedRoute,
     private location: Location
-  ) { }
+  ) {
+    this.subscription = animationService.categorySelected$.subscribe(
+      level => {
+        this.categorySelected = 'lvl1';
+      });
+  }
 
   ngOnInit() {
     this.determineSelectionState();
@@ -52,13 +62,16 @@ export class PublicationCategoriesComponent implements OnInit {
     this.selectedCategory = category;
     this.router.navigate([category.slug], { relativeTo: this.route })
     this.selectionState = 'selection';
+    this.animationService.categorySelected('lvl1');
   }
 
   determineSelectionState(){
     if(JSON.stringify(this.router.url).split('/')[3] === undefined){
       this.selectionState = 'noSelection';
+      this.animationService.categorySelected('lvl0');
     }else{
       this.selectionState = 'selection';
+      this.animationService.categorySelected('lvl1');
     }
   }
 
