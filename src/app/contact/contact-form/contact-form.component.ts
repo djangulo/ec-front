@@ -21,10 +21,24 @@ export class ContactFormComponent implements OnInit {
 
   createForm() {
     this.contactForm = this.fb.group({
-      name: '',
-      email: '',
+      name: ['', [
+        Validators.required,
+        Validators.minLength(3),
+        Validators.maxLength(50)
+        ]
+      ],
+      email: ['', [
+        Validators.required,
+        Validators.email
+        ]
+      ],
       subject: '',
-      message: ''
+      message: ['', [
+        Validators.required,
+        Validators.minLength(5),
+        Validators.maxLength(500)
+        ]
+      ],
     })
   }
 
@@ -35,6 +49,10 @@ export class ContactFormComponent implements OnInit {
     'message': ''
   }
 
+
+  onSubmit() {
+
+  }
 
   ngOnInit() {
   }
