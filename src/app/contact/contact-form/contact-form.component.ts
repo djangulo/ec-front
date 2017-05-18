@@ -1,11 +1,12 @@
 import { Component, OnInit, ViewChild, ElementRef } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 
-import { Http } from '@angular/http';
-
 import { ActivatedRoute } from '@angular/router';
 
+import 'rxjs/add/operator/switchMap';
+
 import { ReCaptchaComponent } from './../recaptcha/recaptcha.component';
+import { ReCaptchaResponse } from './../recaptcha/recaptcha-response.model';
 
 import { ContactService } from './../contact-form.service';
 
@@ -18,10 +19,12 @@ export class ContactFormComponent implements OnInit {
   contactForm: FormGroup;
   @ViewChild(ReCaptchaComponent) captcha: ReCaptchaComponent;
   @ViewChild('submit') submit: ElementRef;
+  private captchaResponse: ReCaptchaResponse;
+  private token: string;
+  private errorMessage: any;
 
   constructor(
     private service: ContactService,
-    private http: Http,
     private route: ActivatedRoute,
     private fb: FormBuilder
   ) {
@@ -63,8 +66,17 @@ export class ContactFormComponent implements OnInit {
   }
 
   captchaVerify(response) {
-    console.log(this.service.captchaVerify(response))
-
+    // this.http.post(
+    //   'https://www.google.com/recaptcha/api/siteverify',
+    //   {}
+    // )
+    console.log(response)
+    this.service.captchaVerify(response)
+      .subscribe(
+        resp => this.captchaResponse = resp,
+        error => this.errorMessage = <any>error);
+    console.log(this.captchaResponse)
+    console.log(this.errorMessage)
   }
 
 

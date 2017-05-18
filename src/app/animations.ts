@@ -13,14 +13,14 @@ export const Animations = {
         state('lvl1', style({ transform: 'translate3d(416%, 0, 0)', opacity: 1})),
         transition('void => lvl0', [
             style({transform: 'translate3d(0, 200%, 0)', opacity: 0}),
-            animate('500ms cubic-bezier(.4,-0.31,.66,1.26)')
+            animate('500ms ease-out')
         ]),
         transition('void => lvl1', [
             style({transform: 'translate3d(416%, 200%, 0)', opacity: 0}),
-            animate('500ms cubic-bezier(.4,-0.31,.66,1.26)')
+            animate('500ms ease-out')
         ]),
         transition('lvl0 <=> lvl1', [
-            animate('500ms cubic-bezier(.4,-0.31,.66,1.26)')
+            animate('500ms ease-out')
         ])
     ]),
     flyNavRight: trigger('flyNavRight', [
@@ -33,11 +33,11 @@ export const Animations = {
         state('selection', style({ transform: 'translate3d(135%, 0, 0)', opacity: 1})),
         transition('void => selection', [
             style({transform: 'translate3d(135%, 200%, 0)', opacity: 0}),
-            animate('500ms cubic-bezier(.4,-0.31,.66,1.26)')
+            animate('500ms ease-out')
         ]),
         transition('void => noSelection', [
             style({transform: 'translate3d(-98%, 200%, 0)', opacity: 0}),
-            animate('500ms cubic-bezier(.4,-0.31,.66,1.26)')
+            animate('500ms ease-out')
         ])
     ]),
     flySecondRight: trigger('flySecondRight', [
@@ -49,7 +49,7 @@ export const Animations = {
         state('*', style({ transform: 'translate3d(-110%, 0, 0)', opacity: 1})),
         transition('void => *', [
             style({transform: 'translate3d(-110%, 200%, 0)', opacity: 0}),
-            animate('500ms cubic-bezier(.4,-0.31,.66,1.26)')
+            animate('500ms ease-out')
         ])
     ]),
     deOpacify: trigger('deOpacify', [

@@ -14,6 +14,8 @@ import { ContactFormComponent } from './contact-form/contact-form.component';
 import { ContactRoutingModule } from './contact-routing.module';
 
 // Services
+import { ContactService } from './contact-form.service';
+
 
 @NgModule({
   imports: [
@@ -25,6 +27,9 @@ import { ContactRoutingModule } from './contact-routing.module';
   declarations: [
     ContactComponent,
     ContactFormComponent
-    ]
+    ],
+  providers: [
+    ContactService
+  ]
 })
 export class ContactModule { }

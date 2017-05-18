@@ -12,26 +12,26 @@ export const Animations = {
         state('noSelection', style({ transform: 'translate3d(54%, 0, 0)', opacity: 1})),
         transition('void => selection', [
             style({transform: 'translate3d(208%, 200%, 0)', opacity: 0}),
-            animate('500ms cubic-bezier(.4,-0.31,.66,1.26)')
+            animate('500ms ease-out')
         ]),
         transition('void => noSelection', [
             style({transform: 'translate3d(54%, 200%, 0)', opacity: 0}),
-            animate('500ms cubic-bezier(.4,-0.31,.66,1.26)')
+            animate('500ms ease-out')
         ])
     ]),
     flySecondRight: trigger('flySecondRight', [
         state('selection', style({ transform: 'translate3d(208%,0,0)' })),
         state('noSelection', style({ transform: 'translate3d(54%, 0, 0)' })),
-        transition('selection <=> noSelection', animate('500ms cubic-bezier(.4,-0.31,.66,1.26)'))
+        transition('selection <=> noSelection', animate('500ms ease-out'))
     ]),
     flyThirdIn: trigger('flyThirdIn', [
         state('*', style({ transform: 'translate3d(-68%, 0, 0)', opacity: 1})),
         transition('void => *', [
-            style({transform: 'translate3d(-68%, 200%, 0)', opacity: 0}),
-            animate('500ms cubic-bezier(.4,-0.31,.66,1.26)')
+            style({transform: 'translate3d(-68%, 300%, 0)', opacity: 0}),
+            animate('500ms ease-out')
         ]),
         transition('* => void', [
-            animate('500ms cubic-bezier(.4,-0.31,.66,1.26)', style({transform: 'translate3d(-68%, -200%, 0)', opacity: 0}))
+            animate('500ms ease-out', style({transform: 'translate3d(-68%, -200%, 0)', opacity: 0}))
         ]),
     ]),
     deOpacify: trigger('deOpacify', [
