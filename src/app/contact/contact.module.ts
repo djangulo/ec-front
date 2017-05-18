@@ -4,7 +4,7 @@ import { CommonModule } from '@angular/common';
 import { ReactiveFormsModule } from '@angular/forms';
 
 // Vendor
-// ...
+import { ReCaptchaModule } from './recaptcha/recaptcha.module';
 
 // Components
 import { ContactComponent } from './contact.component';
@@ -19,7 +19,8 @@ import { ContactRoutingModule } from './contact-routing.module';
   imports: [
     CommonModule,
     ReactiveFormsModule,
-    ContactRoutingModule
+    ContactRoutingModule,
+    ReCaptchaModule
   ],
   declarations: [
     ContactComponent,

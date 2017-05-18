@@ -1,8 +1,13 @@
-import { Component, OnInit, ViewChild } from '@angular/core';
+import { Component, OnInit, ViewChild, ElementRef } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+
+import { Http } from '@angular/http';
 
 import { ActivatedRoute } from '@angular/router';
 
+import { ReCaptchaComponent } from './../recaptcha/recaptcha.component';
+
+import { ContactService } from './../contact-form.service';
 
 @Component({
   selector: 'app-contact-form',
@@ -11,8 +16,12 @@ import { ActivatedRoute } from '@angular/router';
 })
 export class ContactFormComponent implements OnInit {
   contactForm: FormGroup;
+  @ViewChild(ReCaptchaComponent) captcha: ReCaptchaComponent;
+  @ViewChild('submit') submit: ElementRef;
 
   constructor(
+    private service: ContactService,
+    private http: Http,
     private route: ActivatedRoute,
     private fb: FormBuilder
   ) {
@@ -49,10 +58,22 @@ export class ContactFormComponent implements OnInit {
     'message': ''
   }
 
+  verifyCallback(response) {
+    console.log(response)
+  }
 
-  onSubmit() {
+  captchaVerify(response) {
+    console.log(this.service.captchaVerify(response))
 
   }
+
+
+  onSubmit() {
+    let token = this.captcha.getResponse();
+    console.log(token);
+  }
+
+
 
   ngOnInit() {
   }

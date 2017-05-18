@@ -17,10 +17,13 @@
       <textarea formControlName="message" placeholder="Message" required></textarea>
     </div>
 
-    <div class="g-recaptcha" data-sitekey="6LeAzSEUAAAAAAsTKcOrE1lUIwMFMrG5IBoIRFsO"></div>
+    <re-captcha 
+    site_key="6LeAzSEUAAAAAAsTKcOrE1lUIwMFMrG5IBoIRFsO" 
+    language="en" 
+    (captchaResponse)="verifyCallback($event)"></re-captcha>
     
     <div>
-      <button class="btn-submit">Submit</button>
+      <button #submit class="btn-submit" disabled>Submit</button>
     </div>
   </div>
 </form>
