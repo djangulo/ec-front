@@ -1,4 +1,4 @@
-<div [@flyStaffIn]="in" class="staff">
+<div [@flyStaffIn]="animState" class="staff">
   <ul>
     <li class="staff-member card" *ngFor="let member of staff" (click)="onSelect(member)">
         <img src="{{member.photo}}" alt="{{member.username}}'s photo'">
@@ -6,7 +6,7 @@
     </li>
   </ul>
 </div>
-<div [@flyInternsIn]="in" class="interns">
+<div [@flyInternsIn]="animState" class="interns">
   <h4>Interns</h4>
   <ul>
     <li class="intern" *ngFor="let member of interns" (click)="onSelect(member)">

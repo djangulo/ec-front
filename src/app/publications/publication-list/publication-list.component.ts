@@ -20,11 +20,12 @@ import { Subscription } from 'rxjs/Subscription';
     ]
 })
 export class PublicationListComponent implements OnInit, OnDestroy {
-    @Input() category: Category;
-    publications: Publication[];
-    selectedPublication: Publication;
-    subscription: Subscription;
+  @Input() category: Category;
+  publications: Publication[];
+  selectedPublication: Publication;
+  subscription: Subscription;
   categorySwitched: string;
+  animState: string
 
     constructor(
     private animationService: AnimationService,
@@ -36,6 +37,7 @@ export class PublicationListComponent implements OnInit, OnDestroy {
     animationService.categorySwitched$.subscribe(
       state => {this.categorySwitched = state}
     );
+    this.animState = 'in';
     }
 
     ngOnInit(): void {

@@ -1,4 +1,4 @@
-<div class="works"  [@flyThirdIn]="in">
+<div class="works"  [@flyThirdIn]="animState">
   <div class="work" *ngFor="let work of works" (click)="onSelect(work)">
     <div class="caption">
       <p>{{work.published_date|date:'y'}}</p>

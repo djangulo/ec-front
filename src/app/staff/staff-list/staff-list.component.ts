@@ -19,6 +19,7 @@ export class StaffListComponent implements OnInit {
   staff: Staff[];
   interns: Staff[];
   selectedMember: Staff;
+  animState: string;
 
   constructor(
     private staffService: StaffService,
@@ -28,6 +29,7 @@ export class StaffListComponent implements OnInit {
   ) {
       this.staff = [];
       this.interns = [];
+      this.animState = 'in';
   }
 
   ngOnInit() {

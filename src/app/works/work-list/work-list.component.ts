@@ -42,6 +42,7 @@ export class WorkListComponent implements OnInit, OnDestroy {
   detailState: string;
   showDetails: boolean;
   categorySwitched: string;
+  animState: string;
 
   constructor(
     private animationService: AnimationService,
@@ -54,6 +55,7 @@ export class WorkListComponent implements OnInit, OnDestroy {
     animationService.categorySwitched$.subscribe(
       state => {this.categorySwitched = state}
     );
+    this.animState = 'in';
     }
 
     ngOnInit(): void {

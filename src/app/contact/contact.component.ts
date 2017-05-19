@@ -9,8 +9,10 @@ import { Component, OnInit } from '@angular/core';
   ]
 })
 export class ContactComponent implements OnInit {
-
-  constructor() { }
+  animState: string;
+  constructor() {
+    this.animState = 'in';
+  }
 
   ngOnInit() {
   }

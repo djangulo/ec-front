@@ -12,7 +12,6 @@ import { Animations } from './../animations';
   providers: [ HomeImageService ],
   animations: [
     Animations.fade,
-    Animations.parallax
   ]
 })
 export class HomeComponent implements OnInit, OnDestroy {
@@ -27,9 +26,9 @@ export class HomeComponent implements OnInit, OnDestroy {
     private homeImageService: HomeImageService,
     private sanitizer: DomSanitizer
   ) {
-    setInterval(() => {this.fadeState = 'invisible';}, 29000);
-    setInterval(() => {this.rotateImages();  this.parallaxState = 'reset';}, 29700);
-    setInterval(() => {this.fadeState = 'visible'; this.parallaxState = 'do';}, 30000);
+    setInterval(() => {this.fadeState = 'invisible';}, 14000);
+    setInterval(() => {this.rotateImages();}, 29700);
+    setInterval(() => {this.fadeState = 'visible'; this.parallaxState = 'do';}, 15000);
   }
 
 

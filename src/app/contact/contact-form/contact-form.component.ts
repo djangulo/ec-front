@@ -75,8 +75,6 @@ export class ContactFormComponent implements OnInit {
       .subscribe(
         resp => this.captchaResponse = resp,
         error => this.errorMessage = <any>error);
-    console.log(this.captchaResponse)
-    console.log(this.errorMessage)
   }
 
 
