@@ -1,3 +1,40 @@
+svg {
+    height: 32px;
+    width: 32px;
+    pointer-events: all;
+}
+
 .form-wrapper {
     width: 515px;
 }
+
+.icon-facebook *,
+.icon-linkedin *,
+.icon-instagram * {
+    transition: fill 200ms ease-in-out;
+}
+
+.icon-facebook:hover .facebook-bg {
+    fill: #3C5A99;
+}
+
+.icon-facebook:hover .facebook-f {
+    fill: #fff;
+}
+
+
+.icon-linkedin:hover .linkedin-bg {
+    fill: #0083be;
+}
+
+.icon-linkedin:hover .linkedin-text {
+    fill: #fff;
+}
+
+.icon-instagram:hover .instagram-bg {
+    fill: url(#ig-grad);
+}
+
+/*this {
+    background: linear-gradient(right top, #b900b4, #f60d02 50%, #ffd051 100%);
+}*/

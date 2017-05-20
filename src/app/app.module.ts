@@ -8,7 +8,6 @@ import { NgModule } from '@angular/core';
 // Components
 import { AppComponent } from './app.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
-import { ContactFormComponent } from './contact/contact-form/contact-form.component';
 import { HomeComponent } from './home/home.component';
 
 // Modules
