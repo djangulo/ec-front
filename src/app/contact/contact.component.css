@@ -8,6 +8,11 @@ svg {
     width: 515px;
 }
 
+.icon {
+    height: 36px;
+    width: 36px;
+}
+
 .icon-facebook *,
 .icon-linkedin *,
 .icon-instagram * {
