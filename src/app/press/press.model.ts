@@ -7,5 +7,6 @@ export class PressRelease {
     category_slug: string;
     created_date: string;
     published_date: string;
-    url: URL;
+    url: string;
+    press_kit: string;
 }

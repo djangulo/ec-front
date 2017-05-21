@@ -1,12 +1,23 @@
+import { PressService } from './press.service';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { PressDetailComponent } from './press-detail/press-detail.component';
-import { PressListComponent } from './press-list/press-list.component';
+import { PressComponent } from './press.component';
+import { PressLatestComponent } from './press-latest/press-latest.component';
+import { PressArchiveComponent } from './press-archive/press-archive.component';
+import { PressRoutingModule } from './press-routing.module';
 
 @NgModule({
   imports: [
-    CommonModule
+    CommonModule,
+    PressRoutingModule
   ],
-  declarations: [PressDetailComponent, PressListComponent]
+  declarations: [
+    PressLatestComponent,
+    PressArchiveComponent,
+    PressComponent
+  ],
+  providers: [
+    PressService
+  ]
 })
 export class PressModule { }

@@ -12,7 +12,7 @@ import { HomeComponent } from './home/home.component';
 
 // Modules
 import { ContactModule } from './contact';
-import { PressModule } from './press';
+import { PressModule } from './press/press.module';
 import { PublicationsModule } from './publications';
 import { StaffModule } from './staff';
 import { WorksModule } from './works';
@@ -38,6 +38,7 @@ import { AnimationService } from './animation.service';
     PublicationsModule,
     WorksModule,
     StaffModule,
+    PressModule,
     AppRoutingModule
   ],
   declarations: [

@@ -1,0 +1,18 @@
+@import url('../../assets/css/styles.css');
+
+.menu {
+    width: 140px;
+}
+
+.menu-item {
+    font-size: 20px;
+}
+
+.menu-item a {
+    cursor: pointer;
+    color: #444;
+    text-decoration: none;
+    list-style: inherit;
+    font-size: 24px;
+    font-weight: 300;
+}

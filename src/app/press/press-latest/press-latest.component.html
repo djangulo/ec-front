@@ -1,0 +1,16 @@
+<p>
+  press-latest works!
+</p>
+
+<div class="presses">
+  <div class="press" *ngFor="let press of presses">
+    <div class="caption">
+      <p>{{press.published_date|date:'d-mmm-yy'}}</p>
+      <p>{{press.title}}</p>
+      <p><a href="{{press.url}}">More information</a></p>
+      <a href="{{press.press_kit}}" target="_blank" download>
+        <button>Click here to download press kit</button>
+      </a>
+    </div>
+  </div>
+</div>
