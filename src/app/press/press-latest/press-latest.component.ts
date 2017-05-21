@@ -6,17 +6,21 @@ import { Http } from '@angular/http';
 import { Component, OnInit, OnDestroy } from '@angular/core';
 
 import { PressRelease } from './../press.model';
+import { Animations } from './../press-animations'
 import { AnimationService } from './../../animation.service';
 
 @Component({
-  selector: 'app-press-latest',
   templateUrl: './press-latest.component.html',
-  styleUrls: ['./press-latest.component.css']
+  styleUrls: ['./press-latest.component.css'],
+  animations: [
+    Animations.flyThirdIn
+  ]
 })
 export class PressLatestComponent implements OnInit {
   subscription: Subscription;
   presses: PressRelease[];
   animLevel: string;
+  animState: string;
 
   constructor(
     private animationService: AnimationService,
@@ -30,6 +34,7 @@ export class PressLatestComponent implements OnInit {
       level => {
         this.animLevel = 'lvl1';
       });
+    this.animState = 'in';
   }
 
   ngOnInit() {

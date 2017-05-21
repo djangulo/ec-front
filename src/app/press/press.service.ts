@@ -35,10 +35,10 @@ export class PressService {
         .catch(this.handleError);
   }
 
-  getPressDates(): Observable<PressRelease[]> {
+  getPressDates(): Observable<any[]> {
     const url = `${this.pressUrl}/archive/`
     return this.http.get(url)
-        .map(response => response.json().results as PressRelease[])
+        .map(response => response.json().results)
         .catch(this.handleError);
   }
 

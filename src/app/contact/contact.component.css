@@ -1,11 +1,28 @@
+.contact-wrapper {
+    width: 515px;
+    position: relative;
+}
+
+.contact-details {
+    position: absolute;
+    left: 40px;
+    top: 40px;
+}
+
+h2 {
+    margin-top: 40px;
+}
+
+p {
+    font-size: 16px;
+    font-family: inherit;
+    color: #444;
+}
+
 svg {
     height: 32px;
     width: 32px;
     pointer-events: all;
-}
-
-.form-wrapper {
-    width: 515px;
 }
 
 .icon {
@@ -20,16 +37,17 @@ svg {
 }
 
 .icon-facebook:hover .facebook-bg {
-    fill: #3C5A99;
+    /*fill: #3C5A99; <- Original FB blue*/
+    fill: #b72175;
 }
 
 .icon-facebook:hover .facebook-f {
     fill: #fff;
 }
 
-
 .icon-linkedin:hover .linkedin-bg {
-    fill: #0083be;
+    /*fill: #0083be; <- original linkedin blue*/
+    fill: #b72175;
 }
 
 .icon-linkedin:hover .linkedin-text {
@@ -37,9 +55,6 @@ svg {
 }
 
 .icon-instagram:hover .instagram-bg {
-    fill: url(#ig-grad);
+    /*fill: url(#ig-grad); <- instagram gradient (defined inside svg)*/
+    fill: #b72175;
 }
-
-/*this {
-    background: linear-gradient(right top, #b900b4, #f60d02 50%, #ffd051 100%);
-}*/

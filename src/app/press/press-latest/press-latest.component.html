@@ -1,15 +1,12 @@
-<p>
-  press-latest works!
-</p>
-
-<div class="presses">
+<div [@flyThirdIn]="animState" class="presses">
   <div class="press" *ngFor="let press of presses">
     <div class="caption">
-      <p>{{press.published_date|date:'d-mmm-yy'}}</p>
-      <p>{{press.title}}</p>
+      <p class="bold">{{press.published_date|date:'d-MMM-yy'}}</p>
+      <p class="bold">{{press.title}}</p>
+      <p>{{press.description}}</p>
       <p><a href="{{press.url}}">More information</a></p>
-      <a href="{{press.press_kit}}" target="_blank" download>
-        <button>Click here to download press kit</button>
+      <a href="{{press.press_kit}}" target="_blank">
+        <button class="btn-download">Download press kit</button>
       </a>
     </div>
   </div>

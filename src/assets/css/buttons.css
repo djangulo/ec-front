@@ -46,3 +46,19 @@
   transform: rotate(90deg);
   content: "";
 }
+
+.btn-download {
+    background-color: #444;
+    color: #eee;
+    border: none;
+    transition: background-color 200ms, color 200ms;
+    width: 170px;
+    height: 30px;
+    border-radius: 8px;
+    -moz-border-radius: 8px;
+}
+
+.btn-download:hover {
+    background-color: #eee;
+    color: #b72175;
+}
