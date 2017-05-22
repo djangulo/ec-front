@@ -1,7 +1,6 @@
-<p>
-  press-archive works!
-</p>
-
-<div *ngIf="dates">
-  {{dates}}
+<div [@flyYearsIn]="animState" class="menu years">
+  <div class="menu-item" *ngFor="let year of years" (click)="onSelect(year)">
+    <p class="year">{{year.year}}</p>
+  </div>
 </div>
+<router-outlet></router-outlet>

@@ -10,3 +10,11 @@ export class PressRelease {
     url: string;
     press_kit: string;
 }
+
+export class ArchiveDate {
+    year: number;
+    months: {
+        name: string;
+        id: number;
+    }[]
+}

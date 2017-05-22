@@ -1,0 +1,12 @@
+@import url('./../../../assets/css/styles.css');
+
+.year {
+    font-size: 20px;
+}
+
+.years {
+    height: 120px;
+    overflow-y: auto;
+    width: 140px;
+ 	transform: translate3d(246%, 79%, 0);
+}

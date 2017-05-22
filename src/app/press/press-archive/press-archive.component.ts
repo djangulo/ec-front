@@ -1,11 +1,14 @@
+import { Observable } from 'rxjs/Observable';
 import { Subscription } from 'rxjs/Subscription';
 import { Location } from '@angular/common';
-import { Router, ActivatedRoute } from '@angular/router';
+import { Router, ActivatedRoute, Params } from '@angular/router';
 import { PressService } from './../press.service';
 import { Http } from '@angular/http';
 import { Component, OnInit, OnDestroy } from '@angular/core';
 
-import { PressRelease } from './../press.model';
+import 'rxjs/add/operator/switchMap';
+
+import { PressRelease, ArchiveDate } from './../press.model';
 import { Animations } from './../press-animations'
 import { AnimationService } from './../../animation.service';
 
@@ -13,20 +16,17 @@ import { AnimationService } from './../../animation.service';
   templateUrl: './press-archive.component.html',
   styleUrls: ['./press-archive.component.css'],
   animations: [
-    Animations.flyThirdIn
+    Animations.flyYearsIn
   ]
 })
 export class PressArchiveComponent implements OnInit {
   subscription: Subscription;
-  presses: PressRelease[];
-  animLevel: string;
   animState: string;
-  dates: any[];
-  years: any[]
+  animLevel: string;
+  years: ArchiveDate[];
 
   constructor(
     private animationService: AnimationService,
-    private http: Http,
     private service: PressService,
     private router: Router,
     private route: ActivatedRoute,
@@ -37,27 +37,24 @@ export class PressArchiveComponent implements OnInit {
         this.animLevel = 'lvl1';
       });
     this.animState = 'in';
-    this.dates = [];
-    this.years = [];
   }
 
   ngOnInit() {
     this.getDates();
   }
 
-  getLatest(): void {
-    this.service.getLatestPress()
-      .subscribe(presses => this.presses = presses)
-  }
-
   getDates(): void {
     this.service.getPressDates()
-      .subscribe(dates => this.dates = dates)
+      .subscribe(dates => this.years = dates)
   }
 
-  arrangeDates(): void {
 
+  onSelect(year: ArchiveDate) {
+    this.router.navigate([year.year], { relativeTo: this.route})
   }
+
+
+
 
 
 }

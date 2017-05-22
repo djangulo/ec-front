@@ -1,0 +1,9 @@
+<div [@flyMonthsIn]="animState" class="menu months">
+  <div 
+  class="menu-item" 
+  *ngFor="let month of months" 
+  (click)="onSelect(month.id)">
+    <p class="month">{{month.name}}</p>
+  </div>
+</div>
+<router-outlet></router-outlet>

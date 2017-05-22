@@ -13,7 +13,8 @@ import { AnimationService } from './../../animation.service';
   templateUrl: './press-latest.component.html',
   styleUrls: ['./press-latest.component.css'],
   animations: [
-    Animations.flyThirdIn
+    Animations.flySecondIn,
+    Animations.flyLatestPressIn
   ]
 })
 export class PressLatestComponent implements OnInit {

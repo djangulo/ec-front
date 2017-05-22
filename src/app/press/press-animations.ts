@@ -17,14 +17,44 @@ export const Animations = {
             animate('500ms ease-out', style({transform: 'translate3d(49%, -200%, 0)', opacity: 0}))
         ]),
     ]),
-    flyThirdIn: trigger('flyThirdIn', [
-        state('*', style({ transform: 'translate3d(-70%, 0, 0)', opacity: 1})),
+    flyYearsIn: trigger('flyYearsIn', [
+        state('*', style({ transform: 'translate3d(246%, 79%, 0)', opacity: 1})),
         transition('void => *', [
-            style({transform: 'translate3d(-70%, 300%, 0)', opacity: 0}),
+            style({transform: 'translate3d(246%, 200%, 0)', opacity: 0}),
             animate('500ms ease-out')
         ]),
         transition('* => void', [
-            animate('500ms ease-out', style({transform: 'translate3d(-70%, -200%, 0)', opacity: 0}))
+            animate('500ms ease-out', style({transform: 'translate3d(246%, -200%, 0)', opacity: 0}))
+        ]),
+    ]),
+    flyMonthsIn: trigger('flyMonthsIn', [
+        state('*', style({ transform: 'translate3d(147%, 233%, 0)', opacity: 1})),
+        transition('void => *', [
+            style({transform: 'translate3d(147%, 400%, 0)', opacity: 0}),
+            animate('500ms ease-out')
+        ]),
+        transition('* => void', [
+            animate('500ms ease-out', style({transform: 'translate3d(147%, -200%, 0)', opacity: 0}))
+        ]),
+    ]),
+    flyArchivePressIn: trigger('flyArchivePressIn', [
+        state('*', style({ transform: 'translate3d(-99%, -13%, 0)', opacity: 1})),
+        transition('void => *', [
+            style({transform: 'translate3d(-99%, 400%, 0)', opacity: 0}),
+            animate('500ms ease-out')
+        ]),
+        transition('* => void', [
+            animate('500ms ease-out', style({transform: 'translate3d(-99%, -300%, 0)', opacity: 0}))
+        ]),
+    ]),
+    flyLatestPressIn: trigger('flyLatestPressIn', [
+        state('*', style({ transform: 'translate3d(-63%, 0%, 0)', opacity: 1})),
+        transition('void => *', [
+            style({transform: 'translate3d(-63%, 400%, 0)', opacity: 0}),
+            animate('500ms ease-out')
+        ]),
+        transition('* => void', [
+            animate('500ms ease-out', style({transform: 'translate3d(-63%, -300%, 0)', opacity: 0}))
         ]),
     ]),
 }

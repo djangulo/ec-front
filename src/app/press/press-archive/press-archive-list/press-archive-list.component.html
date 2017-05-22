@@ -1,4 +1,4 @@
-<div [@flyLatestPressIn]="animState" class="presses">
+<div class="presses" [@flyArchivePressIn]="animState">
   <div class="press" *ngFor="let press of presses">
     <div class="caption">
       <p class="bold">{{press.published_date|date:'d-MMM-yy'}}</p>
