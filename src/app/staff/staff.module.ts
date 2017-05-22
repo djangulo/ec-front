@@ -2,6 +2,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
+import { RouterModule } from '@angular/router';
 
 // Vendor
 // ...
@@ -18,6 +19,7 @@ import { StaffService } from './staff.service';
 @NgModule({
   imports: [
     CommonModule,
+    RouterModule,
     StaffRoutingModule
   ],
   declarations: [

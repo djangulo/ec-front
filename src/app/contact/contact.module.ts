@@ -1,6 +1,7 @@
 // Core
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { RouterModule } from '@angular/router';
 
 // Vendor
 
@@ -16,6 +17,7 @@ import { ContactRoutingModule } from './contact-routing.module';
 @NgModule({
   imports: [
     CommonModule,
+    RouterModule,
     ContactRoutingModule
   ],
   declarations: [

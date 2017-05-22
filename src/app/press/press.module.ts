@@ -1,3 +1,4 @@
+import { RouterModule } from '@angular/router';
 import { PressService } from './press.service';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
@@ -11,6 +12,7 @@ import { PressMonthListComponent } from './press-archive/press-month-list/press-
 @NgModule({
   imports: [
     CommonModule,
+    RouterModule,
     PressRoutingModule
   ],
   declarations: [

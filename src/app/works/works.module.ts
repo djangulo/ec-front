@@ -2,6 +2,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
+import { RouterModule } from '@angular/router';
 
 // Components
 import { WorkCategoriesComponent } from './work-categories/work-categories.component';
@@ -17,6 +18,7 @@ import { WorkService } from './work.service';
     imports: [
         CommonModule,
         FormsModule,
+        RouterModule,
         WorkRoutingModule
     ],
     declarations: [

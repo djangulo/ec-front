@@ -1,7 +1,7 @@
 import { Animations } from './animations';
 import { AnimationService } from './animation.service';
 import { Location } from '@angular/common';
-import { ActivatedRoute, Router } from '@angular/router';
+import { ActivatedRoute, Router, RouterModule } from '@angular/router';
 import { Category } from './categories/category.model';
 import { Component, OnInit } from '@angular/core';
 
