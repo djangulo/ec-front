@@ -2,6 +2,7 @@
 
 .year {
     font-size: 20px;
+    cursor: pointer;
 }
 
 .years {
@@ -9,4 +10,12 @@
     overflow-y: auto;
     width: 140px;
  	transform: translate3d(246%, 79%, 0);
+}
+
+.menu-item p:hover {
+    color: #b72175;
+}
+
+.active {
+    color: #b72175;
 }

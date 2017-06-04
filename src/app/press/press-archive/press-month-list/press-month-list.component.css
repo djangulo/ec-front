@@ -3,10 +3,19 @@
 .month {
     font-size: 18px;
     margin-bottom: -10px;
+    cursor: pointer;
 }
 
 .months {
     overflow-y: auto;
     width: 140px;
 	transform: translate3d(147%, 233%, 0);
+}
+
+.menu-item p:hover {
+    color: #b72175;
+}
+
+.active {
+    color: #b72175;
 }

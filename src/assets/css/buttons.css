@@ -52,10 +52,14 @@
     color: #eee;
     border: none;
     transition: background-color 200ms, color 200ms;
+    -moz-transition:  background-color 200ms, color 200ms;
+    -o-transition: background-color 200ms, color 200ms;
+    -webkit-transition: background-color 200ms, color 200ms;
     width: 170px;
     height: 30px;
     border-radius: 8px;
     -moz-border-radius: 8px;
+    -o-border-radius: 8px;
 }
 
 .btn-download:hover {
