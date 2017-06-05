@@ -46,10 +46,6 @@
     -o-transform: translateX(80px);
 }
 
-p {
-    color: #444;
-}
-
 /*@-webkit-keyframes bg-move {
 	0%   { background-position:  0 0; }
 	100% { background-position: -50px -50px; transform: scale(1.1); }

@@ -16,13 +16,13 @@
 
 
 .category-description {
-    width: 48%;
+    width: 42%;
     margin: 0;
     padding: 0;
     border: 0;
     outline: 0;
     float: left;
-    transform: translate3d(-50%, 0, 0);
+    transform: translate3d(-22%, 0, 0);
 }
 
 .category-description p {
