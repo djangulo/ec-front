@@ -39,11 +39,9 @@
     -moz-transform: translateX(80px);
     -webkit-transform: translateX(80px);
     -o-transform: translateX(80px);
-}
-
-.home-text {
     color: #444;
 }
+
 
 /*@-webkit-keyframes bg-move {
 	0%   { background-position:  0 0; }
