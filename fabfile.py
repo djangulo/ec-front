@@ -11,12 +11,13 @@ def deploy():
 
 def _clear_previous_files():
     with settings(warn_only=True):
-        run('rm index.html')
-        run('rm main.bundle.js')
-        run('rm polyfills.bundle.js')
-        run('rm vendor.bundle.js')
-        run('rm styles.bundle.css')
-        run('rm -r assets')
+        run(f'cd {main_dir}'
+            ' && rm index.html'
+            ' && rm main.bundle.js'
+            ' && rm polyfills.bundle.js'
+            ' && rm vendor.bundle.js'
+            ' && rm styles.bundle.css'
+            ' && rm -r assets')
 
 def _upload_files():
     jsfiles = ('inline', 'polyfills', 'vendor', 'main',)
@@ -24,6 +25,7 @@ def _upload_files():
         check = local('ls dist')
     if check.failed:
         local('cd ~/Documents/ec-front && ng build --prod')
+    local(r"""sed -i 's:</script><script:</script>\n<script:g' dist/index.html""")
     for jsfile in jsfiles:
         local(f"sed -i 's/{jsfile}.*.bundle.js/{jsfile}.bundle.js/g' "
             ' dist/index.html')
@@ -35,8 +37,6 @@ def _upload_files():
     put('dist/inline*.js', f'{main_dir}/inline.bundle.js')
     put('dist/vendor*.js', f'{main_dir}/vendor.bundle.js')
     put('dist/styles*.css', f'{main_dir}/styles.bundle.css')
-    local("sed -i 's/{/ {\n    /g' dist/styles*.bundle.css")
-    local("sed -i 's/;/;\n    /g' dist/styles*.bundle.css")
     run(f'mkdir -p {main_dir}/assets')
     run(f'mkdir -p {main_dir}/assets/css')
     run(f'mkdir -p {main_dir}/assets/img')
