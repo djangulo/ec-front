@@ -3,27 +3,17 @@ import { Headers, Http } from '@angular/http';
 
 import 'rxjs/add/operator/toPromise';
 
-import { HomeImage } from './home-image.model';
-
 @Injectable()
-export class HomeImageService {
+export class HomeTextService {
     private headers = new Headers({'Content-Type': 'application/json'});
-    private url = 'https://ec.djangulo.com/api/v1/home-images/images';
+    private url = 'https://ec.djangulo.com/api/v1/home-images/text';
 
     constructor(private http: Http) { }
 
-    getImages(): Promise<HomeImage[]> {
+    getText(): Promise<any> {
         return this.http.get(this.url)
             .toPromise()
-            .then(response => response.json().results as HomeImage[])
-            .catch(this.handleError);
-    }
-
-    getImage(id: number): Promise<HomeImage> {
-        const url = `${this.url}/${id}/`;
-        return this.http.get(url)
-            .toPromise()
-            .then(response => response.json() as HomeImage)
+            .then(response => response.json().hometext as any)
             .catch(this.handleError);
     }
 
@@ -35,20 +25,19 @@ export class HomeImageService {
             .catch(this.handleError);
     }
 
-    create(image: HomeImage): Promise<HomeImage> {
+    create(text: string): Promise<string> {
         return this.http
-            .post(this.url, JSON.stringify({image}), {headers: this.headers})
+            .post(this.url, JSON.stringify({text}), {headers: this.headers})
             .toPromise()
-            .then(res => res.json().data as HomeImage)
+            .then(res => res.json().data as string)
             .catch(this.handleError);
     }
 
-    update(image: HomeImage): Promise<HomeImage> {
-    const url = `${this.url}/${image.id}`;
+    update(text: string): Promise<string> {
         return this.http
-            .put(url, JSON.stringify(image), {headers: this.headers})
+            .put(this.url, JSON.stringify(text), {headers: this.headers})
             .toPromise()
-            .then(() => image)
+            .then(() => text)
             .catch(this.handleError);
     }
 

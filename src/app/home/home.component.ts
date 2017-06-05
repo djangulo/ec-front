@@ -3,13 +3,14 @@ import { DomSanitizer } from '@angular/platform-browser';
 
 import { HomeImage } from './home-image.model';
 import { HomeImageService } from './home-image.service';
+import { HomeTextService } from './home-text.service';
 
 import { Animations } from './../animations';
 
 @Component({
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.css'],
-  providers: [ HomeImageService ],
+  providers: [ HomeImageService, HomeTextService ],
   animations: [
     Animations.fade,
   ]
@@ -20,10 +21,12 @@ export class HomeComponent implements OnInit, OnDestroy {
   index: number;
   fadeState: string;
   parallaxState: string;
+  homeText: string;
   @ViewChild('theDiv') div: ElementRef;
 
   constructor(
     private homeImageService: HomeImageService,
+    private homeTextService: HomeTextService,
     private sanitizer: DomSanitizer
   ) {
     setInterval(() => {this.fadeState = 'invisible';}, 14000);
@@ -35,12 +38,18 @@ export class HomeComponent implements OnInit, OnDestroy {
   ngOnInit() {
     this.fadeState = 'invisible';
     this.parallaxState = 'reset';
+    this.getHomeText();
     this.getHomeImages();
   }
   ngOnDestroy() {
     //Called once, before the instance is destroyed.
     //Add 'implements OnDestroy' to the class.
     this.fadeState = 'invisible';
+  }
+
+  getHomeText(): void {
+    this.homeTextService.getText()
+            .then((text) => this.homeText = text);
   }
 
   getHomeImages(): void {

@@ -25,13 +25,14 @@ def _upload_files():
         check = local('ls dist')
     if check.failed:
         local('cd ~/Documents/ec-front && ng build --prod')
-    local(r"""sed -i 's:</script><script:</script>\n<script:g' dist/index.html""")
+    local(r"mkdir -p distribution")
+    local(r"""sed 's:</script><script:</script>\n<script:g' dist/index.html > distribution/index.html""")
     for jsfile in jsfiles:
         local(f"sed -i 's/{jsfile}.*.bundle.js/{jsfile}.bundle.js/g' "
-            ' dist/index.html')
+            ' distribution/index.html')
     local("sed -i 's/styles.*.bundle.css/styles.bundle.css/g'"
-        ' dist/index.html')
-    put('dist/index.html', f'{main_dir}/index.html')
+        ' distribution/index.html')
+    put('distribution/index.html', f'{main_dir}/index.html')
     put('dist/main*.js', f'{main_dir}/main.bundle.js')
     put('dist/polyfills*.js', f'{main_dir}/polyfills.bundle.js')
     put('dist/inline*.js', f'{main_dir}/inline.bundle.js')
@@ -42,6 +43,7 @@ def _upload_files():
     run(f'mkdir -p {main_dir}/assets/img')
     put('dist/assets/css', f'{main_dir}/assets')
     put('dist/assets/img', f'{main_dir}/assets')
+    local('rm -r distribution')
 
 # convert styles.bundle.css into readable format with the sed chain below
-#sed 's/{/ {\n    /g' dist/styles.bundle.css | sed 's/;/;\n    /g' | sed 's/}/\n}\n\n/g' | sed 's/:/: /g'
+#sed 's/{/ {\n    /g' dist/styles.bundle.css | sed 's/;/;\n    /g' | sed 's/}/\n}\n\n/g' | sed 's/:/: /g' build --prod')

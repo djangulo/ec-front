@@ -30,6 +30,21 @@
     background-repeat: no-repeat;
 }
 
+.home-text {
+    font-family: 'Helvetica Neue', Helvetica, 'Open Sans', sans-serif, Arial;
+    font-size: 18px;
+    margin-top: 20px;
+    width: 790px;
+    transform: translateX(80px);
+    -moz-transform: translateX(80px);
+    -webkit-transform: translateX(80px);
+    -o-transform: translateX(80px);
+}
+
+.home-text p {
+    color: #444;
+}
+
 /*@-webkit-keyframes bg-move {
 	0%   { background-position:  0 0; }
 	100% { background-position: -50px -50px; transform: scale(1.1); }
