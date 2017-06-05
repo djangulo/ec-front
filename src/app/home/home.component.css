@@ -30,6 +30,10 @@
     background-repeat: no-repeat;
 }
 
+.home-text p {
+    color: #444;
+}
+
 .home-text {
     font-family: 'Helvetica Neue', Helvetica, 'Open Sans', sans-serif, Arial;
     color: #444;
@@ -42,9 +46,6 @@
     -o-transform: translateX(80px);
 }
 
-.home-text p {
-    color: #444;
-}
 
 /*@-webkit-keyframes bg-move {
 	0%   { background-position:  0 0; }
