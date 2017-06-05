@@ -35,6 +35,8 @@ def _upload_files():
     put('dist/inline*.js', f'{main_dir}/inline.bundle.js')
     put('dist/vendor*.js', f'{main_dir}/vendor.bundle.js')
     put('dist/styles*.css', f'{main_dir}/styles.bundle.css')
+    local("sed -i 's/{/ {\n    /g' dist/styles*.bundle.css")
+    local("sed -i 's/;/;\n    /g' dist/styles*.bundle.css")
     run(f'mkdir -p {main_dir}/assets')
     run(f'mkdir -p {main_dir}/assets/css')
     run(f'mkdir -p {main_dir}/assets/img')
