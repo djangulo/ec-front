@@ -16,6 +16,8 @@
 .settings/
 *.sublime-workspace
 
+upload.sh
+
 # IDE - VSCode
 .vscode/*
 !.vscode/settings.json
