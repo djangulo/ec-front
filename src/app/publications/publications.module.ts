@@ -1,3 +1,4 @@
+import { HomeTextService } from './../home/home-text.service';
 // Core
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
@@ -26,7 +27,8 @@ import { PublicationService } from './publication.service';
         PublicationListComponent
     ],
     providers: [
-        PublicationService
+        PublicationService,
+        HomeTextService
     ]
 })
 export class PublicationsModule {}

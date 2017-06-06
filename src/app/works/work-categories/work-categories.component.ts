@@ -11,6 +11,7 @@ import {
 
 import { Category } from './../../categories/category.model';
 import { WorkService } from './../work.service';
+import { HomeTextService } from './../../home/home-text.service';
 import { Animations } from './../work-animations';
 import { AnimationService } from './../../animation.service';
 import { Subscription } from 'rxjs/Subscription';
@@ -32,26 +33,43 @@ export class WorkCategoriesComponent implements OnInit, OnDestroy {
   hoveredCategory: Category;
   selectionState: string;
   hoverState: string = 'off';
-  subscription: Subscription;
+  catSub: Subscription;
+  switchSub: Subscription;
   categorySelected: string;
+  categorySwitched: string;
+  homeText: string;
   
   constructor(
     private animationService: AnimationService,
+    private homeTextService: HomeTextService,
     private workService: WorkService,
     private router: Router,
     private route: ActivatedRoute,
     private location: Location
   ) {
-    this.subscription = animationService.categorySelected$.subscribe(
+    this.catSub = animationService.categorySelected$.subscribe(
       level => {
-        this.categorySelected = 'lvl1';
+        this.categorySelected = level;
+      });
+    this.switchSub = animationService.categorySwitched$.subscribe(
+      origin => {
+        if(origin !== null){
+          this.selectionState = 'noSelection';
+        }else{
+          this.selectionState = 'selection';
+        }
       });
   }
 
   ngOnInit() {
     this.determineSelectionState();
     this.getCategories();
-    console.log(this.selectionState)
+    this.getHomeText();
+  }
+
+  getHomeText(): void {
+    this.homeTextService.getText()
+            .then((text) => this.homeText = text);
   }
 
   getCategories(): void {
@@ -85,7 +103,8 @@ export class WorkCategoriesComponent implements OnInit, OnDestroy {
   }
 
   ngOnDestroy() {
-    this.subscription.unsubscribe();
+    this.catSub.unsubscribe();
+    this.switchSub.unsubscribe();
   }
 
 

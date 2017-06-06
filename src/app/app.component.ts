@@ -47,6 +47,9 @@ export class AppComponent implements OnInit {
   changeState(arg, origin=null){
     this.homeState = arg;
     this.animationService.categorySelected(arg);
+    if(origin !== null){
+      this.animationService.categorySwitched(origin);
+    }
   }
 
 }

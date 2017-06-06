@@ -35,13 +35,19 @@ export const Animations = {
         ]),
     ]),
     deOpacify: trigger('deOpacify', [
-        state('off', style({
+        state('selection', style({
             opacity: 0
         })),
-        state('on', style({
+        state('noSelection', style({
             opacity: 1
         })),
-        transition('off <=> on', animate('500ms ease-in'))
+        transition('selection <=> noSelection', animate('500ms ease-in')),
+        transition('void => noSelection', [
+            style({opacity: 0}), animate('500ms ease-in')
+        ]),
+        transition('* => void', [
+            animate('500ms ease-in', style({opacity: 0}))
+        ])
     ]),
     fade: trigger('fade', [
         state('out', style({ opacity: 0, backgroundColor: '#000' })),

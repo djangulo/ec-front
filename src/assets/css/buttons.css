@@ -53,31 +53,30 @@
 
 .btn-close {
     position: absolute;
-    top: 13px;
-    right: 35px;
+    top: 5px;
+    right: 25px;
     width: 40px;
     height: 40px;
     background: transparent;
     border: none;
+    z-index: 112;
 }
 
 .btn-download {
-    background-color: #444;
+    background-color: transparent;
     color: #eee;
     border: none;
+    font-weight: bold;
+    font-size: 1.2em;
     transition: background-color 200ms, color 200ms;
     -moz-transition:  background-color 200ms, color 200ms;
     -o-transition: background-color 200ms, color 200ms;
     -webkit-transition: background-color 200ms, color 200ms;
     width: 170px;
     height: 30px;
-    border-radius: 8px;
-    -moz-border-radius: 8px;
-    -o-border-radius: 8px;
 }
 
 .btn-download:hover {
-    background-color: #eee;
     color: #b72175;
 }
 
@@ -85,7 +84,7 @@
 .btn-more {
     position: absolute;
     top: -40px;
-    right: 0;
+    right: -18px;
     width: 130px;
     height: 25px;
     margin-top: 0;

@@ -1,3 +1,4 @@
+import { HomeTextService } from './../home/home-text.service';
 // Core
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
@@ -26,7 +27,8 @@ import { WorkService } from './work.service';
         WorkListComponent
     ],
     providers: [
-        WorkService
+        WorkService,
+        HomeTextService
     ]
 })
 export class WorksModule {}

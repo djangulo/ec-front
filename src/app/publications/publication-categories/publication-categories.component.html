@@ -8,9 +8,11 @@
   </div>
 </div>
 
-<div [@deOpacify]="hoverState" class="category-description">
-  <p *ngIf="hoveredCategory && selectionState === 'noSelection'">{{hoveredCategory.description}}</p>
+<div 
+[@deOpacify]="selectionState" 
+*ngIf="homeText && selectionState === 'noSelection'"
+class="home-text">
+    <p>{{homeText}}</p>
 </div>
-
 
 <router-outlet></router-outlet>

@@ -98,3 +98,27 @@ footer {
     bottom: 10px;
     right: 40px;
 }
+
+@media (max-width: 480px) {
+    header {
+        height: 120px;
+        z-index: 2;
+        margin: 0;
+        padding: 0;
+    }
+
+    header h1 {
+        text-indent: -9999px;
+        margin: 0;
+        padding: 0;
+    }
+
+    header h1 a {
+        display: block;
+        width: 250px;
+        height: 36px;
+        float: left;
+        margin-top: 60px;
+        background: url("./../img/ec-image.png") no-repeat;
+    }
+}

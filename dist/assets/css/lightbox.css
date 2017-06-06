@@ -28,9 +28,10 @@
 .lightbox-title {
     color: #eee;
     font-size: 1.6em;
-    margin-left: 2%;
-    margin-top: 2%;
     display: inline-block;
+    position: absolute;
+    top: -57px;
+    left: -2px;
 }
 
 .details .lightbox-title {

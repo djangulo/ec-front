@@ -1,4 +1,5 @@
 @import url('../../../assets/css/styles.css');
+@import url('./../../home/home.component.css');
 
 /*:host {
     display: inline-block;
