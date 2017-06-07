@@ -41,8 +41,10 @@ def _upload_files():
     run(f'mkdir -p {main_dir}/assets')
     run(f'mkdir -p {main_dir}/assets/css')
     run(f'mkdir -p {main_dir}/assets/img')
+    run(f'mkdir -p {main_dir}/assets/misc')
     put('dist/assets/css', f'{main_dir}/assets')
     put('dist/assets/img', f'{main_dir}/assets')
+    put('dist/assets/misc', f'{main_dir}/assets')
     local('rm -r distribution')
 
 # convert styles.bundle.css into readable format with the sed chain below
