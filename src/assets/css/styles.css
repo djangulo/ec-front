@@ -33,14 +33,15 @@ header h1 {
     padding: 0;
 }
 
-header h1 a {
+header h1 img {
     display: block;
-    width: 250px;
+    width: 199px;
     height: 36px;
     float: left;
     margin-top: 60px;
-    background: url("./../img/ec-image.png") no-repeat;
+    background-image: url("./../img/ec-image.png") no-repeat;
 }
+
 
 ::-webkit-scrollbar {
     display: none;
