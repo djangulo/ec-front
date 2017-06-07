@@ -38,23 +38,23 @@ export const Animations = {
         ]),
     ]),
     flyArchivePressIn: trigger('flyArchivePressIn', [
-        state('*', style({ transform: 'translate3d(-99%, -13%, 0)', opacity: 1})),
+        state('*', style({ transform: 'translate3d(-96%, -29%, 0)', opacity: 1})),
         transition('void => *', [
-            style({transform: 'translate3d(-99%, 400%, 0)', opacity: 0}),
+            style({transform: 'translate3d(-96%, 400%, 0)', opacity: 0}),
             animate('500ms ease-out')
         ]),
         transition('* => void', [
-            animate('500ms ease-out', style({transform: 'translate3d(-99%, -300%, 0)', opacity: 0}))
+            animate('500ms ease-out', style({transform: 'translate3d(-96%, -300%, 0)', opacity: 0}))
         ]),
     ]),
     flyLatestPressIn: trigger('flyLatestPressIn', [
-        state('*', style({ transform: 'translate3d(-63%, 0%, 0)', opacity: 1})),
+        state('*', style({ transform: 'translate3d(-68%, 0%, 0)', opacity: 1})),
         transition('void => *', [
-            style({transform: 'translate3d(-63%, 400%, 0)', opacity: 0}),
+            style({transform: 'translate3d(-68%, 400%, 0)', opacity: 0}),
             animate('500ms ease-out')
         ]),
         transition('* => void', [
-            animate('500ms ease-out', style({transform: 'translate3d(-63%, -300%, 0)', opacity: 0}))
+            animate('500ms ease-out', style({transform: 'translate3d(-68%, -300%, 0)', opacity: 0}))
         ]),
     ]),
 }

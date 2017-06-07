@@ -187,14 +187,19 @@
 
 .thumbnails {
     height: 15%;
-    width: 70%;
+    width: 100%;
     margin-left: 1%;
     padding: 1% 0;
+
 }
 
 .thumbnail-container {
     margin: 0 auto;
     padding: 0;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
 }
 
 .thumbnail {
@@ -205,11 +210,14 @@
     background-repeat: no-repeat;
     background-size: cover;
     display: inline-block;
-    margin: 0 0.5%;
+    margin: 0.5%;
+    flex: 0 1 auto;
 }
 
 .selected {
-    border: 1px solid #eee;
+    border: 2px solid #b72175;
+    width: 156px;
+    height: 86px;
 }
 
 @media screen and (max-width: 480px) {

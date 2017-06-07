@@ -31,12 +31,8 @@ export class WorkListComponent implements OnInit, OnDestroy {
   @ViewChild('cImgDiv') cImgDiv: ElementRef;
   pictures: WorkPicture[]
   stageCenter: WorkPicture;
-  stageLeft: WorkPicture;
-  stageRight: WorkPicture;
   i: number;
   c: number;
-  l: number;
-  r: number;
   fadeState: string;
   worksState: string;
   detailState: string;
@@ -91,43 +87,19 @@ export class WorkListComponent implements OnInit, OnDestroy {
       this.selectedWork.cover,
       this.selectedWork.pictures
     );
-    console.log(this.pictures)
     this.i = this.pictures.length;
     switch(this.i){
       case 0: {
         return null;
       }
-      case 1: {
-        this.c = 0;
-        this.l = 0;
-        this.r = 0; 
-        break;
-      }
-      case 2: {
-        this.c = 0;
-        this.r = 1;
-        this.l = 1;
-        break;
-      }
       default: {
         this.c = 0;
-        this.r = 1;
-        this.l = this.i - 1;
       }
     }
     this.stageCenter = this.pictures[this.c];
-    this.stageRight = this.pictures[this.r];
-    this.stageLeft = this.pictures[this.l];
     this.fadeState = 'in';
     this.detailState = 'false';
 }
-
-// on lcick left, select left image
-// rotate 3  stages to match new center
-//on click right, select right image
-//deal with less than 3 image cases
-//  single image case
-//  two image case
 
   prevPic() {
     this.fadeState = 'out';
@@ -136,51 +108,19 @@ export class WorkListComponent implements OnInit, OnDestroy {
         case 0: {
           return null;
         }
-        case 1: {
-          this.c = 0;
-          this.l = 0;
-          this.r = 0;
-          break;
-        }
-        case 2: {
-          if(this.c === 0){
-            this.c = 1;
-          } else {
-            this.c = 0;
-          }
-          if(this.c === 0){
-            this.r = 1;
-            this.l = 1;
-          } else {
-            this.r = 0;
-            this.l = 0;
-          }
-          break;
-        }
         default: {
-          if(this.c === 1){
-            this.c = this.c - 1;
-            this.r = this.c + 1;
-            this.l = this.i - 1;
-          } else if(this.c === 0){
+          if(this.c === 0){
             this.c = this.i - 1;
-            this.r = 0;
-            this.l = this.i - 2;
           } else {
             this.c = this.c - 1;
-            this.r = this.c + 1;
-            this.l = this.c - 1
           }
         }
         break;
       }
       this.stageCenter = this.pictures[this.c];
-      this.stageRight = this.pictures[this.r];
-      this.stageLeft = this.pictures[this.l];
       this.updateBackground();
       this.fadeState = 'in';
     }, 300);
-
   }
   nextPic() {
     this.fadeState = 'out';
@@ -189,52 +129,20 @@ export class WorkListComponent implements OnInit, OnDestroy {
         case 0: {
           return null;
         }
-        case 1: {
-          this.c = 0;
-          this.l = 0;
-          this.r = 0;
-          break;
-        }
-        case 2: {
-          if(this.c === (this.i - 1)){
-            this.c = 0;
-          } else {
-            this.c = 1;
-          }
-          if(this.c === 0){
-            this.r = 1;
-            this.l = 1;
-          } else {
-            this.r = 0;
-            this.l = 0;
-          }
-          break;
-        }
         default: {
-          if(this.c === (this.i - 2)){
-            this.c = this.c + 1;
-            this.r = 0;
-            this.l = this.c - 1;
-          } else if(this.c === (this.i - 1)){
+          if(this.c === this.i - 1){
             this.c = 0;
-            this.r = 1;
-            this.l = this.i - 1;
           } else {
             this.c = this.c + 1;
-            this.r = this.c + 1;
-            this.l = this.c - 1
           }
-          break;
         }
+        break;
       }
       this.stageCenter = this.pictures[this.c];
-      this.stageRight = this.pictures[this.r];
-      this.stageLeft = this.pictures[this.l];
       this.updateBackground();
       this.fadeState = 'in';
     }, 300);
   }
-
   scroll(event: KeyboardEvent) {
     event.preventDefault();
     if (event.keyCode === 37) {
@@ -264,6 +172,7 @@ export class WorkListComponent implements OnInit, OnDestroy {
     this.fadeState = 'out';
     setTimeout(() => {
       this.stageCenter = picture;
+      this.c = this.pictures.indexOf(picture);
       this.updateBackground();
       this.fadeState = 'in';
     }, 300);

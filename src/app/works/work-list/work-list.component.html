@@ -59,7 +59,8 @@
         <p><strong>Program: </strong>{{selectedWork.program}}</p>
         <p><strong>Status: </strong>{{selectedWork.status}}</p>
         <p><strong>Team: </strong>{{selectedWork.team}}</p>
-        <a class="btn-download" href="{{selectedWork.document}}" target="_blank" download>
+        <a class="btn-download" 
+        href="{{selectedWork.document}}" target="_blank" download>
           Download
         </a>
         <div class="description">
@@ -67,7 +68,7 @@
         </div>
     </div>
     <div class="thumbnails" *ngIf="showDetails">
-      <div class="thumbnail-container" [style.width]="(166 * i)+ 'px'">
+      <div class="thumbnail-container">
         <div 
         class="thumbnail" 
         *ngFor="let picture of pictures" 

@@ -22,6 +22,7 @@ export class Work {
     title: string;
     slug: string;
     description: string;
+    category: string;
     category_id: number;
     category_slug: string;
     document: string;
