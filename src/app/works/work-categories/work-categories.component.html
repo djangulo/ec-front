@@ -11,8 +11,7 @@
 <div
 [@deOpacify]="selectionState"
 *ngIf="homeText && selectionState === 'noSelection'"
-class="home-text">
-    <p>{{homeText}}</p>
+class="home-text" [innerHTML]="safeHTML(homeText)">
 </div>
 
 <router-outlet></router-outlet>

@@ -1,3 +1,4 @@
+import { DomSanitizer } from '@angular/platform-browser';
 import { Location } from '@angular/common';
 import { Router, ActivatedRoute } from '@angular/router';
 import {
@@ -43,7 +44,8 @@ export class PublicationCategoriesComponent implements OnInit {
     private service: PublicationService,
     private router: Router,
     private route: ActivatedRoute,
-    private location: Location
+    private location: Location,
+    private sanitizer: DomSanitizer
   ) {
     this.catSub = animationService.categorySelected$.subscribe(
       level => {
@@ -68,6 +70,10 @@ export class PublicationCategoriesComponent implements OnInit {
   getHomeText(): void {
     this.homeTextService.getText()
             .then((text) => this.homeText = text);
+  }
+
+  safeHTML(html) {
+    return this.sanitizer.bypassSecurityTrustHtml(html);
   }
 
   getCategories(): void {

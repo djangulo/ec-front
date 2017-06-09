@@ -52,6 +52,10 @@ export class HomeComponent implements OnInit, OnDestroy {
             .then((text) => this.homeText = text);
   }
 
+  safeHTML(html) {
+    return this.sanitizer.bypassSecurityTrustHtml(html);
+  }
+
   getHomeImages(): void {
     this.homeImageService
       .getImages()

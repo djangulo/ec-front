@@ -1,3 +1,4 @@
+import { DomSanitizer } from '@angular/platform-browser';
 import { Location } from '@angular/common';
 import { Router, ActivatedRoute } from '@angular/router';
 import { Component, OnInit } from '@angular/core';
@@ -25,7 +26,8 @@ export class StaffListComponent implements OnInit {
     private staffService: StaffService,
     private router: Router,
     private route: ActivatedRoute,
-    private location: Location
+    private location: Location,
+    private sanitizer: DomSanitizer
   ) {
       this.staff = [];
       this.interns = [];
@@ -81,6 +83,16 @@ export class StaffListComponent implements OnInit {
   }
   clearSelection(): void {
     this.selectedMember = null;
+  }
+  escape(event: KeyboardEvent) {
+    event.preventDefault();
+    if (event.keyCode === 27) {
+      this.clearSelection();
+    } else return;
+  }
+
+  safeHTML(html) {
+    return this.sanitizer.bypassSecurityTrustHtml(html);
   }
 
 }

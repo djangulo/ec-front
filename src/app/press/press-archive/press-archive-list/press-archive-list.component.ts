@@ -1,3 +1,4 @@
+import { DomSanitizer } from '@angular/platform-browser';
 import { Animations } from './../../press-animations';
 import { PressRelease } from './../../press.model';
 import { Subscription } from 'rxjs/Subscription';
@@ -27,7 +28,8 @@ export class PressArchiveListComponent implements OnInit, OnDestroy {
     private service: PressService,
     private router: Router,
     private route: ActivatedRoute,
-    private location: Location) {
+    private location: Location,
+    private sanitizer: DomSanitizer) {
       this.sub = this.route.parent.params.subscribe(
         params => this.year = +params['year']
       );
@@ -47,6 +49,10 @@ export class PressArchiveListComponent implements OnInit, OnDestroy {
                                 +params['month']
                               )
       ).subscribe(presses => this.presses = presses); 
+  }
+
+  safeHTML(html) {
+    return this.sanitizer.bypassSecurityTrustHtml(html);
   }
 
   ngOnDestroy() {

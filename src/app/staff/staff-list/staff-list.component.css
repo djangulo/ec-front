@@ -1,3 +1,6 @@
+@import url('../../../assets/css/lightbox.css');
+@import url('../../../assets/css/buttons.css');
+
 .staff {
     margin: 0;
     padding: 0;
@@ -43,5 +46,15 @@
     padding: 2%;
     margin: 0;
     margin-left: -25%;
+}
+
+.interns li p,
+.staff-member {
+    cursor: pointer;
+}
+
+.interns li p:hover,
+.staff-member:hover {
+    color: #b72175;
 }
 

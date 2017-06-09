@@ -1,3 +1,4 @@
+import { DomSanitizer } from '@angular/platform-browser';
 import { Subscription } from 'rxjs/Subscription';
 import { Location } from '@angular/common';
 import { Router, ActivatedRoute } from '@angular/router';
@@ -29,7 +30,8 @@ export class PressLatestComponent implements OnInit {
     private service: PressService,
     private router: Router,
     private route: ActivatedRoute,
-    private location: Location
+    private location: Location,
+    private sanitizer: DomSanitizer
   ) {
     this.subscription = animationService.categorySelected$.subscribe(
       level => {
@@ -40,6 +42,10 @@ export class PressLatestComponent implements OnInit {
 
   ngOnInit() {
     this.getLatest();
+  }
+
+  safeHTML(html) {
+    return this.sanitizer.bypassSecurityTrustHtml(html);
   }
 
   getLatest(): void {

@@ -1,3 +1,4 @@
+import { DomSanitizer } from '@angular/platform-browser';
 import { Location } from '@angular/common';
 import { Router, ActivatedRoute } from '@angular/router';
 import {
@@ -45,7 +46,8 @@ export class WorkCategoriesComponent implements OnInit, OnDestroy {
     private workService: WorkService,
     private router: Router,
     private route: ActivatedRoute,
-    private location: Location
+    private location: Location,
+    private sanitizer: DomSanitizer
   ) {
     this.catSub = animationService.categorySelected$.subscribe(
       level => {
@@ -70,6 +72,10 @@ export class WorkCategoriesComponent implements OnInit, OnDestroy {
   getHomeText(): void {
     this.homeTextService.getText()
             .then((text) => this.homeText = text);
+  }
+
+  safeHTML(html) {
+    return this.sanitizer.bypassSecurityTrustHtml(html);
   }
 
   getCategories(): void {

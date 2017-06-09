@@ -2,8 +2,8 @@
   <div class="publication" *ngFor="let publication of publications" (click)="onSelect(publication)">
     <div class="caption">
       <p><strong>Title: </strong>{{publication.title}}</p>
-      <p><strong>Description: </strong>{{publication.description}}</p>
-      <p><strong>Medium: </strong>{{publication.medium_slug}}</p>
+      <p [innerHTML]=safeHTML(publication.description)></p>
+      <p><strong>Medium: </strong>{{publication.medium_name}}</p>
       <a *ngIf="publication.url !== ''" href="{{publication.url}}"><p>Link</p></a>
     </div>
     <div class="image" [style.backgroundImage]="getBackground(publication.image)"></div>

@@ -43,10 +43,7 @@
           <span class="chevron right-chevron"></span>
         </button>
       </div>
-      <div 
-        class="caption">
-        {{stageCenter.caption}}
-      </div>
+      <div class="caption" [innerHTML]="safeHTML(stageCenter.caption)"></div>
     </div>
     <div 
     class="details" 
@@ -63,8 +60,7 @@
         href="{{selectedWork.document}}" target="_blank" download>
           Download
         </a>
-        <div class="description">
-          <p>{{selectedWork.description}}</p>       
+        <div class="description" [innerHTML]="safeHTML(selectedWork.description)">
         </div>
     </div>
     <div class="thumbnails" *ngIf="showDetails">

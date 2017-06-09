@@ -3,7 +3,7 @@
     <div class="caption">
       <p class="bold">{{press.published_date|date:'d-MMM-yy'}}</p>
       <p class="bold">{{press.title}}</p>
-      <p>{{press.description}}</p>
+      <p [innerHTML]="safeHTML(press.description)"></p>
       <p><a href="{{press.url}}">More information</a></p>
       <a class="btn-download" href="{{press.press_kit}}" target="_blank">
         Download press kit

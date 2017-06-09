@@ -51,6 +51,10 @@ export class PublicationListComponent implements OnInit, OnDestroy {
             .subscribe((publications: Publication[]) => this.publications = publications);
     }
 
+  safeHTML(html) {
+    return this.sanitizer.bypassSecurityTrustHtml(html);
+  }
+
     onSelect(publication: Publication): void {
         this.selectedPublication = publication;
     }

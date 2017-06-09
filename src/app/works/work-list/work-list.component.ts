@@ -165,6 +165,10 @@ export class WorkListComponent implements OnInit, OnDestroy {
     return this.sanitizer.bypassSecurityTrustStyle(`url(${image})`);
   }
 
+  safeHTML(html) {
+    return this.sanitizer.bypassSecurityTrustHtml(html);
+  }
+
   switchPic(picture: WorkPicture){
     if(this.stageCenter.id === picture.id){
       return ;
