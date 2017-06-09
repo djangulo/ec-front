@@ -8,9 +8,9 @@
   </div>
 </div>
 
-<div
-[@deOpacify]="selectionState"
-*ngIf="homeText && selectionState === 'noSelection'"
+<div 
+[@deOpacify]="selectionState" 
+*ngIf="homeText && selectionState === 'noSelection'" 
 class="home-text" [innerHTML]="safeHTML(homeText)">
 </div>
 

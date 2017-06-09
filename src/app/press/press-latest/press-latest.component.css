@@ -42,3 +42,7 @@
 .btn-download {
     color: #444;
 }
+
+ .inline-p {
+     display: inline;
+ }

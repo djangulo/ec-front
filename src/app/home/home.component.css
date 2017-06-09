@@ -30,12 +30,6 @@
     background-repeat: no-repeat;
 }
 
-.home-text p {
-    color: #b72175;    
-    font-size: 14px;
-}
-
-
 .home-text {
     font-family: 'Helvetica Neue', Helvetica, 'Open Sans', sans-serif, Arial;
     color: #444;
@@ -45,7 +39,9 @@
     transform: translateX(146%); 
     -moz-transform: translateX(146%); 
     -webkit-transform: translateX(146%); 
-    -o-transform: translateX(146%); 
+    -o-transform: translateX(146%);
+    color: #b72175;    
+    font-size: 14px;
 }
 
 /*@-webkit-keyframes bg-move {

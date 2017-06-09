@@ -171,11 +171,11 @@
     margin-right: 1%;
 }
 
-.details p {
+.details {
     font-size: 1.2em;
 }
 
-.details p strong {
+.details strong {
     font-weight: bold;
 }
 

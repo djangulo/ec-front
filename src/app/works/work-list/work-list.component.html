@@ -55,7 +55,9 @@
       >{{selectedWork.published_date|date:'y'}} - {{selectedWork.title}}</h2>
         <p><strong>Program: </strong>{{selectedWork.program}}</p>
         <p><strong>Status: </strong>{{selectedWork.status}}</p>
-        <p><strong>Team: </strong>{{selectedWork.team}}</p>
+        <p class="inline-p"><strong>Team: </strong></p><p 
+         class="inline-p" 
+        [innerHTML]="safeHTML(selectedWork.team)"></p>
         <a class="btn-download" 
         href="{{selectedWork.document}}" target="_blank" download>
           Download
