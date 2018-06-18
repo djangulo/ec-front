@@ -38,7 +38,7 @@ export const Animations = {
         ]),
     ]),
     flyArchivePressIn: trigger('flyArchivePressIn', [
-        state('*', style({ transform: 'translate3d(-96%, -29%, 0)', opacity: 1})),
+        state('*', style({ transform: 'translate3d(-96%, -20%, 0)', opacity: 1})),
         transition('void => *', [
             style({transform: 'translate3d(-96%, 400%, 0)', opacity: 0}),
             animate('500ms ease-out')

@@ -12,7 +12,7 @@ import { PressRelease } from './press.model';
 @Injectable()
 export class PressService {
   private headers = new Headers({'Content-Type': 'application/json'});
-  private pressUrl = 'https://ec.djangulo.com/api/v1/press/'; // currently on localhost:8000, change later to actual domain
+  private pressUrl = 'https://ec.djangulo.com/api/v1/press'; // currently on localhost:8000, change later to actual domain
 
   constructor(private http: Http) { }
   getAllPress(): Observable<PressRelease[]> {
@@ -22,7 +22,7 @@ export class PressService {
   }
 
   getLatestPress(): Observable<PressRelease[]> {
-    const url = `${this.pressUrl}/latest/`
+    const url = `${this.pressUrl}/latest/`;
     return this.http.get(url)
         .map(response => response.json().results as PressRelease[])
         .catch(this.handleError);
@@ -36,14 +36,14 @@ export class PressService {
   }
 
   getPressDates(): Observable<any[]> {
-    const url = `${this.pressUrl}/archive/`
+    const url = `${this.pressUrl}/archive/`;
     return this.http.get(url)
         .map(response => response.json().results)
         .catch(this.handleError);
   }
 
   getPress(id: number): Observable<PressRelease> {
-    const url = `${this.pressUrl}/${id}/`
+    const url = `${this.pressUrl}/${id}/`;
     return this.http.get(url)
         .map(response => response.json() as PressRelease)
         .catch(this.handleError);

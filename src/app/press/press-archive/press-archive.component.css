@@ -19,3 +19,50 @@
 .active {
     color: #b72175;
 }
+
+.presses {
+    width: 510px;
+    height: 80vh;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    /*float: right;*/
+    overflow-y: auto;
+    /*overflow-x: visible;*/
+}
+
+.press {
+    position: relative;
+    /*height: 240px;*/
+    margin: 2% auto;
+    padding: 0;
+    float: none;
+    clear: both;
+}
+
+.press .caption {
+    width: 460px;
+    float: left;
+    padding: 4px;
+    margin-top: 20px;
+    clear: both;
+    text-align: left;
+}
+
+.bold {
+    font-weight: bold;
+}
+
+.press .caption p {
+    margin: 2px 0;
+    font-size: 13px;
+}
+
+.btn-download {
+    color: #444;
+}
+
+ .inline-p {
+     display: inline;
+ }
