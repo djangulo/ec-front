@@ -2,7 +2,7 @@
 @import url('../../../assets/css/buttons.css');
 
 .works {
-    width: 590px;
+    width: 560px;
     height: 80vh;
     margin: 0;
     padding: 0;
@@ -23,7 +23,7 @@
 }
 
 .work .caption {
-    width: 181px;
+    width: min-content;
     float: left;
     padding: 4px;
     clear: both;

@@ -6,7 +6,7 @@
     </li>
   </ul>
 </div>
-<!--<div [@flyInternsIn]="animState" class="interns">
+<div [@flyInternsIn]="animState" class="interns">
   <h4>Interns</h4>
   <ul>
     <li class="intern" *ngFor="let member of interns" (click)="onSelect(member)">
@@ -14,21 +14,3 @@
     </li>
   </ul>
 </div>
-<div class="lightbox-outer s-work" *ngIf="selectedMember">
-  <div class="lightbox-inner" (keydown)="escape($event)">
-    <div class="lightbox-header">
-
-      <button class="btn btn-close" (click)="clearSelection()">
-        <span class="close-icon"></span>
-      </button>
-    </div>
-    <div class="container">
-      <h2 
-      class="lightbox-title" 
-      >{{selectedMember.first_name}} {{selectedMember.last_name}}</h2>
-             <div class="description" [innerHTML]="safeHTML(selectedMember.bio)"></div>
-    </div>
-
-
-  </div>
-</div>-->
