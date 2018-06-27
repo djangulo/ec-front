@@ -1,12 +1,12 @@
-@import url('../../assets/css/styles.css');
+@import url('../../assets/css/styles.css'); */
 
 .menu {
     width: 140px;
 }
-
+/* 
 .menu-item {
     font-size: 20px;
-}
+} */
 
 .menu-item a {
     cursor: pointer;

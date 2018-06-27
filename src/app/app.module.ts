@@ -38,7 +38,6 @@ import { AnimationService } from './animation.service';
     PublicationsModule,
     WorksModule,
     StaffModule,
-    PressModule,
     AppRoutingModule
   ],
   declarations: [

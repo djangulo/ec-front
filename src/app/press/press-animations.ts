@@ -38,13 +38,13 @@ export const Animations = {
         ]),
     ]),
     flyArchivePressIn: trigger('flyArchivePressIn', [
-        state('*', style({ transform: 'translate3d(-96%, -20%, 0)', opacity: 1})),
+        state('*', style({ transform: 'translate3d(-33%, -20%, 0)', opacity: 1})),
         transition('void => *', [
-            style({transform: 'translate3d(-96%, 400%, 0)', opacity: 0}),
+            style({transform: 'translate3d(-33%, 400%, 0)', opacity: 0}),
             animate('500ms ease-out')
         ]),
         transition('* => void', [
-            animate('500ms ease-out', style({transform: 'translate3d(-96%, -300%, 0)', opacity: 0}))
+            animate('500ms ease-out', style({transform: 'translate3d(-33%, -300%, 0)', opacity: 0}))
         ]),
     ]),
     flyLatestPressIn: trigger('flyLatestPressIn', [

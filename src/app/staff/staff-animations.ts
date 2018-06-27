@@ -9,13 +9,13 @@ import {
 
 export const Animations = {
     flyStaffIn: trigger('flyStaffIn', [
-        state('*', style({ transform: 'translate3d(-81.4%,0,0)', opacity: 1})),
+        state('*', style({ transform: 'translate3d(-79.4%,0,0)', opacity: 1})),
         transition('void => *', [
-            style({transform: 'translate3d(-81.4%, 200%, 0)', opacity: 0}),
+            style({transform: 'translate3d(-79.4%, 200%, 0)', opacity: 0}),
             animate('500ms ease-out')
         ]),
         transition('* => void', [
-            style({transform: 'translate3d(-81.4%, -400%, 0)', opacity: 0}),
+            style({transform: 'translate3d(-79.4%, -400%, 0)', opacity: 0}),
             animate('500ms ease-out')
         ])
     ]),

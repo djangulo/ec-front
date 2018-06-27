@@ -40,10 +40,6 @@ header h1 img {
     float: left;
     margin-top: 60px;
     background-image: url("./../img/ec-image.png") no-repeat;
-    transform: translateX(-10px);
-    -moz-transform: translateX(-10px);
-    -webkit-transform: translateX(-10px);
-    -o-transform: translateX(-10px);
 }
 
 
@@ -62,7 +58,7 @@ header h1 img {
 }
 
 .menu {
-    width: 200px;
+    width: 180px;
     margin: 0;
     padding: 0;
     border: 0;
@@ -70,6 +66,7 @@ header h1 img {
     vertical-align: baseline;
     float: left;
     margin-top: 30px;
+    margin-left: 20px;
 }
 
 
