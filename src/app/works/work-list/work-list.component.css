@@ -24,6 +24,7 @@
 
 .work .caption {
     width: max-content;
+    max-width: 225px;
     float: left;
     padding: 4px;
     clear: both;
